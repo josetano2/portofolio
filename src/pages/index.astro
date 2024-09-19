@@ -3,8 +3,32 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <div class="flex flex-col items-end justify-end gap-2">
-    <p class="text-6xl">おはよう</p>
-    <p class="text-8xl font-extrabold">Fullstack Developer</p>
+  <div class="flex flex-col justify-between h-full">
+    <div>
+      <p>Jose Jonathan Tano</p>
+    </div>
+    <div class="flex flex-col items-end justify-end gap-2 mt-auto">
+      <p class="text-6xl text">おはよう</p>
+      <p class="text-8xl font-extrabold text">Fullstack Developer</p>
+    </div>
   </div>
 </Layout>
+
+<style is:global>
+  .text {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+</style>
+
+<script>
+  import gsap from "gsap";
+  
+  gsap.to(".text", {
+    y: 0,
+    opacity: 1,
+    duration: 0.3,
+    ease: "power1.out",
+    delay: 0.5,
+  });
+</script>
