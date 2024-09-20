@@ -4,7 +4,7 @@ import { Routes } from "@/lib/routes/routes";
 
 export default function Navbar() {
   return (
-    <div className="w-full flex justify-center p-1 gap-12 text-xl font-semibold">
+    <div className="w-full flex justify-center gap-12 text-xl font-semibold bg-transparent">
       {Routes.map((r) => {
         return <TransitionHref href={r.path} label={r.name} />;
       })}

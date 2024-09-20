@@ -1,34 +1,61 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "@/layouts/Layout.astro";
 ---
 
 <Layout>
-  <div class="flex flex-col justify-between h-full">
-    <div>
-      <p>Jose Jonathan Tano</p>
+  <div class="flex flex-col justify-between h-full p-12">
+    <div class="flex flex-col gap-2">
+      <p class="text-3xl font-semibold top-text split" id="split-text">Hi, I'm Jose</p>
+      <p class="text-2xl top-text split" id="split-text">Welcome to my portofolio.</p>
     </div>
-    <div class="flex flex-col items-end justify-end gap-2 mt-auto">
-      <p class="text-6xl text">おはよう</p>
-      <p class="text-8xl font-extrabold text">Fullstack Developer</p>
+    <div class="flex flex-col items-end justify-end gap-5 mt-auto">
+      <p class="text-5xl font-semibold opacity-30 text split" id="split-text">
+        いらっしゃい
+      </p>
+      <div class="overflow-hidden">
+        <p class="text-8xl font-extrabold split" id="split-text">
+          Fullstack Developer
+        </p>
+      </div>
     </div>
   </div>
 </Layout>
 
 <style is:global>
   .text {
-    opacity: 0;
     transform: translateY(20px);
+  }
+
+  .split {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .char {
+    /* opacity: 0; */
+    transform: translateY(5.5rem);
+    transition: transform 0.5s;
   }
 </style>
 
 <script>
   import gsap from "gsap";
-  
-  gsap.to(".text", {
+  import SplitType from "split-type";
+
+  const splitText = new SplitType("#split-text");
+
+  gsap.to(".char", {
     y: 0,
-    opacity: 1,
-    duration: 0.3,
+    stagger: 0.05,
+    delay: 0.2,
+    duration: 0.2,
     ease: "power1.out",
-    delay: 0.5,
   });
+
+  // gsap.to(".text", {
+  //   y: 0,
+  //   opacity: 1,
+  //   duration: 0.3,
+  //   ease: "power1.out",
+  //   delay: 0.5,
+  // });
 </script>
