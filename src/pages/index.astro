@@ -1,21 +1,44 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import * as Contents from "@/lib/contents/homeTexts";
+import { splitText } from "@/lib/util/split";
 ---
 
 <Layout>
   <div class="flex flex-col justify-between h-full p-12">
-    <div class="flex flex-col gap-2">
-      <p class="text-3xl font-semibold top-text split" id="split-text">Hi, I'm Jose</p>
-      <p class="text-2xl top-text split" id="split-text">Welcome to my portofolio.</p>
+    <div class="flex flex-col">
+      <div class="text-3xl font-semibold flex split">
+        {
+          splitText(Contents.topText1).map((char: string) => {
+            return <p class="char1">{char === " " ? "\u00A0" : char}</p>;
+          })
+        }
+      </div>
+      <div class="text-xl top-text split flex">
+        {
+          splitText(Contents.topText2).map((char: string) => {
+            return <p class="char1">{char === " " ? "\u00A0" : char}</p>;
+          })
+        }
+      </div>
     </div>
-    <div class="flex flex-col items-end justify-end gap-5 mt-auto">
-      <p class="text-5xl font-semibold opacity-30 text split" id="split-text">
-        いらっしゃい
-      </p>
+
+    <div class="flex flex-col items-center justify-end gap-5 mt-auto">
+      <div class="text-5xl font-semibold opacity-30 text split flex">
+        {
+          splitText(Contents.bottomText1).map((char: string) => {
+            return <p class="char2">{char === " " ? "\u00A0" : char}</p>;
+          })
+        }
+      </div>
       <div class="overflow-hidden">
-        <p class="text-8xl font-extrabold split" id="split-text">
-          Fullstack Developer
-        </p>
+        <div class="text-8xl font-extrabold split flex">
+          {
+            splitText(Contents.bottomText2).map((char: string) => {
+              return <p class="char2">{char === " " ? "\u00A0" : char}</p>;
+            })
+          }
+        </div>
       </div>
     </div>
   </div>
@@ -30,7 +53,8 @@ import Layout from "@/layouts/Layout.astro";
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 
-  .char {
+  .char1,
+  .char2 {
     /* opacity: 0; */
     transform: translateY(5.5rem);
     transition: transform 0.5s;
@@ -39,16 +63,19 @@ import Layout from "@/layouts/Layout.astro";
 
 <script>
   import gsap from "gsap";
-  import SplitType from "split-type";
 
-  const splitText = new SplitType("#split-text");
-
-  gsap.to(".char", {
+  gsap.to(".char1", {
     y: 0,
     stagger: 0.05,
-    delay: 0.2,
-    duration: 0.2,
-    ease: "power1.out",
+    duration: 0.1,
+    ease: "expo.inOut",
+  });
+
+  gsap.to(".char2", {
+    y: 0,
+    stagger: 0.05,
+    duration: 0.1,
+    ease: "expo.inOut",
   });
 
   // gsap.to(".text", {

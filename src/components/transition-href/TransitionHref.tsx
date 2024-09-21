@@ -12,7 +12,6 @@ export default function TransitionHref({ label, href }: ITransitionHref) {
       className="cursor-pointer"
       onClick={(e) => {
         e.preventDefault();
-        // window.location.href = href;
         animatePageOut(href);
       }}
     >
