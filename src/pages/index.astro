@@ -1,33 +1,33 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import * as Contents from "@/lib/contents/homeTexts";
-import { splitText } from "@/lib/util/split";
+import { splitText, renderSplittedSentence } from "@/lib/util/split";
 ---
 
 <Layout>
   <div class="flex flex-col justify-between h-full p-12">
-    <div class="flex flex-col">
+    <div class="flex flex-col items-center pt-5">
       <div class="text-3xl font-semibold flex split">
         {
           splitText(Contents.topText1).map((char: string) => {
-            return <p class="char1">{char === " " ? "\u00A0" : char}</p>;
+            return <p class="char1">{renderSplittedSentence(char)}</p>;
           })
         }
       </div>
       <div class="text-xl top-text split flex">
         {
           splitText(Contents.topText2).map((char: string) => {
-            return <p class="char1">{char === " " ? "\u00A0" : char}</p>;
+            return <p class="char1">{renderSplittedSentence(char)}</p>;
           })
         }
       </div>
     </div>
 
     <div class="flex flex-col items-center justify-end gap-5 mt-auto">
-      <div class="text-5xl font-semibold opacity-30 text split flex">
+      <div class="text-5xl font-semibold text-gray-400 text split flex">
         {
           splitText(Contents.bottomText1).map((char: string) => {
-            return <p class="char2">{char === " " ? "\u00A0" : char}</p>;
+            return <p class="char2">{renderSplittedSentence(char)}</p>;
           })
         }
       </div>
