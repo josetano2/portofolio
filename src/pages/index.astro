@@ -3,26 +3,36 @@ import Layout from "@/layouts/Layout.astro";
 import * as Contents from "@/lib/contents/homeTexts";
 import { FaGithub, FaLinkedin, FaInstagram, FaDiscord } from "react-icons/fa6";
 import Button from "../components/Button";
+import TypewriterText from "@/components/TypewriterText";
 ---
 
 <Layout>
   <div class="flex flex-col justify-center h-full p-12 overflow-hidden">
     <div class="flex flex-col justify-center items-center gap-8 split">
-      <!-- <p class="text-5xl font-mono">{`{ ${Contents.introName} }`}</p> -->
-      <p class="text-4xl font-mono">{`> ${Contents.introName}`}</p>
+      <div class="flex">
+        <p class="text-4xl font-mono">{`>\xa0`}</p>
+        <TypewriterText client:load />
+        <p class="text-4xl font-mono">{`, I'm Jose`}</p>
+      </div>
 
       <div class="flex gap-12">
-        <FaGithub data-cursor-text=" " size={30} />
-        <FaLinkedin data-cursor-text=" " size={30} />
-        <FaInstagram data-cursor-text=" " size={30} />
-        <FaDiscord data-cursor-text=" " size={30} />
-      </div>
-      <div class="flex gap-12 text-lg">
-        <button
+        <FaGithub data-cursor-text=" " className="cursor-pointer" size={30} />
+        <FaLinkedin data-cursor-text=" " className="cursor-pointer" size={30} />
+        <FaInstagram
           data-cursor-text=" "
-          class="border-black border-[1px] rounded-full px-6 py-1">CV</button
-        >
-        <Button client:idle href="/projects" text="Projects" />
+          className="cursor-pointer"
+          size={30}
+        />
+        <FaDiscord data-cursor-text=" " className="cursor-pointer" size={30} />
+      </div>
+      <div class="flex justify-center items-center gap-12 text-lg">
+        <Button client:idle href="/" text="View CV" id="button-cv" />
+        <Button
+          client:idle
+          href="/projects"
+          text="Projects"
+          id="button-projects"
+        />
       </div>
     </div>
   </div>
@@ -45,7 +55,6 @@ import Button from "../components/Button";
       transition: transform 0.5s;
     }
   </style>
-
   <script>
     import { animatePageOut } from "@/lib/animation/animation";
     import gsap from "gsap";
@@ -69,14 +78,6 @@ import Button from "../components/Button";
       opacity: 1,
       ease: "expo.inOut",
     });
-
-    // gsap.to(".text", {
-    //   y: 0,
-    //   opacity: 1,
-    //   duration: 0.3,
-    //   ease: "power1.out",
-    //   delay: 0.5,
-    // });
 
     const handleChangePage = (path: string) => {
       animatePageOut(path);

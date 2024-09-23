@@ -54,13 +54,13 @@ export const hoverEffect = (topChar: string, bottomChar: string) => {
     y: -30,
     duration: 0.3,
     stagger: 0.02,
-    ease: "power1.out"  
+    ease: "power1.out",
   });
   gsap.to(bottomChar, {
     y: -40,
     duration: 0.3,
     stagger: 0.02,
-    ease: "power1.out"   
+    ease: "power1.out",
   });
 };
 
@@ -68,13 +68,41 @@ export const exitHoverEffect = (topChar: string, bottomChar: string) => {
   gsap.to(topChar, {
     y: 0,
     duration: 0.3,
-    stagger: 0.02,  
-    ease: "power1.out" 
+    stagger: 0.02,
+    ease: "power1.out",
   });
   gsap.to(bottomChar, {
     y: 0,
     duration: 0.3,
-    stagger: 0.02,  
-    ease: "power1.out"
+    stagger: 0.02,
+    ease: "power1.out",
   });
+};
+
+export const buttonHoverEffect = (id: string) => {
+  const buttonRef = document.getElementById(id);
+
+  if (buttonRef) {
+    gsap.to(buttonRef, {
+      duration: 0.3,
+      scale: 1.1,
+      backgroundColor: "#80c3de",
+      ease: "power1.out",
+      color: "white",
+    });
+  }
+};
+
+export const buttonExitHoverEffect = (id: string) => {
+  const buttonRef = document.getElementById(id);
+
+  if (buttonRef) {
+    gsap.to(buttonRef, {
+      duration: 0.3,
+      scale: 1,
+      backgroundColor: "transparent",
+      ease: "power1.out",
+      color: "black",
+    });
+  }
 };

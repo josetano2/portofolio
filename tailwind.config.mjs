@@ -4,6 +4,12 @@ export default {
   theme: {
     extend: {
       lexend: ["Lexend", "open-sans"],
+      backgroundSize: {
+        "custom-size": "60px 60px", 
+      },
+      backgroundImage: {
+        "custom-grid": `radial-gradient(circle, #000000 1px, rgba(0, 0, 0, 0) 1px)`,
+      },
     },
   },
   plugins: [],
