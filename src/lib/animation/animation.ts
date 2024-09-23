@@ -52,14 +52,14 @@ export const animatePageOut = (href: string) => {
 export const hoverEffect = (topChar: string, bottomChar: string) => {
   gsap.to(topChar, {
     y: -30,
-    duration: 0.4,
-    stagger: 0.05,
+    duration: 0.3,
+    stagger: 0.02,
     ease: "power1.out"  
   });
   gsap.to(bottomChar, {
     y: -40,
-    duration: 0.4,
-    stagger: 0.05,
+    duration: 0.3,
+    stagger: 0.02,
     ease: "power1.out"   
   });
 };
@@ -67,14 +67,14 @@ export const hoverEffect = (topChar: string, bottomChar: string) => {
 export const exitHoverEffect = (topChar: string, bottomChar: string) => {
   gsap.to(topChar, {
     y: 0,
-    duration: 0.4,
-    stagger: 0.05,  
+    duration: 0.3,
+    stagger: 0.02,  
     ease: "power1.out" 
   });
   gsap.to(bottomChar, {
     y: 0,
-    duration: 0.4,
-    stagger: 0.05,  
+    duration: 0.3,
+    stagger: 0.02,  
     ease: "power1.out"
   });
 };

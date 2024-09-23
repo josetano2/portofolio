@@ -1,6 +1,6 @@
 ---
 import Navbar from "../components/navbar/Navbar";
-import "../styles/index.css";
+import "../styles/index.scss";
 ---
 
 <html lang="en">
@@ -15,7 +15,9 @@ import "../styles/index.css";
     >
     </div>
     <div class="w-full h-full flex flex-col p-5">
-      <Navbar client:idle />
+      <div class="w-full h-fit flex justify-center">
+        <Navbar client:only />
+      </div>
       <article class="h-full">
         <slot />
       </article>
@@ -38,7 +40,6 @@ import "../styles/index.css";
 
 <script>
   import LocomotiveScroll from "locomotive-scroll";
-  import gsap from "gsap";
   import { animatePageIn } from "@/lib/animation/animation";
 
   const locomotiveScroll = new LocomotiveScroll({
