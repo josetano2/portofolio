@@ -3,26 +3,42 @@ import { Image } from "astro:assets";
 import type { IProject, IStack } from "../lib/models/model";
 
 interface Props {
+  id: string;
   name: string;
   role: string;
   stacks: IStack[];
   thumbnail: ImageMetadata;
 }
 
-const { name, role, stacks, thumbnail } = Astro.props;
+const { id, name, role, stacks, thumbnail } = Astro.props;
 ---
 
-<div class="w-full h-fit gap-2 font-mono cursor-pointer" data-cursor-text={name}>
-  <Image class="object-cover w-[full] h-72" src={thumbnail} alt="tes" />
-  <p class="text-2xl font-bold">{name}</p>
-  <p class="text-lg">{role}</p>
-  <div class="flex gap-3">
-    {
-      stacks.map((s) => {
-        return <s.icon size={25} />;
-      })
-    }
+<div
+  class="w-full h-fit gap-2 font-mono cursor-pointer border-2 border-black"
+  data-cursor-text={name}
+>
+  <div class="w-full h-72 overflow-hidden relative group">
+    <div
+      class="w-screen h-full bg-black absolute z-[999] opacity-20 group-hover:opacity-0 transition-opacity ease-in"
+    >
+    </div>
+    <Image
+      class="object-cover w-full h-full transition-transform ease-in duration-[0.6] scale-[1.1] group-hover:scale-[1.15]"
+      src={thumbnail}
+      alt="tes"
+    />
+  </div>
+  <div class="bg-orange-50 p-3">
+    <div class="flex justify-between w-full">
+      <p class="text-2xl font-bold">{name}</p>
+      <div class="flex gap-3">
+        {
+          stacks.map((s) => {
+            return <s.icon size={25} />;
+          })
+        }
+      </div>
+    </div>
+    <p class="text-lg">{role}</p>
   </div>
 </div>
-
-<script></script>

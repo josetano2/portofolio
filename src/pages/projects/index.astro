@@ -9,10 +9,11 @@ import { projectContents } from "@/lib/contents/project-contents";
     <p class="font-mono text-4xl font-bold reveal">{`> My Projects`}</p>
     <div class="grid gap-6 sm:grid-cols-1 lg:grid-cols-3">
       {
-        projectContents.map((project) => {
+        projectContents.map((project, idx) => {
           return (
             <div class="cards">
               <Card
+                id={idx.toString()}
                 name={project.name}
                 stacks={project.stacks}
                 role={project.role}
