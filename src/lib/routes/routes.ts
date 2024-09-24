@@ -11,4 +11,8 @@ export const Routes = [
     name: "About Me",
     path: "about-me",
   },
+  {
+    name: "Gallery",
+    path: "gallery",
+  },
 ];

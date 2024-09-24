@@ -1,14 +1,14 @@
 ---
-import Navbar from "../components/navbar/Navbar";
+import Navbar from "../components/Navbar";
 import "../styles/index.scss";
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
-  <body class="w-screen h-screen flex bg-custom-grid bg-custom-size">
+  <body class="w-screen h-screen flex bg-custom-grid bg-custom-size bg-yellow-50">
     <div
       class="fixed w-[200vw] h-[140vh] bg-black -left-[50vw] top-0 z-[999]"
       id="bg-transition"
@@ -31,6 +31,7 @@ import "../styles/index.scss";
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
+    /* cursor: none; */
   }
 
   ::-webkit-scrollbar {

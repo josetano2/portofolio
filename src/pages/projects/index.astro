@@ -1,10 +1,61 @@
 ---
+import Card from "@/components/Card.astro";
 import Layout from "../../layouts/Layout.astro";
+import { projectContents } from "@/lib/contents/project-contents";
 ---
 
 <Layout>
-  <div class="flex flex-col h-full p-12">
-    ini project
+  <div class="flex flex-col h-full sm:p-2 lg:p-12 mt-6 gap-6">
+    <p class="font-mono text-4xl font-bold reveal">{`> My Projects`}</p>
+    <div class="grid gap-6 sm:grid-cols-1 lg:grid-cols-3">
+      {
+        projectContents.map((project) => {
+          return (
+            <div class="cards">
+              <Card
+                name={project.name}
+                stacks={project.stacks}
+                role={project.role}
+                thumbnail={project.thumbnail}
+              />
+            </div>
+          );
+        })
+      }
+    </div>
   </div>
 </Layout>
 
+<script>
+  import gsap from "gsap";
+
+  gsap.fromTo(
+    ".reveal",
+    {
+      y: 20,
+      ease: "power1.in",
+      opacity: 0,
+    },
+    {
+      y: 0,
+      duration: 0.4,
+      opacity: 1,
+      ease: "power1.in",
+    }
+  );
+  gsap.fromTo(
+    ".cards",
+    {
+      y: 20,
+      ease: "power1.in",
+      opacity: 0,
+    },
+    {
+      y: 0,
+      duration: 0.4,
+      stagger: 0.2,
+      opacity: 1,
+      ease: "power1.in",
+    }
+  );
+</script>

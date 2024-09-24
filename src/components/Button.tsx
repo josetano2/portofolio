@@ -14,7 +14,7 @@ interface IButton {
 export default function Button({ href, text, id }: IButton) {
   return (
     <button
-      data-cursor-text=" "
+      data-cursor-icon=" "
       className="border-black border-[1px] rounded-full px-4 py-1"
       id={id}
       onClick={() => animatePageOut(href)}

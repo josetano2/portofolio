@@ -65,8 +65,8 @@ $mf-color-text: #fff !default;
 
   &.-text {
     &:before {
-      opacity: 0.75;
-      transform: scale(1);
+      // opacity: 0.75;
+      transform: scale(1.7);
       
     }
 
@@ -80,7 +80,7 @@ $mf-color-text: #fff !default;
 
   &.-icon {
     &:before {
-      transform: scale(1.5);
+      transform: scale(1);
     }
 
     &.-active:before {

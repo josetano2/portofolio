@@ -29,7 +29,7 @@ export const cursor = new MouseFollower({
   speed: 0.55,
   ease: "expo.out",
   overwrite: true,
-  skewing: 0,
+  skewing: 2,
   skewingText: 2,
   skewingIcon: 2,
   skewingMedia: 2,

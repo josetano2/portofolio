@@ -1,5 +1,0 @@
-export const introName = "Hello, I'm Jose"
-export const welcomeText = "Welcome to my portofolio"
-// export const bottomText1 = "「いらっしゃい」"
-export const japaneseText = "おはよう"
-export const currentStatus = "Software Developer"

@@ -9,13 +9,12 @@ export const animatePageIn = () => {
       {
         y: "0%",
         borderRadius: "0",
-        // scale: 0.95,
       },
       {
         duration: 0.4,
         y: "-100%",
         // ease: "Back.out(1.7)",
-        ease: "power2.in",
+        ease: "power1.in",
         scale: 1,
         borderRadius: "0% 0% 100% 100%",
       }
@@ -32,13 +31,11 @@ export const animatePageOut = (href: string) => {
       {
         y: "100%",
         borderRadius: "0",
-        // scale: 1.05,
       },
       {
         duration: 0.4,
         y: "-10%",
-        // ease: "Back.inOut(1.7)",
-        ease: "power2.out",
+        ease: "power1.out",
         scale: 1,
         borderRadius: "100% 100% 0% 0%",
         onComplete: () => {
@@ -54,12 +51,14 @@ export const hoverEffect = (topChar: string, bottomChar: string) => {
     y: -30,
     duration: 0.3,
     stagger: 0.02,
+    opacity: 0,
     ease: "power1.out",
   });
   gsap.to(bottomChar, {
     y: -40,
     duration: 0.3,
     stagger: 0.02,
+    opacity: 1,
     ease: "power1.out",
   });
 };
@@ -69,12 +68,14 @@ export const exitHoverEffect = (topChar: string, bottomChar: string) => {
     y: 0,
     duration: 0.3,
     stagger: 0.02,
+    opacity: 1,
     ease: "power1.out",
   });
   gsap.to(bottomChar, {
     y: 0,
     duration: 0.3,
     stagger: 0.02,
+    opacity: 0,
     ease: "power1.out",
   });
 };
@@ -86,7 +87,7 @@ export const buttonHoverEffect = (id: string) => {
     gsap.to(buttonRef, {
       duration: 0.3,
       scale: 1.1,
-      backgroundColor: "#80c3de",
+      backgroundColor: "#b2e7f9",
       ease: "power1.out",
       color: "white",
     });

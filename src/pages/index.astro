@@ -1,13 +1,12 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import * as Contents from "@/lib/contents/homeTexts";
 import { FaGithub, FaLinkedin, FaInstagram, FaDiscord } from "react-icons/fa6";
 import Button from "../components/Button";
 import TypewriterText from "@/components/TypewriterText";
 ---
 
 <Layout>
-  <div class="flex flex-col justify-center h-full p-12 overflow-hidden">
+  <div class="flex flex-col justify-center h-full sm:p-0 lg:p-12 overflow-hidden">
     <div class="flex flex-col justify-center items-center gap-8 split">
       <div class="flex">
         <p class="text-4xl font-mono">{`>\xa0`}</p>
@@ -16,14 +15,26 @@ import TypewriterText from "@/components/TypewriterText";
       </div>
 
       <div class="flex gap-12">
-        <FaGithub data-cursor-text=" " className="cursor-pointer" size={30} />
-        <FaLinkedin data-cursor-text=" " className="cursor-pointer" size={30} />
-        <FaInstagram
-          data-cursor-text=" "
+        <FaGithub
+          data-cursor-text="Github"
           className="cursor-pointer"
           size={30}
         />
-        <FaDiscord data-cursor-text=" " className="cursor-pointer" size={30} />
+        <FaLinkedin
+          data-cursor-text="LinkedIn"
+          className="cursor-pointer"
+          size={30}
+        />
+        <FaInstagram
+          data-cursor-text="Instagram"
+          className="cursor-pointer"
+          size={30}
+        />
+        <FaDiscord
+          data-cursor-text="Discord"
+          className="cursor-pointer"
+          size={30}
+        />
       </div>
       <div class="flex justify-center items-center gap-12 text-lg">
         <Button client:idle href="/" text="View CV" id="button-cv" />
@@ -78,9 +89,5 @@ import TypewriterText from "@/components/TypewriterText";
       opacity: 1,
       ease: "expo.inOut",
     });
-
-    const handleChangePage = (path: string) => {
-      animatePageOut(path);
-    };
   </script>
 </Layout>

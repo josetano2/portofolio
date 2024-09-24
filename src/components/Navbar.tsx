@@ -10,10 +10,10 @@ import { cursor } from "@/lib/util/cursor";
 
 export default function Navbar() {
   return (
-    <div className="flex items-center gap-16 text-2xl font-semibold bg-transparent fixed">
+    <div className="flex items-center gap-16 text-xl mt-4 font-semibold font-mono bg-transparent fixed">
       {Routes.map((r, idx) => {
         const charClass = `char-navbar-${idx}`,
-          charClassBottom = `char-navbar-${idx + 3}`,
+          charClassBottom = `char-navbar-${idx + 4}`,
           parentClass = `parent-${idx}`,
           invisClass = `invis-${idx}`;
 
@@ -21,18 +21,18 @@ export default function Navbar() {
           <div
             className={`cursor-pointer flex flex-col gap-2 ${parentClass}`}
             style={{ clipPath: "inset(0% 0 40% 0)" }}
-            
+            data-cursor-icon=" "
             onClick={(e) => {
               e.preventDefault();
               animatePageOut(r.path);
             }}
             onMouseEnter={() => {
               hoverEffect("." + charClass, "." + charClassBottom);
-              cursor.setText(" ");
+            
             }}
             onMouseLeave={() => {
               exitHoverEffect("." + charClass, "." + charClassBottom);
-              cursor.removeText();
+            
             }}
           >
             <div className="flex">
