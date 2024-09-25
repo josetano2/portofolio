@@ -6,7 +6,7 @@
 }
 
 $mf-color-base: #000 !default;
-$mf-color-text: #fff !default;
+$mf-color-text: #000 !default;
 
 .mf-cursor {
   $root: &;
@@ -35,7 +35,7 @@ $mf-color-text: #fff !default;
     height: 48px;
     transform: scale(0.2);
 
-    background: #fc9191;
+    background: #fff156;
     border-radius: 50%;
 
     transition:
@@ -81,6 +81,7 @@ $mf-color-text: #fff !default;
   &.-icon {
     &:before {
       transform: scale(1);
+      opacity: 0.75;
     }
 
     &.-active:before {

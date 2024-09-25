@@ -55,7 +55,7 @@ export const hoverEffect = (topChar: string, bottomChar: string) => {
     ease: "power1.out",
   });
   gsap.to(bottomChar, {
-    y: -40,
+    y: -30,
     duration: 0.3,
     stagger: 0.02,
     opacity: 1,

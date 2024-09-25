@@ -14,21 +14,21 @@ const { id, name, role, stacks, thumbnail } = Astro.props;
 ---
 
 <div
-  class="w-full h-fit gap-2 font-mono cursor-pointer border-2 border-black"
+  class="w-full h-fit gap-2 font-mono cursor-pointer border-2 border-black p-3 bg-white group"
   data-cursor-text={name}
 >
-  <div class="w-full h-72 overflow-hidden relative group">
+  <div class="w-full h-72 overflow-hidden relative">
     <div
-      class="w-screen h-full bg-black absolute z-[999] opacity-20 group-hover:opacity-0 transition-opacity ease-in"
+      class="w-screen h-full bg-black absolute z-20 opacity-10 group-hover:opacity-0 transition-opacity ease-in"
     >
     </div>
     <Image
-      class="object-cover w-full h-full transition-transform ease-in duration-[0.6] scale-[1.1] group-hover:scale-[1.15]"
+      class="object-cover w-full h-full transition-transform ease-in duration-[0.15s] scale-[1] group-hover:scale-[1.05]"
       src={thumbnail}
       alt="tes"
     />
   </div>
-  <div class="bg-orange-50 p-3">
+  <div class="pt-6">
     <div class="flex justify-between w-full">
       <p class="text-2xl font-bold">{name}</p>
       <div class="flex gap-3">

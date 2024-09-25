@@ -1,9 +1,13 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
 
-export default function TypewriterText() {
+interface ITypewriterText {
+  className: string;
+}
+
+export default function TypewriterText({ className }: ITypewriterText) {
   return (
-    <div className="font-mono text-4xl">
+    <div className={className}>
       <Typewriter
         options={{
           strings: ["Hello", "你好", "おはよう"],

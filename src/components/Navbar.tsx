@@ -10,7 +10,7 @@ import { cursor } from "@/lib/util/cursor";
 
 export default function Navbar() {
   return (
-    <div className="flex items-center gap-16 text-xl mt-4 font-semibold font-mono bg-transparent fixed">
+    <div className="flex items-center gap-[5vw] sm:text-lg xl:text-xl mt-4 z-30 font-semibold font-mono bg-transparent">
       {Routes.map((r, idx) => {
         const charClass = `char-navbar-${idx}`,
           charClassBottom = `char-navbar-${idx + 4}`,
@@ -19,8 +19,8 @@ export default function Navbar() {
 
         return (
           <div
-            className={`cursor-pointer flex flex-col gap-2 ${parentClass}`}
-            style={{ clipPath: "inset(0% 0 40% 0)" }}
+            className={`cursor-pointer flex flex-col relative h-8 ${parentClass}`}
+            style={{ clipPath: "inset(0% 0 20% 0)" }}
             data-cursor-icon=" "
             onClick={(e) => {
               e.preventDefault();
