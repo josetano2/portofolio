@@ -7,11 +7,14 @@ import {
   RiNextjsFill,
   RiFirebaseFill,
 } from "react-icons/ri";
-import { SiFlask, SiCsharp } from "react-icons/si";
+import { SiFlask, SiCsharp, SiElectron } from "react-icons/si";
 import { TbBrandKotlin, TbBrandGolang, TbBrandCSharp } from "react-icons/tb";
 import { GrGraphQl } from "react-icons/gr";
-import traveloHIThumbnail from "@/lib/images/traveloHI/unknown.jpg";
-import easyWorkThumbnail from "@/lib/images/EasyWork/unknown.jpg";
+import { IoLogoElectron } from "react-icons/io5";
+import traveloHIThumbnail from "@/lib/images/TraveloHI/main.jpg";
+import recallThumbnail from "@/lib/images/Recall/main.png";
+import easyWorkThumbnail from "@/lib/images/EasyWork/main.png";
+import linkasaThumbnail from "@/lib/images/LinKasa/main.png";
 
 export const stackContents: IStack[] = [
   // 0
@@ -74,15 +77,20 @@ export const stackContents: IStack[] = [
     name: "GraphQL",
     icon: GrGraphQl,
   },
-  // 11
+  // 12
   {
     name: "GraphQL",
     icon: GrGraphQl,
   },
-  // 12
+  // 13
   {
     name: "Redis",
     icon: DiRedis,
+  },
+  // 14
+  {
+    name: "Electron",
+    icon: IoLogoElectron,
   },
 ];
 
@@ -114,7 +122,7 @@ export const projectContents: IProject[] = [
     name: "Recall",
     description: "Mobile Application",
     stacks: [stackContents[6], stackContents[7]],
-    thumbnail: traveloHIThumbnail,
+    thumbnail: recallThumbnail,
   },
   {
     name: "The Adventure of TPA",
@@ -125,8 +133,8 @@ export const projectContents: IProject[] = [
   {
     name: "LinKasa",
     description: "Desktop Application",
-    stacks: [stackContents[0], stackContents[4]],
-    thumbnail: traveloHIThumbnail,
+    stacks: [stackContents[0], stackContents[4], stackContents[14]],
+    thumbnail: linkasaThumbnail,
   },
   {
     name: "SunshineFi",
@@ -135,7 +143,7 @@ export const projectContents: IProject[] = [
     thumbnail: traveloHIThumbnail,
   },
   {
-    name: "TarZan",
+    name: "TarZaN",
     description: "Game",
     stacks: [stackContents[8], stackContents[9]],
     thumbnail: traveloHIThumbnail,

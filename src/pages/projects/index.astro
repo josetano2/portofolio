@@ -7,7 +7,7 @@ import { projectContents } from "@/lib/contents/project-contents";
 <Layout>
   <div class="flex flex-col h-full sm:p-4 lg:p-8 gap-6">
     <p class="text-2xl lg:text-3xl 2xl:text-4xl font-mono font-bold reveal">{`> My Projects`}</p>
-    <div class="grid pb-12 gap-6 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+    <div class="grid pb-12 gap-6 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3">
       {
         projectContents.map((project, idx) => {
           return (
