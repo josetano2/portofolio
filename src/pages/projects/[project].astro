@@ -1,0 +1,23 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+export function getStaticPaths() {
+  return [
+    {params: {project: 'TraveloHI'}},
+    {params: {project: 'EasyWork'}},
+    {params: {project: 'Sunshine'}},
+    {params: {project: 'Recall'}},
+    {params: {project: 'LinKasa'}},
+    {params: {project: 'SunshineFi'}},
+    {params: {project: 'TarZaN'}},
+    {params: {project: 'The Adventure of TPA'}},
+    {params: {project: 'JAniDB'}},
+  ];
+}
+
+const { project } = Astro.params;
+---
+
+<Layout>
+    <div>{project}</div>
+</Layout>

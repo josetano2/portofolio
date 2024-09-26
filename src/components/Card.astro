@@ -1,25 +1,27 @@
 ---
 import { Image } from "astro:assets";
 import type { IProject, IStack } from "../lib/models/model";
+import { animatePageOut } from "@/lib/animation/animation";
 
 interface Props {
   id: string;
   name: string;
-  role: string;
+  description: string;
   stacks: IStack[];
   thumbnail: ImageMetadata;
 }
 
-const { id, name, role, stacks, thumbnail } = Astro.props;
+const { id, name = "TraveloHI", description, stacks, thumbnail } = Astro.props;
 ---
 
 <div
-  class="w-full h-fit gap-2 font-mono cursor-pointer border-2 border-black p-3 bg-white group"
+  class="w-full h-fit gap-2 font-mono cursor-pointer border-2 border-black p-3 bg-white group card-parent"
   data-cursor-text={name}
+  data-name={name}
 >
   <div class="w-full h-72 overflow-hidden relative">
     <div
-      class="w-screen h-full bg-black absolute z-20 opacity-10 group-hover:opacity-0 transition-opacity ease-in"
+      class="w-screen h-full bg-black absolute z-20 opacity-0 xl:opacity-10 2xl:opacity-10 group-hover:opacity-0 transition-opacity ease-in"
     >
     </div>
     <Image
@@ -29,16 +31,30 @@ const { id, name, role, stacks, thumbnail } = Astro.props;
     />
   </div>
   <div class="pt-6">
-    <div class="flex justify-between w-full">
-      <p class="text-2xl font-bold">{name}</p>
+    <div class="flex items-center justify-between w-full">
+      <p class="text-xl 2xl:text-2xl font-bold">{name}</p>
       <div class="flex gap-3">
         {
           stacks.map((s) => {
-            return <s.icon size={25} />;
+            return <s.icon size={21} />;
           })
         }
       </div>
     </div>
-    <p class="text-lg">{role}</p>
+    <p class="text-base 2xl:text-lg">{description}</p>
   </div>
 </div>
+
+<script>
+  import { animatePageOut } from "@/lib/animation/animation";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(
+      ".card-parent"
+    ) as NodeListOf<HTMLElement>;
+    cards.forEach((card) => {
+      const name = card.dataset.name;
+      card.addEventListener("click", () => animatePageOut("/projects/" + name));
+    });
+  });
+</script>

@@ -1,13 +1,15 @@
 import type { IProject, IStack } from "@/lib/models/model";
-import { DiPostgresql, DiReact } from "react-icons/di";
-import { FaGolang } from "react-icons/fa6";
+import { DiPostgresql, DiReact, DiRedis } from "react-icons/di";
+import { FaGolang, FaUnity, FaCss3 } from "react-icons/fa6";
+import { FaReact } from "react-icons/fa";
 import {
   RiTailwindCssFill,
   RiNextjsFill,
   RiFirebaseFill,
 } from "react-icons/ri";
-import { SiFlask } from "react-icons/si";
-import { TbBrandKotlin } from "react-icons/tb";
+import { SiFlask, SiCsharp } from "react-icons/si";
+import { TbBrandKotlin, TbBrandGolang, TbBrandCSharp } from "react-icons/tb";
+import { GrGraphQl } from "react-icons/gr";
 import traveloHIThumbnail from "@/lib/images/traveloHI/unknown.jpg";
 import easyWorkThumbnail from "@/lib/images/EasyWork/unknown.jpg";
 
@@ -15,12 +17,12 @@ export const stackContents: IStack[] = [
   // 0
   {
     name: "React",
-    icon: DiReact,
+    icon: FaReact,
   },
   // 1
   {
     name: "Go",
-    icon: FaGolang,
+    icon: TbBrandGolang,
   },
   // 2
   {
@@ -52,12 +54,42 @@ export const stackContents: IStack[] = [
     name: "Firebase",
     icon: RiFirebaseFill,
   },
+  // 8
+  {
+    name: "Unity",
+    icon: FaUnity,
+  },
+  // 9
+  {
+    name: "C#",
+    icon: TbBrandCSharp,
+  },
+  // 10
+  {
+    name: "CSS",
+    icon: FaCss3,
+  },
+  // 11
+  {
+    name: "GraphQL",
+    icon: GrGraphQl,
+  },
+  // 11
+  {
+    name: "GraphQL",
+    icon: GrGraphQl,
+  },
+  // 12
+  {
+    name: "Redis",
+    icon: DiRedis,
+  },
 ];
 
 export const projectContents: IProject[] = [
   {
     name: "TraveloHI",
-    role: "Frontend + Backend + AI",
+    description: "Web Application",
     stacks: [
       stackContents[0],
       stackContents[1],
@@ -68,32 +100,50 @@ export const projectContents: IProject[] = [
   },
   {
     name: "EasyWork",
-    role: "Frontend",
+    description: "Web Application",
     stacks: [stackContents[3], stackContents[4]],
     thumbnail: easyWorkThumbnail,
   },
   {
     name: "Sunshine",
-    role: "Frontend",
+    description: "Web3 Application",
     stacks: [stackContents[0], stackContents[4]],
     thumbnail: traveloHIThumbnail,
   },
   {
     name: "Recall",
-    role: "Mobile",
+    description: "Mobile Application",
     stacks: [stackContents[6], stackContents[7]],
     thumbnail: traveloHIThumbnail,
   },
   {
+    name: "The Adventure of TPA",
+    description: "Game",
+    stacks: [stackContents[8], stackContents[9]],
+    thumbnail: traveloHIThumbnail,
+  },
+  {
     name: "LinKasa",
-    role: "Diagrams + Frontend + Backend",
+    description: "Desktop Application",
     stacks: [stackContents[0], stackContents[4]],
     thumbnail: traveloHIThumbnail,
   },
   {
     name: "SunshineFi",
-    role: "Frontend + Backend",
+    description: "Web3 Application",
     stacks: [stackContents[0], stackContents[4], stackContents[5]],
+    thumbnail: traveloHIThumbnail,
+  },
+  {
+    name: "TarZan",
+    description: "Game",
+    stacks: [stackContents[8], stackContents[9]],
+    thumbnail: traveloHIThumbnail,
+  },
+  {
+    name: "JAniDB",
+    description: "Web Application",
+    stacks: [stackContents[0], stackContents[10], stackContents[11]],
     thumbnail: traveloHIThumbnail,
   },
 ];

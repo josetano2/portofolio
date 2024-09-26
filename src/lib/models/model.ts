@@ -3,7 +3,7 @@ import type { IconType } from "react-icons/lib";
 
 export interface IProject {
   name: string;
-  role: string;
+  description: string;
   stacks: IStack[];
   thumbnail: ImageMetadata;
   imageDetails?: ImageMetadata;
