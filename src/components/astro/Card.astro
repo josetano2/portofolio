@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import type { IProject, IStack } from "../lib/models/model";
+import type { IProject, IStack } from "../../lib/models/model";
 import { animatePageOut } from "@/lib/animation/animation";
 
 interface Props {
@@ -11,7 +11,7 @@ interface Props {
   thumbnail: ImageMetadata;
 }
 
-const { id, name = "TraveloHI", description, stacks, thumbnail } = Astro.props;
+const { id, name, description, stacks, thumbnail } = Astro.props;
 ---
 
 <div

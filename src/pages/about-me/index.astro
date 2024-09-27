@@ -1,10 +1,25 @@
 ---
+import ImageCard from "@/components/astro/ImageCard.astro";
 import Layout from "../../layouts/Layout.astro";
+import placeholder from "@/lib/images/AboutMe/placeholder.png";
 ---
 
 <Layout>
-  <div>
-    Ini about me
+  <div class="w-full h-full p-12">
+    <div class="flex gap-12 justify-center items-center">
+      <ImageCard thumbnail={placeholder} />
+      <div class="w-1/2 text-justify font-mono flex flex-col gap-6">
+        <p class="text-3xl font-bold">{`> About Me`}</p>
+        <p class="text-2xl">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+    </div>
   </div>
 </Layout>
-
