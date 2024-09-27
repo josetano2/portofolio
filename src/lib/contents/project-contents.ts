@@ -155,3 +155,6 @@ export const projectContents: IProject[] = [
     thumbnail: traveloHIThumbnail,
   },
 ];
+
+export const lorem =
+  "Hello, my name is Jose Jonathan Tano, an undergratuate computer science student. ";
