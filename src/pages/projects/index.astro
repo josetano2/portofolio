@@ -2,28 +2,36 @@
 import Card from "@/components/astro/Card.astro";
 import Layout from "../../layouts/Layout.astro";
 import { projectContents } from "@/lib/contents/project-contents";
+import Footer from "@/components/astro/Footer.astro";
 ---
 
 <Layout>
-  <div class="flex flex-col h-full sm:p-4 lg:p-8 gap-6">
-    <p class="text-2xl lg:text-3xl 2xl:text-4xl font-mono font-bold reveal">{`> My Projects`}</p>
-    <div class="grid pb-12 gap-6 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3">
-      {
-        projectContents.map((project, idx) => {
-          return (
-            <div class="cards">
-              <Card
-                id={idx.toString()}
-                name={project.name}
-                stacks={project.stacks}
-                description={project.description}
-                thumbnail={project.thumbnail}
-              />
-            </div>
-          );
-        })
-      }
+  <div class="flex flex-col items-center">
+    <div class="flex flex-col h-full sm:p-4 lg:p-8 gap-6">
+      <p class="text-2xl lg:text-3xl 2xl:text-4xl font-mono font-bold reveal">
+        {`> My Projects`}
+      </p>
+      <div
+        class="grid pb-12 gap-6 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3"
+      >
+        {
+          projectContents.map((project, idx) => {
+            return (
+              <div class="cards">
+                <Card
+                  id={idx.toString()}
+                  name={project.name}
+                  stacks={project.stacks}
+                  description={project.description}
+                  thumbnail={project.thumbnail}
+                />
+              </div>
+            );
+          })
+        }
+      </div>
     </div>
+    <Footer />
   </div>
 </Layout>
 

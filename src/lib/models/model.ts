@@ -13,3 +13,8 @@ export interface IStack {
   name: string;
   icon: IconType;
 }
+
+export interface IExperience{
+  name: string;
+  year: string;
+}

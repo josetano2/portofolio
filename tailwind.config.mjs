@@ -5,10 +5,10 @@ export default {
     extend: {
       lexend: ["Lexend", "open-sans"],
       backgroundSize: {
-        "custom-size": "60px 60px", 
+        "custom-size": "70px 70px", 
       },
       backgroundImage: {
-        "custom-grid": `radial-gradient(circle, #000000 1px, rgba(0, 0, 0, 0) 1px)`,
+        "custom-grid": `radial-gradient(circle, rgba(0, 0, 0, 0.25) 1px, rgba(0, 0, 0, 0) 1px)`,
       },
     },
   },

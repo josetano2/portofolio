@@ -1,15 +1,15 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import { FaGithub, FaLinkedin, FaInstagram, FaDiscord } from "react-icons/fa6";
 import Button from "../components/react/Button";
 import TypewriterText from "@/components/react/TypewriterText";
+import GetInTouch from "@/components/astro/GetInTouch.astro";
 ---
 
 <Layout>
   <div
     class="flex flex-col justify-center h-full sm:p-6 lg:p-12 overflow-hidden"
   >
-    <div class="flex flex-col justify-center items-center gap-8 split">
+    <div class="flex flex-col h-full justify-center items-center gap-8 split">
       <div class="flex">
         <p class="text-2xl lg:text-3xl 2xl:text-4xl font-mono">{`>\xa0`}</p>
         <TypewriterText
@@ -20,35 +20,7 @@ import TypewriterText from "@/components/react/TypewriterText";
           {`, I'm Jose`}
         </p>
       </div>
-
-      <div class="flex gap-12">
-        <a href="https://github.com/josetano2">
-          <FaGithub
-            data-cursor-text="Github"
-            className="cursor-pointer"
-            size={30}
-          />
-        </a>
-        <a href="https://www.linkedin.com/in/jose-jonathan-tano">
-          <FaLinkedin
-            data-cursor-text="LinkedIn"
-            className="cursor-pointer"
-            size={30}
-          />
-        </a>
-        <a href="https://www.instagram.com/josetano2/">
-          <FaInstagram
-            data-cursor-text="Instagram"
-            className="cursor-pointer"
-            size={30}
-          />
-        </a>
-        <FaDiscord
-          data-cursor-text="Discord"
-          className="cursor-pointer"
-          size={30}
-        />
-      </div>
+      <GetInTouch />
       <div class="flex justify-center items-center gap-12 text-lg">
         <Button client:idle href="/" text="View CV" id="button-cv" />
         <Button

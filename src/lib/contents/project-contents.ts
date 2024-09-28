@@ -1,4 +1,4 @@
-import type { IProject, IStack } from "@/lib/models/model";
+import type { IExperience, IProject, IStack } from "@/lib/models/model";
 import { DiPostgresql, DiReact, DiRedis } from "react-icons/di";
 import { FaGolang, FaUnity, FaCss3 } from "react-icons/fa6";
 import { FaReact } from "react-icons/fa";
@@ -11,10 +11,12 @@ import { SiFlask, SiCsharp, SiElectron } from "react-icons/si";
 import { TbBrandKotlin, TbBrandGolang, TbBrandCSharp } from "react-icons/tb";
 import { GrGraphQl } from "react-icons/gr";
 import { IoLogoElectron } from "react-icons/io5";
+import { RiFlutterFill } from "react-icons/ri";
 import traveloHIThumbnail from "@/lib/images/TraveloHI/main.jpg";
 import recallThumbnail from "@/lib/images/Recall/main.png";
 import easyWorkThumbnail from "@/lib/images/EasyWork/main.png";
 import linkasaThumbnail from "@/lib/images/LinKasa/main.png";
+import janiDBThumbnail from "@/lib/images/JAniDB/main.png";
 
 export const stackContents: IStack[] = [
   // 0
@@ -92,6 +94,11 @@ export const stackContents: IStack[] = [
     name: "Electron",
     icon: IoLogoElectron,
   },
+  // 15
+  {
+    name: "Flutter",
+    icon: RiFlutterFill,
+  },
 ];
 
 export const projectContents: IProject[] = [
@@ -133,7 +140,7 @@ export const projectContents: IProject[] = [
   {
     name: "LinKasa",
     description: "Desktop Application",
-    stacks: [stackContents[0], stackContents[4], stackContents[14]],
+    stacks: [stackContents[0], stackContents[7], stackContents[14]],
     thumbnail: linkasaThumbnail,
   },
   {
@@ -152,9 +159,46 @@ export const projectContents: IProject[] = [
     name: "JAniDB",
     description: "Web Application",
     stacks: [stackContents[0], stackContents[10], stackContents[11]],
+    thumbnail: janiDBThumbnail,
+  },
+  {
+    name: "AniList - Mobile",
+    description: "Mobile Application",
+    stacks: [stackContents[15]],
     thumbnail: traveloHIThumbnail,
   },
 ];
 
-export const lorem =
-  "Hello, my name is Jose Jonathan Tano, an undergratuate computer science student. ";
+export const myself = `Hello, my name is Jose Jonathan Tano, an undergratuate 
+    computer science student with a passion for technologies and learning. 
+    My focus right now to master my skills in web development, aiming
+    to create user-friendly, efficient, and elegant softwares.`;
+
+export const achievements: IExperience[] = [
+  {
+    name: "2nd Winner of Hackathon 3.0",
+    year: "2024",
+  },
+  {
+    name: "2nd Winner of Chain Fusion Hackathon",
+    year: "2024",
+  },
+  {
+    name: "Best Teaching Index",
+    year: "2024",
+  },
+  {
+    name: "Garudahacks Hackathon",
+    year: "2024",
+  },
+];
+export const experiences: IExperience[] = [
+  {
+    name: "Part-Time Laboratory Assistant@Binus",
+    year: "2023",
+  },
+  {
+    name: "Full-Time Laboratory Assistant@Binus",
+    year: "2023 - 2025",
+  },
+];

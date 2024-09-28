@@ -1,22 +1,94 @@
 ---
 import ImageCard from "@/components/astro/ImageCard.astro";
 import Layout from "../../layouts/Layout.astro";
-import placeholder from "@/lib/images/AboutMe/placeholder.png";
-import { lorem } from "@/lib/contents/project-contents";
+import me from "@/lib/images/AboutMe/me.jpg";
+import {
+  myself,
+  experiences,
+  achievements,
+} from "@/lib/contents/project-contents";
+import { Image } from "astro:assets";
+import Footer from "@/components/astro/Footer.astro";
 ---
 
 <Layout>
-  <div class="flex flex-col h-full mt-4 sm:p-4 lg:p-8 gap-12">
-    <div class="flex flex-col md:flex-row gap-12 justify-center items-center">
-      <ImageCard thumbnail={placeholder} />
-      <div class="w-full sm:w-1/2 text-justify font-mono flex flex-col gap-6">
-        <p class="text-2xl lg:text-3xl 2xl:text-4xl font-bold">
-          {`> About Me`}
-        </p>
-        <p class="text-lg lg:text-xl lg:leading-7">
-          {lorem}
-        </p>
+  <div class="flex flex-col w-full h-full items-center about">
+    <div class="flex flex-col h-fit mt-4 sm:p-4 lg:p-8 gap-12 font-mono">
+      <div class="flex flex-col md:flex-row gap-12 justify-center items-center">
+        <!-- <ImageCard thumbnail={me} /> -->
+        <div
+          class="w-[21rem] h-96 overflow-hidden relative group"
+          data-cursor-text="Hello"
+        >
+          <div
+            class="w-screen h-full bg-black absolute z-20 opacity-0 xl:opacity-10 2xl:opacity-10 group-hover:opacity-0 transition-opacity ease-in"
+          >
+          </div>
+          <Image
+            class="object-cover w-full h-full transition-transform ease-in duration-[0.15s] scale-[1] group-hover:scale-[1.05]"
+            src={me}
+            alt="tes"
+          />
+        </div>
+        <div class="w-full sm:w-1/2 text-justify flex flex-col gap-3 lg:gap-6">
+          <p class="text-2xl lg:text-3xl 2xl:text-4xl font-bold">
+            {`> About Me`}
+          </p>
+          <p class="text-lg lg:text-2xl">
+            {myself}
+          </p>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row w-full justify-evenly gap-6">
+        <div class="flex flex-col gap-3 w-full md:w-1/2">
+          <p class="text-2xl lg:text-3xl 2xl:text-4xl font-bold">
+            {`> Achievement`}
+          </p>
+
+          {
+            achievements.map((e) => (
+              <div class="flex justify-between">
+                <p class="text-lg lg:text-xl w-[80%] md:w-full">{e.name}</p>
+                <p class="text-lg lg:text-xl">{e.year}</p>
+              </div>
+            ))
+          }
+        </div>
+        <div class="bg-black h-full w-[0.15rem] rounded-3xl"></div>
+        <div class="flex flex-col gap-3 w-full md:w-1/2">
+          <p class="text-2xl lg:text-3xl 2xl:text-4xl font-bold">
+            {`> Experience`}
+          </p>
+          {
+            experiences.map((e) => (
+              <div class="flex justify-between">
+                <p class="text-lg lg:text-xl w-[65%]">{e.name}</p>
+                <p class="text-lg lg:text-xl text-right">{e.year}</p>
+              </div>
+            ))
+          }
+        </div>
       </div>
     </div>
+    <Footer />
   </div>
 </Layout>
+
+<script>
+  import gsap from "gsap";
+
+  gsap.fromTo(
+    ".about",
+    {
+      y: 20,
+      ease: "power1.in",
+      opacity: 0,
+    },
+    {
+      y: 0,
+      duration: 0.5,
+      opacity: 1,
+      ease: "power1.in",
+    }
+  );
+</script>
