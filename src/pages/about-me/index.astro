@@ -12,7 +12,9 @@ import Footer from "@/components/astro/Footer.astro";
 ---
 
 <Layout>
-  <div class="flex flex-col w-full h-full items-center about">
+  <div
+    class="flex flex-col w-full h-full items-center translate-y-[60px] about opacity-0"
+  >
     <div class="flex flex-col h-fit mt-4 sm:p-4 lg:p-8 gap-12 font-mono">
       <div class="flex flex-col md:flex-row gap-12 justify-center items-center">
         <!-- <ImageCard thumbnail={me} /> -->
@@ -34,12 +36,12 @@ import Footer from "@/components/astro/Footer.astro";
           <p class="text-2xl lg:text-3xl 2xl:text-4xl font-bold">
             {`> About Me`}
           </p>
-          <p class="text-lg lg:text-2xl">
+          <p class="text-lg lg:text-xl">
             {myself}
           </p>
         </div>
       </div>
-      <div class="flex flex-col md:flex-row w-full justify-evenly gap-6">
+      <div class="flex flex-col md:flex-row w-full h-full justify-evenly gap-6">
         <div class="flex flex-col gap-3 w-full md:w-1/2">
           <p class="text-2xl lg:text-3xl 2xl:text-4xl font-bold">
             {`> Achievement`}
@@ -54,7 +56,7 @@ import Footer from "@/components/astro/Footer.astro";
             ))
           }
         </div>
-        <div class="bg-black h-full w-[0.15rem] rounded-3xl"></div>
+        <div class="bg-black w-[0.15rem] rounded-3xl"></div>
         <div class="flex flex-col gap-3 w-full md:w-1/2">
           <p class="text-2xl lg:text-3xl 2xl:text-4xl font-bold">
             {`> Experience`}
@@ -77,18 +79,10 @@ import Footer from "@/components/astro/Footer.astro";
 <script>
   import gsap from "gsap";
 
-  gsap.fromTo(
-    ".about",
-    {
-      y: 20,
-      ease: "power1.in",
-      opacity: 0,
-    },
-    {
-      y: 0,
-      duration: 0.5,
-      opacity: 1,
-      ease: "power1.in",
-    }
-  );
+  gsap.to(".about", {
+    y: 0,
+    duration: 1,
+    opacity: 1,
+    ease: "expo.inOut",
+  });
 </script>

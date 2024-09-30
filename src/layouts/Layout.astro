@@ -9,13 +9,13 @@ import "../styles/index.scss";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="/public/logo.png">
   </head>
-  <body class="w-screen h-screen flex bg-custom-grid bg-custom-size bg-yellow-50">
+  <body class="w-screen min-h-screen flex bg-custom-grid bg-custom-size bg-sky-50">
     <div
-      class="fixed w-[200vw] h-[140vh] bg-yellow-100 -left-[50vw] top-0 z-[999]"
+      class="fixed w-[200vw] h-[140vh] bg-sky-100 -left-[50vw] top-0 z-[999]"
       id="bg-transition"
     >
     </div>
-    <div class="w-full h-full flex flex-col p-8">
+    <div class="w-full min-h-screen flex flex-col p-8">
       <div class="w-full h-fit flex justify-center">
         <Navbar client:only />
       </div>

@@ -28,25 +28,26 @@ export default function Navbar() {
             }}
             onMouseEnter={() => {
               hoverEffect("." + charClass, "." + charClassBottom);
-            
             }}
             onMouseLeave={() => {
               exitHoverEffect("." + charClass, "." + charClassBottom);
-            
             }}
+            key={idx}
           >
             <div className="flex">
-              {splitText(r.name).map((char) => {
+              {splitText(r.name).map((char, i) => {
                 return (
-                  <p className={charClass}>{renderSplittedSentence(char)}</p>
+                  <p className={charClass} key={i}>
+                    {renderSplittedSentence(char)}
+                  </p>
                 );
               })}
             </div>
 
             <div className="flex">
-              {splitText(r.name).map((char) => {
+              {splitText(r.name).map((char, i) => {
                 return (
-                  <p className={charClassBottom}>
+                  <p className={charClassBottom} key={i}>
                     {renderSplittedSentence(char)}
                   </p>
                 );

@@ -7,7 +7,7 @@ import GetInTouch from "@/components/astro/GetInTouch.astro";
 
 <Layout>
   <div
-    class="flex flex-col justify-center h-full sm:p-6 lg:p-12 overflow-hidden"
+    class="flex flex-col justify-center w-full h-full sm:p-6 lg:p-12 overflow-hidden mt-auto"
   >
     <div class="flex flex-col h-full justify-center items-center gap-8 split">
       <div class="flex">
@@ -43,30 +43,11 @@ import GetInTouch from "@/components/astro/GetInTouch.astro";
       opacity: 0;
     }
 
-    .char1,
-    .char2 {
-      /* opacity: 0; */
-      transform: translateY(5.5rem);
-      transition: transform 0.5s;
-    }
   </style>
+
   <script>
-    import { animatePageOut } from "@/lib/animation/animation";
     import gsap from "gsap";
-
-    gsap.to(".char1", {
-      y: 0,
-      stagger: 0.05,
-      duration: 0.1,
-      ease: "expo.inOut",
-    });
-
-    gsap.to(".char2", {
-      y: 0,
-      stagger: 0.05,
-      duration: 0.1,
-      ease: "expo.inOut",
-    });
+    
     gsap.to(".split", {
       y: 0,
       duration: 1,
