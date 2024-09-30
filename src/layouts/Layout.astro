@@ -7,9 +7,12 @@ import "../styles/index.scss";
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="/public/logo.png">
+    <link rel="icon" type="image/x-icon" href="/public/logo.png" />
+    <title>Portofolio</title>
   </head>
-  <body class="w-screen min-h-screen flex bg-custom-grid bg-custom-size bg-sky-50">
+  <body
+    class="w-screen min-h-screen flex bg-custom-grid bg-custom-size bg-sky-50 overflow-x-hidden"
+  >
     <div
       class="fixed w-[200vw] h-[140vh] bg-sky-100 -left-[50vw] top-0 z-[999]"
       id="bg-transition"
@@ -35,17 +38,24 @@ import "../styles/index.scss";
     /* cursor: none; */
   }
 
-  ::-webkit-scrollbar {
-    display: none;
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
   }
 
-  body {
-  background-size: 40px 40px;
-  background-image:
-    linear-gradient(to right, grey 1px, transparent 1px),
-    linear-gradient(to bottom, grey 1px, transparent 1px);
-}
+  ::-webkit-scrollbar-thumb {
+    background-color: #00a8db;
+    border-radius: 10px;
+  }
 
+  ::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  body {
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, grey 1px, transparent 1px),
+      linear-gradient(to bottom, grey 1px, transparent 1px);
+  }
 </style>
 
 <script>

@@ -25,9 +25,10 @@ const { id, name, description, stacks, thumbnail } = Astro.props;
     >
     </div>
     <Image
-      class="object-cover	 w-full h-full transition-transform ease-in duration-[0.15s] scale-[1] group-hover:scale-[1.05]"
+      class="object-cover	object-top w-full h-full transition-transform ease-in duration-[0.15s] scale-[1] group-hover:scale-[1.05]"
       src={thumbnail}
       alt="tes"
+      densities={[1.5, 2]}
     />
   </div>
   <div class="pt-6">

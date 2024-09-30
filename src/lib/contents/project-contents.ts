@@ -12,11 +12,14 @@ import { TbBrandKotlin, TbBrandGolang, TbBrandCSharp } from "react-icons/tb";
 import { GrGraphQl } from "react-icons/gr";
 import { IoLogoElectron } from "react-icons/io5";
 import { RiFlutterFill } from "react-icons/ri";
-import traveloHIThumbnail from "@/lib/images/TraveloHI/main.jpg";
+import traveloHIThumbnail from "@/lib/images/TraveloHI/main.png";
+import sunshineThumbnail from "@/lib/images/Sunshine/main.jpg";
 import recallThumbnail from "@/lib/images/Recall/main.png";
 import easyWorkThumbnail from "@/lib/images/EasyWork/main.png";
 import linkasaThumbnail from "@/lib/images/LinKasa/main.png";
 import janiDBThumbnail from "@/lib/images/JAniDB/main.png";
+import theAdventureOfTPAThumbnail from "@/lib/images/The Adventure of TPA/main.png";
+import tarzanThumbnail from "@/lib/images/TarZaN/main.png";
 
 export const stackContents: IStack[] = [
   // 0
@@ -123,7 +126,7 @@ export const projectContents: IProject[] = [
     name: "Sunshine",
     description: "Web3 Application",
     stacks: [stackContents[0], stackContents[4]],
-    thumbnail: traveloHIThumbnail,
+    thumbnail: sunshineThumbnail,
   },
   {
     name: "Recall",
@@ -135,7 +138,7 @@ export const projectContents: IProject[] = [
     name: "The Adventure of TPA",
     description: "Game",
     stacks: [stackContents[8], stackContents[9]],
-    thumbnail: traveloHIThumbnail,
+    thumbnail: theAdventureOfTPAThumbnail,
   },
   {
     name: "LinKasa",
@@ -153,7 +156,7 @@ export const projectContents: IProject[] = [
     name: "TarZaN",
     description: "Game",
     stacks: [stackContents[8], stackContents[9]],
-    thumbnail: traveloHIThumbnail,
+    thumbnail: tarzanThumbnail,
   },
   {
     name: "JAniDB",
