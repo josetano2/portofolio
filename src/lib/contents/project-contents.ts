@@ -20,6 +20,8 @@ import linkasaThumbnail from "@/lib/images/LinKasa/main.png";
 import janiDBThumbnail from "@/lib/images/JAniDB/main.png";
 import theAdventureOfTPAThumbnail from "@/lib/images/The Adventure of TPA/main.png";
 import tarzanThumbnail from "@/lib/images/TarZaN/main.png";
+import sunshineFiThumbnail from "@/lib/images/SunshineFi/main.png";
+import aniMobThumbnail from "@/lib/images/AniMob/main.jpg";
 
 export const stackContents: IStack[] = [
   // 0
@@ -147,16 +149,16 @@ export const projectContents: IProject[] = [
     thumbnail: linkasaThumbnail,
   },
   {
-    name: "SunshineFi",
-    description: "Web3 Application",
-    stacks: [stackContents[0], stackContents[4], stackContents[5]],
-    thumbnail: traveloHIThumbnail,
-  },
-  {
     name: "TarZaN",
     description: "Game",
     stacks: [stackContents[8], stackContents[9]],
     thumbnail: tarzanThumbnail,
+  },
+  {
+    name: "SunshineFi",
+    description: "Web3 Application",
+    stacks: [stackContents[0], stackContents[4], stackContents[5]],
+    thumbnail: sunshineFiThumbnail,
   },
   {
     name: "JAniDB",
@@ -165,10 +167,10 @@ export const projectContents: IProject[] = [
     thumbnail: janiDBThumbnail,
   },
   {
-    name: "AniList - Mobile",
+    name: "AniMob",
     description: "Mobile Application",
     stacks: [stackContents[15]],
-    thumbnail: traveloHIThumbnail,
+    thumbnail: aniMobThumbnail,
   },
 ];
 
@@ -179,11 +181,11 @@ export const myself = `Hello, my name is Jose Jonathan Tano, an undergratuate
 
 export const achievements: IExperience[] = [
   {
-    name: "2nd Winner of Hackathon 3.0",
+    name: "2nd Winner of CodeFest Hackathon 3.0",
     year: "2024",
   },
   {
-    name: "2nd Winner of Chain Fusion Hackathon",
+    name: "2nd Winner of CodeFest Chain Fusion Hackathon",
     year: "2024",
   },
   {
