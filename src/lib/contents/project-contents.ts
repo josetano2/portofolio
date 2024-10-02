@@ -106,8 +106,8 @@ export const stackContents: IStack[] = [
   },
 ];
 
-export const projectContents: IProject[] = [
-  {
+export const projectContents: { [key: string]: IProject } = {
+  travelohi: {
     name: "TraveloHI",
     description: "Web Application",
     stacks: [
@@ -118,61 +118,61 @@ export const projectContents: IProject[] = [
     ],
     thumbnail: traveloHIThumbnail,
   },
-  {
+  easywork: {
     name: "EasyWork",
     description: "Web Application",
     stacks: [stackContents[3], stackContents[4]],
     thumbnail: easyWorkThumbnail,
   },
-  {
+  sunshine: {
     name: "Sunshine",
     description: "Web3 Application",
     stacks: [stackContents[0], stackContents[4]],
     thumbnail: sunshineThumbnail,
   },
-  {
+  recall: {
     name: "Recall",
     description: "Mobile Application",
     stacks: [stackContents[6], stackContents[7]],
     thumbnail: recallThumbnail,
   },
-  {
+  "the-adventure-of-tpa": {
     name: "The Adventure of TPA",
     description: "Game",
     stacks: [stackContents[8], stackContents[9]],
     thumbnail: theAdventureOfTPAThumbnail,
   },
-  {
+  linkasa: {
     name: "LinKasa",
     description: "Desktop Application",
     stacks: [stackContents[0], stackContents[7], stackContents[14]],
     thumbnail: linkasaThumbnail,
   },
-  {
+  tarzan: {
     name: "TarZaN",
     description: "Game",
     stacks: [stackContents[8], stackContents[9]],
     thumbnail: tarzanThumbnail,
   },
-  {
+  sunshinefi: {
     name: "SunshineFi",
     description: "Web3 Application",
     stacks: [stackContents[0], stackContents[4], stackContents[5]],
     thumbnail: sunshineFiThumbnail,
   },
-  {
+  janidb: {
     name: "JAniDB",
     description: "Web Application",
     stacks: [stackContents[0], stackContents[10], stackContents[11]],
     thumbnail: janiDBThumbnail,
   },
-  {
+  animob: {
     name: "AniMob",
     description: "Mobile Application",
     stacks: [stackContents[15]],
     thumbnail: aniMobThumbnail,
   },
-];
+};
 
 export const myself = `Hello, my name is Jose Jonathan Tano, an undergratuate 
     computer science student with a passion for technologies and learning. 

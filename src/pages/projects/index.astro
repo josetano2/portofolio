@@ -15,11 +15,11 @@ import Footer from "@/components/astro/Footer.astro";
         class="grid pb-12 gap-6 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3"
       >
         {
-          projectContents.map((project, idx) => {
+          Object.entries(projectContents).map(([projectName, project], idx) => {
             return (
               <div class="cards">
                 <Card
-                  id={idx.toString()}
+                  key={projectName}
                   name={project.name}
                   stacks={project.stacks}
                   description={project.description}

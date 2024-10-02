@@ -4,20 +4,20 @@ import type { IProject, IStack } from "../../lib/models/model";
 import { animatePageOut } from "@/lib/animation/animation";
 
 interface Props {
-  id: string;
+  key: string;
   name: string;
   description: string;
   stacks: IStack[];
   thumbnail: ImageMetadata;
 }
 
-const { id, name, description, stacks, thumbnail } = Astro.props;
+const { key, name, description, stacks, thumbnail } = Astro.props;
 ---
 
 <div
   class="w-full h-fit gap-2 font-mono cursor-pointer border-2 border-black p-3 bg-white group card-parent"
   data-cursor-text={name}
-  data-name={name}
+  data-key={key}
 >
   <div class="w-full h-72 overflow-hidden relative">
     <div
@@ -25,7 +25,7 @@ const { id, name, description, stacks, thumbnail } = Astro.props;
     >
     </div>
     <Image
-      class="object-cover	object-top w-full h-full transition-transform ease-in duration-[0.15s] scale-[1] group-hover:scale-[1.05]"
+      class="object-cover object-top w-full h-full transition-transform ease-in duration-[0.15s] scale-[1] group-hover:scale-[1.05]"
       src={thumbnail}
       alt="tes"
       densities={[1.5, 2]}
@@ -54,8 +54,8 @@ const { id, name, description, stacks, thumbnail } = Astro.props;
       ".card-parent"
     ) as NodeListOf<HTMLElement>;
     cards.forEach((card) => {
-      const name = card.dataset.name;
-      card.addEventListener("click", () => animatePageOut("/projects/" + name));
+      const key = card.dataset.key;
+      card.addEventListener("click", () => animatePageOut("/projects/" + key));
     });
   });
 </script>

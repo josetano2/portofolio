@@ -1,18 +1,19 @@
 ---
+import { projectContents } from "@/lib/contents/project-contents";
 import Layout from "../../layouts/Layout.astro";
 
 export function getStaticPaths() {
   return [
-    {params: {project: 'TraveloHI'}},
-    {params: {project: 'EasyWork'}},
-    {params: {project: 'Sunshine'}},
-    {params: {project: 'Recall'}},
-    {params: {project: 'LinKasa'}},
-    {params: {project: 'SunshineFi'}},
-    {params: {project: 'TarZaN'}},
-    {params: {project: 'The Adventure of TPA'}},
-    {params: {project: 'JAniDB'}},
-    {params: {project: 'Chronos'}},
+    { params: { project: "travelohi" } },
+    { params: { project: "easywork" } },
+    { params: { project: "sunshine" } },
+    { params: { project: "recall" } },
+    { params: { project: "linkasa" } },
+    { params: { project: "sunshinefi" } },
+    { params: { project: "tarzan" } },
+    { params: { project: "the-adventure-of-tpa" } },
+    { params: { project: "janidb" } },
+    { params: { project: "chronos" } },
   ];
 }
 
@@ -20,5 +21,5 @@ const { project } = Astro.params;
 ---
 
 <Layout>
-    <div>{project}</div>
+  <div>{projectContents[project].name}</div>
 </Layout>
