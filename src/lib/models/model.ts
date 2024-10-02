@@ -6,7 +6,8 @@ export interface IProject {
   description: string;
   stacks: IStack[];
   thumbnail: ImageMetadata;
-  imageDetails?: ImageMetadata;
+  imageDetails?: ImageMetadata[];
+  githubRepo: string;
 }
 
 export interface IStack {

@@ -5,8 +5,8 @@ import {
   exitHoverEffect,
   hoverEffect,
 } from "@/lib/animation/animation";
-import { renderSplittedSentence, splitText } from "@/lib/util/split";
-import { cursor } from "@/lib/util/cursor";
+import { renderSplittedSentence, splitText } from "@/lib/utils/split";
+import { cursor } from "@/lib/utils/cursor";
 
 export default function Navbar() {
   return (

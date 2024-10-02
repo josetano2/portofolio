@@ -117,60 +117,71 @@ export const projectContents: { [key: string]: IProject } = {
       stackContents[5],
     ],
     thumbnail: traveloHIThumbnail,
+    githubRepo: "https://github.com/josetano2/TraveloHI",
+    imageDetails: [traveloHIThumbnail, traveloHIThumbnail, traveloHIThumbnail, traveloHIThumbnail, traveloHIThumbnail]
   },
   easywork: {
     name: "EasyWork",
     description: "Web Application",
     stacks: [stackContents[3], stackContents[4]],
     thumbnail: easyWorkThumbnail,
+    githubRepo: "https://github.com/josetano2/easy-work",
   },
   sunshine: {
     name: "Sunshine",
     description: "Web3 Application",
     stacks: [stackContents[0], stackContents[4]],
     thumbnail: sunshineThumbnail,
+    githubRepo: "https://github.com/josetano2/sunshine",
   },
   recall: {
     name: "Recall",
     description: "Mobile Application",
     stacks: [stackContents[6], stackContents[7]],
     thumbnail: recallThumbnail,
+    githubRepo: "https://github.com/josetano2/recall"
   },
   "the-adventure-of-tpa": {
     name: "The Adventure of TPA",
     description: "Game",
     stacks: [stackContents[8], stackContents[9]],
     thumbnail: theAdventureOfTPAThumbnail,
+    githubRepo: "https://github.com/josetano2/The-Adventure-of-TPA",
   },
   linkasa: {
     name: "LinKasa",
     description: "Desktop Application",
     stacks: [stackContents[0], stackContents[7], stackContents[14]],
     thumbnail: linkasaThumbnail,
+    githubRepo: "https://github.com/josetano2/LinKasa",
   },
   tarzan: {
     name: "TarZaN",
     description: "Game",
     stacks: [stackContents[8], stackContents[9]],
     thumbnail: tarzanThumbnail,
+    githubRepo: "https://github.com/josetano2/tarzan",
   },
   sunshinefi: {
     name: "SunshineFi",
     description: "Web3 Application",
     stacks: [stackContents[0], stackContents[4], stackContents[5]],
     thumbnail: sunshineFiThumbnail,
+    githubRepo: "https://github.com/josetano2/sunshine-socialfi",
   },
   janidb: {
     name: "JAniDB",
     description: "Web Application",
     stacks: [stackContents[0], stackContents[10], stackContents[11]],
     thumbnail: janiDBThumbnail,
+    githubRepo: "https://github.com/josetano2/JAniDB",
   },
   animob: {
     name: "AniMob",
     description: "Mobile Application",
     stacks: [stackContents[15]],
     thumbnail: aniMobThumbnail,
+    githubRepo: "https://github.com/josetano2/AniMob",
   },
 };
 
