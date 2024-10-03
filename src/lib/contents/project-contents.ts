@@ -138,92 +138,155 @@ export const projectContents: { [key: string]: IProject } = {
   easywork: {
     name: "EasyWork",
     description: "Web Application",
+    explanation: `
+      TraveloHI is a fullstack web application that offer users to book flights and reserve hotel rooms online, similar to many other e-commerce platforms. 
+      TraveloHI is a project to replicate the famous Traveloka.com. User could use promo, view their transaction history, view their current active ticket, 
+      view bookings, search & filter multiple hotels and flights, and much more! A cool feature on this web is user could upload a specific scenery photo,
+      and an AI could predict the image that is given by the user.#
+
+      The frontend of this website is created by utilizing React and SCSS. Meanwhile the backend part it created by using Go and Flask. The web application
+      utilizes REST API powered by PostgreSQL for database management. Lastly, it utilizes JWT authentication for user access and storing cookies.
+    `,
     stacks: [stackContents[3], stackContents[4]],
     thumbnail: easyWorkThumbnail,
     githubRepo: "https://github.com/josetano2/easy-work",
-    imageDetails:[
-      easyWorkThumbnail
-    ],
+    imageDetails: [easyWorkThumbnail],
   },
   sunshine: {
     name: "Sunshine",
     description: "Web3 Application",
+    explanation: `
+      TraveloHI is a fullstack web application that offer users to book flights and reserve hotel rooms online, similar to many other e-commerce platforms. 
+      TraveloHI is a project to replicate the famous Traveloka.com. User could use promo, view their transaction history, view their current active ticket, 
+      view bookings, search & filter multiple hotels and flights, and much more! A cool feature on this web is user could upload a specific scenery photo,
+      and an AI could predict the image that is given by the user.#
+
+      The frontend of this website is created by utilizing React and SCSS. Meanwhile the backend part it created by using Go and Flask. The web application
+      utilizes REST API powered by PostgreSQL for database management. Lastly, it utilizes JWT authentication for user access and storing cookies.
+    `,
     stacks: [stackContents[0], stackContents[4]],
     thumbnail: sunshineThumbnail,
     githubRepo: "https://github.com/josetano2/sunshine",
-    imageDetails:[
-      easyWorkThumbnail
-    ],
+    imageDetails: [easyWorkThumbnail],
   },
   recall: {
     name: "Recall",
     description: "Mobile Application",
+    explanation: `
+      TraveloHI is a fullstack web application that offer users to book flights and reserve hotel rooms online, similar to many other e-commerce platforms. 
+      TraveloHI is a project to replicate the famous Traveloka.com. User could use promo, view their transaction history, view their current active ticket, 
+      view bookings, search & filter multiple hotels and flights, and much more! A cool feature on this web is user could upload a specific scenery photo,
+      and an AI could predict the image that is given by the user.#
+
+      The frontend of this website is created by utilizing React and SCSS. Meanwhile the backend part it created by using Go and Flask. The web application
+      utilizes REST API powered by PostgreSQL for database management. Lastly, it utilizes JWT authentication for user access and storing cookies.
+    `,
     stacks: [stackContents[6], stackContents[7]],
     thumbnail: recallThumbnail,
     githubRepo: "https://github.com/josetano2/recall",
-    imageDetails:[
-      easyWorkThumbnail
-    ],
+    imageDetails: [easyWorkThumbnail],
   },
   "the-adventure-of-tpa": {
     name: "The Adventure of TPA",
     description: "Game",
+    explanation: `
+      TraveloHI is a fullstack web application that offer users to book flights and reserve hotel rooms online, similar to many other e-commerce platforms. 
+      TraveloHI is a project to replicate the famous Traveloka.com. User could use promo, view their transaction history, view their current active ticket, 
+      view bookings, search & filter multiple hotels and flights, and much more! A cool feature on this web is user could upload a specific scenery photo,
+      and an AI could predict the image that is given by the user.#
+
+      The frontend of this website is created by utilizing React and SCSS. Meanwhile the backend part it created by using Go and Flask. The web application
+      utilizes REST API powered by PostgreSQL for database management. Lastly, it utilizes JWT authentication for user access and storing cookies.
+    `,
     stacks: [stackContents[8], stackContents[9]],
     thumbnail: theAdventureOfTPAThumbnail,
     githubRepo: "https://github.com/josetano2/The-Adventure-of-TPA",
-    imageDetails:[
-      easyWorkThumbnail
-    ],
+    imageDetails: [easyWorkThumbnail],
   },
   linkasa: {
     name: "LinKasa",
     description: "Desktop Application",
+    explanation: `
+      TraveloHI is a fullstack web application that offer users to book flights and reserve hotel rooms online, similar to many other e-commerce platforms. 
+      TraveloHI is a project to replicate the famous Traveloka.com. User could use promo, view their transaction history, view their current active ticket, 
+      view bookings, search & filter multiple hotels and flights, and much more! A cool feature on this web is user could upload a specific scenery photo,
+      and an AI could predict the image that is given by the user.#
+
+      The frontend of this website is created by utilizing React and SCSS. Meanwhile the backend part it created by using Go and Flask. The web application
+      utilizes REST API powered by PostgreSQL for database management. Lastly, it utilizes JWT authentication for user access and storing cookies.
+    `,
     stacks: [stackContents[0], stackContents[7], stackContents[14]],
     thumbnail: linkasaThumbnail,
     githubRepo: "https://github.com/josetano2/LinKasa",
-    imageDetails:[
-      easyWorkThumbnail
-    ],
+    imageDetails: [easyWorkThumbnail],
   },
   tarzan: {
     name: "TarZaN",
     description: "Game",
+    explanation: `
+      TraveloHI is a fullstack web application that offer users to book flights and reserve hotel rooms online, similar to many other e-commerce platforms. 
+      TraveloHI is a project to replicate the famous Traveloka.com. User could use promo, view their transaction history, view their current active ticket, 
+      view bookings, search & filter multiple hotels and flights, and much more! A cool feature on this web is user could upload a specific scenery photo,
+      and an AI could predict the image that is given by the user.#
+
+      The frontend of this website is created by utilizing React and SCSS. Meanwhile the backend part it created by using Go and Flask. The web application
+      utilizes REST API powered by PostgreSQL for database management. Lastly, it utilizes JWT authentication for user access and storing cookies.
+    `,
     stacks: [stackContents[8], stackContents[9]],
     thumbnail: tarzanThumbnail,
     githubRepo: "https://github.com/josetano2/tarzan",
-    imageDetails:[
-      easyWorkThumbnail
-    ],
+    imageDetails: [easyWorkThumbnail],
   },
   sunshinefi: {
     name: "SunshineFi",
+    explanation: `
+      TraveloHI is a fullstack web application that offer users to book flights and reserve hotel rooms online, similar to many other e-commerce platforms. 
+      TraveloHI is a project to replicate the famous Traveloka.com. User could use promo, view their transaction history, view their current active ticket, 
+      view bookings, search & filter multiple hotels and flights, and much more! A cool feature on this web is user could upload a specific scenery photo,
+      and an AI could predict the image that is given by the user.#
+
+      The frontend of this website is created by utilizing React and SCSS. Meanwhile the backend part it created by using Go and Flask. The web application
+      utilizes REST API powered by PostgreSQL for database management. Lastly, it utilizes JWT authentication for user access and storing cookies.
+    `,
     description: "Web3 Application",
     stacks: [stackContents[0], stackContents[4], stackContents[5]],
     thumbnail: sunshineFiThumbnail,
     githubRepo: "https://github.com/josetano2/sunshine-socialfi",
-    imageDetails:[
-      easyWorkThumbnail
-    ],
+    imageDetails: [easyWorkThumbnail],
   },
   janidb: {
     name: "JAniDB",
+    explanation: `
+      TraveloHI is a fullstack web application that offer users to book flights and reserve hotel rooms online, similar to many other e-commerce platforms. 
+      TraveloHI is a project to replicate the famous Traveloka.com. User could use promo, view their transaction history, view their current active ticket, 
+      view bookings, search & filter multiple hotels and flights, and much more! A cool feature on this web is user could upload a specific scenery photo,
+      and an AI could predict the image that is given by the user.#
+
+      The frontend of this website is created by utilizing React and SCSS. Meanwhile the backend part it created by using Go and Flask. The web application
+      utilizes REST API powered by PostgreSQL for database management. Lastly, it utilizes JWT authentication for user access and storing cookies.
+    `,
     description: "Web Application",
     stacks: [stackContents[0], stackContents[10], stackContents[11]],
     thumbnail: janiDBThumbnail,
     githubRepo: "https://github.com/josetano2/JAniDB",
-    imageDetails:[
-      easyWorkThumbnail
-    ],
+    imageDetails: [easyWorkThumbnail],
   },
   animob: {
     name: "AniMob",
+    explanation: `
+      TraveloHI is a fullstack web application that offer users to book flights and reserve hotel rooms online, similar to many other e-commerce platforms. 
+      TraveloHI is a project to replicate the famous Traveloka.com. User could use promo, view their transaction history, view their current active ticket, 
+      view bookings, search & filter multiple hotels and flights, and much more! A cool feature on this web is user could upload a specific scenery photo,
+      and an AI could predict the image that is given by the user.#
+
+      The frontend of this website is created by utilizing React and SCSS. Meanwhile the backend part it created by using Go and Flask. The web application
+      utilizes REST API powered by PostgreSQL for database management. Lastly, it utilizes JWT authentication for user access and storing cookies.
+    `,
     description: "Mobile Application",
     stacks: [stackContents[15]],
     thumbnail: aniMobThumbnail,
     githubRepo: "https://github.com/josetano2/AniMob",
-    imageDetails:[
-      easyWorkThumbnail
-    ],
+    imageDetails: [easyWorkThumbnail],
   },
 };
 

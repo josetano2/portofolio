@@ -4,7 +4,7 @@ import type { IconType } from "react-icons/lib";
 export interface IProject {
   name: string;
   description: string;
-  explanation?: string;
+  explanation: string;
   stacks: IStack[];
   thumbnail: ImageMetadata;
   imageDetails: ImageMetadata[];
