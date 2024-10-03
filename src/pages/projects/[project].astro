@@ -1,6 +1,7 @@
 ---
 import { projectContents } from "@/lib/contents/project-contents";
 import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
 
 export function getStaticPaths() {
   return [
@@ -16,11 +17,10 @@ export function getStaticPaths() {
   ];
 }
 
-import Slider from "@/components/react/Slider";
-
 const { project } = Astro.params;
 
-const images = projectContents[project].imageDetails;
+const thumbnail = projectContents[project].thumbnail;
+
 const projectName = projectContents[project].name;
 const projectExplanation = projectContents[project].explanation;
 ---
@@ -31,7 +31,7 @@ const projectExplanation = projectContents[project].explanation;
       class="flex flex-col h-full sm:p-4 lg:p-8 gap-6 w-full lg:w-3/4 justify-center items-center"
     >
       <div class="flex gap-6 justify-center">
-        <Slider image={images} client:idle />
+        <Image class="border-2 border-black" src={thumbnail} alt={projectName} />
       </div>
       <div class="flex flex-col justify-center">
         <div class="text-justify">
