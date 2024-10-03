@@ -55,7 +55,7 @@ const { key, name, description, stacks, thumbnail } = Astro.props;
     ) as NodeListOf<HTMLElement>;
     cards.forEach((card) => {
       const key = card.dataset.key;
-      // card.addEventListener("click", () => animatePageOut("/projects/" + key));
+      card.addEventListener("click", () => animatePageOut("/projects/" + key));
     });
   });
 </script>

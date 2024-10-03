@@ -116,9 +116,24 @@ export const projectContents: { [key: string]: IProject } = {
       stackContents[2],
       stackContents[5],
     ],
+    explanation: `
+      TraveloHI is a fullstack web application that offer users to book flights and reserve hotel rooms online, similar to many other e-commerce platforms. 
+      TraveloHI is a project to replicate the famous Traveloka.com. User could use promo, view their transaction history, view their current active ticket, 
+      view bookings, search & filter multiple hotels and flights, and much more! A cool feature on this web is user could upload a specific scenery photo,
+      and an AI could predict the image that is given by the user.#
+
+      The frontend of this website is created by utilizing React and SCSS. Meanwhile the backend part it created by using Go and Flask. The web application
+      utilizes REST API powered by PostgreSQL for database management. Lastly, it utilizes JWT authentication for user access and storing cookies.
+    `,
     thumbnail: traveloHIThumbnail,
     githubRepo: "https://github.com/josetano2/TraveloHI",
-    imageDetails: [traveloHIThumbnail, traveloHIThumbnail, traveloHIThumbnail, traveloHIThumbnail, traveloHIThumbnail]
+    imageDetails: [
+      traveloHIThumbnail,
+      traveloHIThumbnail,
+      traveloHIThumbnail,
+      traveloHIThumbnail,
+      traveloHIThumbnail,
+    ],
   },
   easywork: {
     name: "EasyWork",
@@ -139,7 +154,7 @@ export const projectContents: { [key: string]: IProject } = {
     description: "Mobile Application",
     stacks: [stackContents[6], stackContents[7]],
     thumbnail: recallThumbnail,
-    githubRepo: "https://github.com/josetano2/recall"
+    githubRepo: "https://github.com/josetano2/recall",
   },
   "the-adventure-of-tpa": {
     name: "The Adventure of TPA",

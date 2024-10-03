@@ -7,23 +7,27 @@ import {
   CarouselPrevious,
 } from "../ui/carousel";
 import type { ImageMetadata } from "astro";
+import type { IStack } from "@/lib/models/model";
 
 interface ISlider {
   image: ImageMetadata[];
+  stacks: IStack[];
 }
 
-export default function Slider({ image }: ISlider) {
+export default function Slider({ image, stacks }: ISlider) {
   return (
-    <Carousel className="w-full">
+    <Carousel className="w-full flex flex-col gap-3">
       <CarouselContent>
         {image.map((i, idx) => (
-          <CarouselItem key={idx} className="basis-1/2">
+          <CarouselItem key={idx}>
             <img src={i.src} className="object-cover border-2 border-black" />
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <div className="flex justify-between">
+        <CarouselPrevious data-cursor-icon=" " />
+        <CarouselNext data-cursor-icon=" " />
+      </div>
     </Carousel>
   );
 }

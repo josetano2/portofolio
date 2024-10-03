@@ -195,7 +195,7 @@ CarouselItem.displayName = "CarouselItem"
 const CarouselPrevious = React.forwardRef<
   HTMLButtonElement,
   React.ComponentProps<typeof Button>
->(({ className, variant = "outline", size = "icon", ...props }, ref) => {
+>(({ className, variant = "ghost", size = "icon", ...props }, ref) => {
   const { orientation, scrollPrev, canScrollPrev } = useCarousel()
 
   return (
@@ -204,14 +204,14 @@ const CarouselPrevious = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        "absolute h-8 w-8 border-0 bg-transparent",
+        "h-8 w-8 border-0 bg-transparent",
         className
       )}
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}
     >
-      <p className="font-mono text-2xl font-bold">{`<`}</p>
+      <p className="font-mono text-3xl font-bold">{`<`}</p>
       <span className="sr-only">Previous slide</span>
     </Button>
   )
@@ -221,7 +221,7 @@ CarouselPrevious.displayName = "CarouselPrevious"
 const CarouselNext = React.forwardRef<
   HTMLButtonElement,
   React.ComponentProps<typeof Button>
->(({ className, variant = "outline", size = "icon", ...props }, ref) => {
+>(({ className, variant = "ghost", size = "icon", ...props }, ref) => {
   const { orientation, scrollNext, canScrollNext } = useCarousel()
 
   return (
@@ -230,7 +230,7 @@ const CarouselNext = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        "absolute h-8 w-8 border-0 bg-transparent",
+        "h-8 w-8 border-0 bg-transparent",
         orientation === "horizontal"
           ? "-right-0"
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -240,7 +240,7 @@ const CarouselNext = React.forwardRef<
       onClick={scrollNext}
       {...props}
     >
-      <p className="font-mono text-2xl font-bold">{`>`}</p>
+      <p className="font-mono text-3xl font-bold">{`>`}</p>
       <span className="sr-only">Next slide</span>
     </Button>
   )
