@@ -7,7 +7,6 @@ import {
   CarouselPrevious,
 } from "../ui/carousel";
 import type { ImageMetadata } from "astro";
-import type { IStack } from "@/lib/models/model";
 
 interface ISlider {
   image: ImageMetadata[];
