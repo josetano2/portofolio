@@ -11,10 +11,9 @@ import type { IStack } from "@/lib/models/model";
 
 interface ISlider {
   image: ImageMetadata[];
-  stacks: IStack[];
 }
 
-export default function Slider({ image, stacks }: ISlider) {
+export default function Slider({ image }: ISlider) {
   return (
     <Carousel className="w-full flex flex-col gap-3">
       <CarouselContent>

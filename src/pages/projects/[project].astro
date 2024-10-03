@@ -1,14 +1,6 @@
 ---
 import { projectContents } from "@/lib/contents/project-contents";
 import Layout from "../../layouts/Layout.astro";
-import { Image } from "astro:assets";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 
 export function getStaticPaths() {
   return [
@@ -34,7 +26,7 @@ const { project } = Astro.params;
   <div class="flex flex-col pt-4 lg:pt-0 justify-center items-center">
     <div class="flex flex-col h-full sm:p-4 lg:p-8 gap-6 w-full lg:w-3/4 justify-center items-center">
       <div class="flex gap-6 justify-center">
-        <Slider image={projectContents[project].imageDetails!} stacks={projectContents[project].stacks} client:load />
+        <Slider image={projectContents[project].imageDetails!} client:load />
       </div>
       <div class="flex flex-col justify-center">
         <div class="text-justify">

@@ -1,13 +1,13 @@
 import type { IExperience, IProject, IStack } from "@/lib/models/model";
-import { DiPostgresql, DiReact, DiRedis } from "react-icons/di";
-import { FaGolang, FaUnity, FaCss3 } from "react-icons/fa6";
+import { DiPostgresql, DiRedis } from "react-icons/di";
+import { FaUnity, FaCss3 } from "react-icons/fa6";
 import { FaReact } from "react-icons/fa";
 import {
   RiTailwindCssFill,
   RiNextjsFill,
   RiFirebaseFill,
 } from "react-icons/ri";
-import { SiFlask, SiCsharp, SiElectron } from "react-icons/si";
+import { SiFlask } from "react-icons/si";
 import { TbBrandKotlin, TbBrandGolang, TbBrandCSharp } from "react-icons/tb";
 import { GrGraphQl } from "react-icons/gr";
 import { IoLogoElectron } from "react-icons/io5";
