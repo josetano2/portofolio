@@ -13,17 +13,12 @@ export function getStaticPaths() {
     { params: { project: "tarzan" } },
     { params: { project: "the-adventure-of-tpa" } },
     { params: { project: "janidb" } },
-    { params: { project: "chronos" } },
   ];
 }
 
 import Slider from "@/components/react/Slider";
 
 const { project } = Astro.params;
-
-if (!projectContents[project]) {
-  throw new Error(`Project "${project}" not found.`);
-}
 
 const images = projectContents[project].imageDetails;
 const projectName = projectContents[project].name;
