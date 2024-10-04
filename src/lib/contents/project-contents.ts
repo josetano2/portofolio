@@ -139,18 +139,20 @@ export const projectContents: { [key: string]: IProject } = {
     name: "EasyWork",
     description: "Web Application",
     explanation: `
-      TraveloHI is a fullstack web application that offer users to book flights and reserve hotel rooms online, similar to many other e-commerce platforms. 
-      TraveloHI is a project to replicate the famous Traveloka.com. User could use promo, view their transaction history, view their current active ticket, 
-      view bookings, search & filter multiple hotels and flights, and much more! A cool feature on this web is user could upload a specific scenery photo,
-      and an AI could predict the image that is given by the user.#
+      EasyWork is an AI-powered application designed to reduce unemployment and address the wage gap in Indonesia. In recent years, unemployment has become a growing issue, 
+      exacerbated by a lack of financial literacy, formal education, and accessible skill development resources. This challenge affects not only individuals with limited 
+      skills but also those who are qualified yet struggle to find employment. Recognizing this, our team was inspired to create a platform that connects people with job 
+      opportunities, helping them secure meaningful employment.#
 
-      The frontend of this website is created by utilizing React and SCSS. Meanwhile the backend part it created by using Go and Flask. The web application
-      utilizes REST API powered by PostgreSQL for database management. Lastly, it utilizes JWT authentication for user access and storing cookies.
+      EasyWork is designed to be user-friendly. Users can input their educational background, work experience, and other relevant details, and the app determines their suitability 
+      for various job opportunities. Our web application leverages Large Language Models, vector databases, and Pinecone AI to automate the job search process, delivering personalized 
+      job matches efficiently. The frontend is built using Next.js and Tailwind. EasyWork is created over the course of 36 hours for the Garudahacks Hackathon, created
+      by a group of 4 people which are Christopher Alden, Darryl Christopher, and Theo Justin.
     `,
     stacks: [stackContents[3], stackContents[4]],
     thumbnail: easyWorkThumbnail,
     githubRepo: "https://github.com/josetano2/easy-work",
-    imageDetails: [easyWorkThumbnail],
+    imageDetails: [easyWorkThumbnail, easyWorkThumbnail, easyWorkThumbnail],
   },
   sunshine: {
     name: "Sunshine",
