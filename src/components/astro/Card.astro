@@ -51,14 +51,13 @@ const { key, name, description, stacks, thumbnail } = Astro.props;
 
   const bgTransition = document.getElementById("bg-transition") as HTMLElement
   function reset() {
-    console.log("run")
         bgTransition.style.width = 'auto';
         bgTransition.style.height = 'auto';
         bgTransition.style.y = '100%'
     }
 
-    window.addEventListener("pageshow", reset, false);
-    window.addEventListener("pagehide", reset, false);
+  // window.addEventListener("pageshow", reset, false);
+  window.addEventListener("pagehide", reset, false);
   document.addEventListener("DOMContentLoaded", () => {
     const cards = document.querySelectorAll(
       ".card-parent"
