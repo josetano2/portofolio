@@ -1,6 +1,8 @@
 ---
 import Navbar from "../components/react/Navbar";
 import "../styles/index.scss";
+
+const { title = "Jose Jonathan Tano" } = Astro.params;
 ---
 
 <html lang="en">
@@ -8,7 +10,7 @@ import "../styles/index.scss";
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="/public/logo.png" />
-    <title>Portofolio</title>
+    <title>{title}</title>
   </head>
   <body
     class="w-screen min-h-screen flex bg-custom-grid bg-custom-size bg-sky-50 overflow-x-hidden"

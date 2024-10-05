@@ -3,6 +3,7 @@ import Layout from "@/layouts/Layout.astro";
 import Button from "../components/react/Button";
 import TypewriterText from "@/components/react/TypewriterText";
 import GetInTouch from "@/components/astro/GetInTouch.astro";
+import cv from "@/lib/contents/cv/cv.pdf"
 import '@/styles/index.scss'
 ---
 
@@ -23,7 +24,7 @@ import '@/styles/index.scss'
       </div>
       <GetInTouch />
       <div class="flex justify-center items-center gap-12 text-lg">
-        <Button client:idle href="/" text="View CV" id="button-cv" />
+        <Button client:idle href={cv}  text="View CV" id="button-cv" />
         <Button
           client:idle
           href="/projects"
