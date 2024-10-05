@@ -120,7 +120,7 @@ export const projectContents: { [key: string]: IProject } = {
       TraveloHI is a fullstack web application that offer users to book flights and reserve hotel rooms online, similar to many other e-commerce platforms. 
       TraveloHI is a project to replicate the famous Traveloka.com. User could use promo, view their transaction history, view their current active ticket, 
       view bookings, search & filter multiple hotels and flights, and much more! A cool feature on this web is user could upload a specific scenery photo,
-      and an AI could predict the image that is given by the user.#
+      and an AI could predict the image that is given by the user.~
 
       The frontend of this website is created by utilizing React and SCSS. Meanwhile the backend part it created by using Go and Flask. The web application
       utilizes REST API powered by PostgreSQL for database management. Lastly, it utilizes JWT authentication for user access and storing cookies.
@@ -142,7 +142,7 @@ export const projectContents: { [key: string]: IProject } = {
       EasyWork is an AI-powered application designed to reduce unemployment and address the wage gap in Indonesia. In recent years, unemployment has become a growing issue, 
       exacerbated by a lack of financial literacy, formal education, and accessible skill development resources. This challenge affects not only individuals with limited 
       skills but also those who are qualified yet struggle to find employment. Recognizing this, our team was inspired to create a platform that connects people with job 
-      opportunities, helping them secure meaningful employment.#
+      opportunities, helping them secure meaningful employment.~
 
       EasyWork is designed to be user-friendly. Users can input their educational background, work experience, and other relevant details, and the app determines their suitability 
       for various job opportunities. Our web application leverages Large Language Models, vector databases, and Pinecone AI to automate the job search process, delivering personalized 
@@ -155,17 +155,16 @@ export const projectContents: { [key: string]: IProject } = {
     imageDetails: [easyWorkThumbnail, easyWorkThumbnail, easyWorkThumbnail],
   },
   sunshine: {
-    name: "Sunshine",
+    name: "Sunshine 🌞",
     description: "Web3 Application",
     explanation: `
-      TraveloHI is a fullstack web application that offer users to book flights and reserve hotel rooms online, similar to many other e-commerce platforms. 
-      TraveloHI is a project to replicate the famous Traveloka.com. User could use promo, view their transaction history, view their current active ticket, 
-      view bookings, search & filter multiple hotels and flights, and much more! A cool feature on this web is user could upload a specific scenery photo,
-      and an AI could predict the image that is given by the user.#
+     Sunshine is a real-time chat application developed on the Internet Computer using the Motoko programming language. It enables user interactions through integrated Internet Identity 
+     verification and supports cryptocurrency transactions. Additionally, Sunshine offers interactive gaming features to enhance user engagement and fun. Sunshine also utilizes Internet 
+     Identity for authentication. With Internet Identity, users do not need to rely on traditional usernames and passwords; instead, they can authenticate their identity using biometric data.~
 
-      The frontend of this website is created by utilizing React and SCSS. Meanwhile the backend part it created by using Go and Flask. The web application
-      utilizes REST API powered by PostgreSQL for database management. Lastly, it utilizes JWT authentication for user access and storing cookies.
-    `,
+    The frontend of the application is built using React and Tailwind, while the backend, which handles all incoming messages, is powered by Motoko, a language specifically designed 
+    for the Internet Computer. Sunshine is created by a group of 3 people which are Theo Justin, and Ryan Wantouw.
+     `,
     stacks: [stackContents[0], stackContents[4]],
     thumbnail: sunshineThumbnail,
     githubRepo: "https://github.com/josetano2/sunshine",
@@ -175,13 +174,13 @@ export const projectContents: { [key: string]: IProject } = {
     name: "Recall",
     description: "Mobile Application",
     explanation: `
-      TraveloHI is a fullstack web application that offer users to book flights and reserve hotel rooms online, similar to many other e-commerce platforms. 
-      TraveloHI is a project to replicate the famous Traveloka.com. User could use promo, view their transaction history, view their current active ticket, 
-      view bookings, search & filter multiple hotels and flights, and much more! A cool feature on this web is user could upload a specific scenery photo,
-      and an AI could predict the image that is given by the user.#
+      Recall is a mobile app for sharing and optimizing flashcards online, utilizing the Supermemo2 Algorithm to boost learning efficiency. Recall is created
+      to enables people who wanted to learn new things quickly and efficiently. Recall is efficient since it utilizes Spaced Repetition System (SRS) algorithm 
+      to determine what the user should review now. User could create a deck for their studying purposes, or they could view all of the available decks online
+      created by other users. Users could review their card ans see the summary of their review, which utilizes SM2 algorithm at the backend.~
 
-      The frontend of this website is created by utilizing React and SCSS. Meanwhile the backend part it created by using Go and Flask. The web application
-      utilizes REST API powered by PostgreSQL for database management. Lastly, it utilizes JWT authentication for user access and storing cookies.
+      Recall created in Android and uses Kotlin, we also utilize the Jetpack Compose Framework on creating the layout of the application. Meanwhile the backend
+      is created by using Firebase and Java Spring. Recall is created by a group of 2 people, myself and Darren Maverick.
     `,
     stacks: [stackContents[6], stackContents[7]],
     thumbnail: recallThumbnail,
@@ -192,13 +191,14 @@ export const projectContents: { [key: string]: IProject } = {
     name: "The Adventure of TPA",
     description: "Game",
     explanation: `
-      TraveloHI is a fullstack web application that offer users to book flights and reserve hotel rooms online, similar to many other e-commerce platforms. 
-      TraveloHI is a project to replicate the famous Traveloka.com. User could use promo, view their transaction history, view their current active ticket, 
-      view bookings, search & filter multiple hotels and flights, and much more! A cool feature on this web is user could upload a specific scenery photo,
-      and an AI could predict the image that is given by the user.#
+      The Adventure of Tim, Patrick, and Araszkiewicz (TPA) is a quest based RPG developed in Unity, featuring a dynamic battle system and immersive environment.
+      The game follows the journey of three charactes: Tim, a brave knight; Patrick, a dog knight; and Araszkiewicz, a wizard. Player can explore the town to accept
+      quest, or to buy potions to enhance their character. One of the available quest is to defend crystals from the upcoming enemies. The goal is to kill the enemy
+      as many as possible to earn points. The game will end when either the crystal is destroyed, or all three character dies. After a game ends, the player could earn
+      in-game money based on their perfomance.~
 
-      The frontend of this website is created by utilizing React and SCSS. Meanwhile the backend part it created by using Go and Flask. The web application
-      utilizes REST API powered by PostgreSQL for database management. Lastly, it utilizes JWT authentication for user access and storing cookies.
+      The Adventure of TPA is created by using Unity and C#. The uses multiple algorithms for world design and pathfindings. The game uses Binary Space Partitioning (BSP),
+      and Prim to generate random obstacles on the map, and A* algorithm for the enemies' pathfinding.
     `,
     stacks: [stackContents[8], stackContents[9]],
     thumbnail: theAdventureOfTPAThumbnail,

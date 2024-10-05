@@ -52,7 +52,7 @@ const projectDetails = projectContents[project];
         <div>
           {
             projectDetails.explanation
-              .split("#")
+              .split("~")
               .map((paragraph) => (
                 <p class="text-justify text-lg mb-4">{paragraph}</p>
               ))
