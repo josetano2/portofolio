@@ -15,6 +15,7 @@ export function getStaticPaths() {
     { params: { project: "tarzan" } },
     { params: { project: "the-adventure-of-tpa" } },
     { params: { project: "janidb" } },
+    { params: { project: "animob" } },
   ];
 }
 
@@ -30,7 +31,7 @@ const projectDetails = projectContents[project];
     >
       <div class="flex gap-6 justify-center">
         <Image
-          class="border-2 border-black"
+          class="border-2 border-black object-cover"
           src={projectDetails.thumbnail}
           alt={projectDetails.name}
         />
@@ -59,7 +60,7 @@ const projectDetails = projectContents[project];
           }
         </div>
       </div>
-      <div class="grid grid-cols-2 gap-3">
+      <!-- <div class="grid grid-cols-2 gap-3">
         {
           projectDetails.imageDetails.map((i) => (
             <Image
@@ -69,7 +70,7 @@ const projectDetails = projectContents[project];
             />
           ))
         }
-      </div>
+      </div> -->
     </div>
   </div>
 </Layout>

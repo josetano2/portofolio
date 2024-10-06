@@ -177,7 +177,7 @@ export const projectContents: { [key: string]: IProject } = {
       Recall is a mobile app for sharing and optimizing flashcards online, utilizing the Supermemo2 Algorithm to boost learning efficiency. Recall is created
       to enables people who wanted to learn new things quickly and efficiently. Recall is efficient since it utilizes Spaced Repetition System (SRS) algorithm 
       to determine what the user should review now. User could create a deck for their studying purposes, or they could view all of the available decks online
-      created by other users. Users could review their card ans see the summary of their review, which utilizes SM2 algorithm at the backend.~
+      created by other users. Users could review their card and see the summary of their review, which utilizes SM2 algorithm at the backend.~
 
       Recall created in Android and uses Kotlin, we also utilize the Jetpack Compose Framework on creating the layout of the application. Meanwhile the backend
       is created by using Firebase and Java Spring. Recall is created by a group of 2 people, myself and Darren Maverick.
@@ -209,13 +209,14 @@ export const projectContents: { [key: string]: IProject } = {
     name: "LinKasa",
     description: "Desktop Application",
     explanation: `
-      TraveloHI is a fullstack web application that offer users to book flights and reserve hotel rooms online, similar to many other e-commerce platforms. 
-      TraveloHI is a project to replicate the famous Traveloka.com. User could use promo, view their transaction history, view their current active ticket, 
-      view bookings, search & filter multiple hotels and flights, and much more! A cool feature on this web is user could upload a specific scenery photo,
-      and an AI could predict the image that is given by the user.#
+      LinKasa is a desktop application designed to manage and optimize airport management operations. LinKasa aims to facilitate complex task associated with
+      managing flight operations, ground support, and other logistical challenges. This application integrates real-time monitoring, task management, and communication 
+      features between departments, allowing airport staff to efficiently handle everything from baggage tracking to security operations.  LinKasa is designed to be 
+      user-friendly and customizable, providing the tools that airport operators need to ensure safety and efficiency.~
 
-      The frontend of this website is created by utilizing React and SCSS. Meanwhile the backend part it created by using Go and Flask. The web application
-      utilizes REST API powered by PostgreSQL for database management. Lastly, it utilizes JWT authentication for user access and storing cookies.
+      Given Linkasa's extensive range of roles and functionalities, the first step is to thoroughly analyze the business requirements for this application, by mapping them
+      into an UML Model. For this project, I have made the use case diagram, use case description, and the other diagrams needed. For the application itself, it is created
+      by using Next.js and electron, and Firebase to store all of the data.
     `,
     stacks: [stackContents[0], stackContents[7], stackContents[14]],
     thumbnail: linkasaThumbnail,
@@ -226,13 +227,15 @@ export const projectContents: { [key: string]: IProject } = {
     name: "TarZaN",
     description: "Game",
     explanation: `
-      TraveloHI is a fullstack web application that offer users to book flights and reserve hotel rooms online, similar to many other e-commerce platforms. 
-      TraveloHI is a project to replicate the famous Traveloka.com. User could use promo, view their transaction history, view their current active ticket, 
-      view bookings, search & filter multiple hotels and flights, and much more! A cool feature on this web is user could upload a specific scenery photo,
-      and an AI could predict the image that is given by the user.#
+     TarZan is an RPG and tower defense game developed in Unity. Player can explore diverse biomes, tame wild animals,
+     and mainly, engage in tower defense scenarios where waves of enemies challenge their defenses. Overtime, player would
+     get XP from the tower defense game mode. The player's objective is to defend the treehouse from these enemis.
+     Once they are ready, tehy can challenge the final boss to conclude the game. Aside from the tower defense mode, player 
+     could explore the biomes by walking, running, climbing, and even grappling. Player could tame pets to help them throught the gameplay.~
 
-      The frontend of this website is created by utilizing React and SCSS. Meanwhile the backend part it created by using Go and Flask. The web application
-      utilizes REST API powered by PostgreSQL for database management. Lastly, it utilizes JWT authentication for user access and storing cookies.
+     TarZan is created by using Unity and C#. It also utilizes various algorithms throughout the game, which are Wave Function Collapse
+     (WFC) to generate the obstacles, and A* for the optimizing the enemies' pathfinding towards the treehouse. Lastly, the game uses NavMesh
+     for the wild animal's movement and pathfinding.
     `,
     stacks: [stackContents[8], stackContents[9]],
     thumbnail: tarzanThumbnail,
@@ -242,13 +245,16 @@ export const projectContents: { [key: string]: IProject } = {
   sunshinefi: {
     name: "SunshineFi",
     explanation: `
-      TraveloHI is a fullstack web application that offer users to book flights and reserve hotel rooms online, similar to many other e-commerce platforms. 
-      TraveloHI is a project to replicate the famous Traveloka.com. User could use promo, view their transaction history, view their current active ticket, 
-      view bookings, search & filter multiple hotels and flights, and much more! A cool feature on this web is user could upload a specific scenery photo,
-      and an AI could predict the image that is given by the user.#
+      SunshineFi is a SocialFi and Crowdfunding platform that revolutionizes how projects are funded and managed on the blockchain. Our platform offers 
+      seamless project prototype submission while integrating AI-driven sentiment analysis (NLP) to monitor and evaluate community feedback. By detecting 
+      negative comments, such as those related to disturbing content or potential scams, SunshineFi automatically manages these flagged posts through a DAO system, 
+      ensuring that only trustworthy projects are promoted. Once a project is validated and stored in our dApp, users can crowdfund it, driving innovation 
+      and growth in the Web3 space.~
 
-      The frontend of this website is created by utilizing React and SCSS. Meanwhile the backend part it created by using Go and Flask. The web application
-      utilizes REST API powered by PostgreSQL for database management. Lastly, it utilizes JWT authentication for user access and storing cookies.
+      The frontend of the application is built using React and Tailwind, while the backend, which handles all the posts available, is powered by Motoko, a language 
+      specifically designed for the Internet Computer. Just like Sunshine, SunshineFi also utilizes Internet Identity to identify and authenticate users that uses
+      our web. SunshineFi is created over the course of 36 hours for the Chain Fusion HackerHouse Hackatahon at Bali, build by a group of 3 people, Theo Justin and
+      Ryan Wantouw.
     `,
     description: "Web3 Application",
     stacks: [stackContents[0], stackContents[4], stackContents[5]],
@@ -259,13 +265,11 @@ export const projectContents: { [key: string]: IProject } = {
   janidb: {
     name: "JAniDB",
     explanation: `
-      TraveloHI is a fullstack web application that offer users to book flights and reserve hotel rooms online, similar to many other e-commerce platforms. 
-      TraveloHI is a project to replicate the famous Traveloka.com. User could use promo, view their transaction history, view their current active ticket, 
-      view bookings, search & filter multiple hotels and flights, and much more! A cool feature on this web is user could upload a specific scenery photo,
-      and an AI could predict the image that is given by the user.#
+      JaniDB is a web application that showcases a vast collection of information from the world of anime. The site features top-rated shows across various genres like 
+      RomCom, Drama, Action, and Music. When a user clicks on an anime card, they are directed to a detailed page containing comprehensive information, including total episodes, 
+      characters, genres, synopsis, and more. Users can also search for specific anime titles and save their favorites for easy access.~
 
-      The frontend of this website is created by utilizing React and SCSS. Meanwhile the backend part it created by using Go and Flask. The web application
-      utilizes REST API powered by PostgreSQL for database management. Lastly, it utilizes JWT authentication for user access and storing cookies.
+      JaniDB is created with React, and it utlizies GraphQL from the AniList API. JaniDB is my first project that uses React and utilizes API to display real-time dynamic information on the website.
     `,
     description: "Web Application",
     stacks: [stackContents[0], stackContents[10], stackContents[11]],
@@ -276,13 +280,12 @@ export const projectContents: { [key: string]: IProject } = {
   animob: {
     name: "AniMob",
     explanation: `
-      TraveloHI is a fullstack web application that offer users to book flights and reserve hotel rooms online, similar to many other e-commerce platforms. 
-      TraveloHI is a project to replicate the famous Traveloka.com. User could use promo, view their transaction history, view their current active ticket, 
-      view bookings, search & filter multiple hotels and flights, and much more! A cool feature on this web is user could upload a specific scenery photo,
-      and an AI could predict the image that is given by the user.#
+      AniMob is a mobile application that showcases a vast collection of information from the world of anime. Similar to JaniDB, it recommends multiple animes from various of genres.
+      User could comment their opinion on each of the anime, and they could mark their favorites for easy access. The app also features a search function, allowing users to 
+      browse various anime, view brief synopses, and explore genres.~
 
-      The frontend of this website is created by utilizing React and SCSS. Meanwhile the backend part it created by using Go and Flask. The web application
-      utilizes REST API powered by PostgreSQL for database management. Lastly, it utilizes JWT authentication for user access and storing cookies.
+      AniMob is created with Flutter, and it does not have a backend. So everything within the application is hard coded information. Although the application is not dynamic, it gave
+      me a new approach on building application on Flutter, since this is my first project by using Flutter.
     `,
     description: "Mobile Application",
     stacks: [stackContents[15]],

@@ -90,6 +90,8 @@ export const buttonHoverEffect = (id: string) => {
       backgroundColor: "#b2e7f9",
       ease: "power1.out",
       color: "white",
+      borderRight: 2,
+      borderBottom: 5,
     });
   }
 };
@@ -104,6 +106,8 @@ export const buttonExitHoverEffect = (id: string) => {
       backgroundColor: "transparent",
       ease: "power1.out",
       color: "black",
+      borderRight: 1,
+      borderBottom: 1,
     });
   }
 };
