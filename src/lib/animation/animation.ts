@@ -90,7 +90,7 @@ export const buttonHoverEffect = (id: string) => {
       backgroundColor: "#b2e7f9",
       ease: "power1.out",
       color: "white",
-      borderRight: 2,
+      // borderRight: 2,
       borderBottom: 5,
     });
   }

@@ -9,6 +9,7 @@ export interface IProject {
   thumbnail: ImageMetadata;
   imageDetails: ImageMetadata[];
   githubRepo: string;
+  demo?: string;
 }
 
 export interface IStack {

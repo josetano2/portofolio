@@ -123,7 +123,8 @@ export const projectContents: { [key: string]: IProject } = {
       and an AI could predict the image that is given by the user.~
 
       The frontend of this website is created by utilizing React and SCSS. Meanwhile the backend part it created by using Go and Flask. The web application
-      utilizes REST API powered by PostgreSQL for database management. Lastly, it utilizes JWT authentication for user access and storing cookies.
+      utilizes REST API powered by PostgreSQL for database management. For the model itself, it utilizes the AlexNet Model. Lastly, it utilizes JWT authentication 
+      for user access and storing cookies.
     `,
     thumbnail: traveloHIThumbnail,
     githubRepo: "https://github.com/josetano2/TraveloHI",
@@ -153,6 +154,7 @@ export const projectContents: { [key: string]: IProject } = {
     thumbnail: easyWorkThumbnail,
     githubRepo: "https://github.com/josetano2/easy-work",
     imageDetails: [easyWorkThumbnail, easyWorkThumbnail, easyWorkThumbnail],
+    demo: "https://devpost.com/software/easywork?ref_content=my-projects-tab&ref_feature=my_projects",
   },
   sunshine: {
     name: "Sunshine 🌞",
@@ -169,6 +171,7 @@ export const projectContents: { [key: string]: IProject } = {
     thumbnail: sunshineThumbnail,
     githubRepo: "https://github.com/josetano2/sunshine",
     imageDetails: [easyWorkThumbnail],
+    demo: "https://youtu.be/5CAqpu-hQPc",
   },
   recall: {
     name: "Recall",
@@ -276,6 +279,7 @@ export const projectContents: { [key: string]: IProject } = {
     thumbnail: janiDBThumbnail,
     githubRepo: "https://github.com/josetano2/JAniDB",
     imageDetails: [easyWorkThumbnail],
+    demo: "https://janidb.vercel.app/",
   },
   animob: {
     name: "AniMob",
