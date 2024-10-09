@@ -21,3 +21,6 @@ export interface IExperience {
   name: string;
   year: string;
 }
+export interface IAchievement extends IExperience{
+  certifImage?: ImageMetadata;
+}
