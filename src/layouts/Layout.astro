@@ -82,7 +82,15 @@ const { title = "Jose Jonathan Tano" } = Astro.params;
     },
   });
 
-  window.addEventListener("DOMContentLoaded", () => {
-    animatePageIn();
+  // window.addEventListener("DOMContentLoaded", () => {
+  //   animatePageIn();
+  // });
+
+  const bgTransition = document.getElementById("bg-transition") as HTMLElement;
+
+  window.addEventListener("pageshow", () => {
+    if (bgTransition) {
+      animatePageIn();
+    }
   });
 </script>
