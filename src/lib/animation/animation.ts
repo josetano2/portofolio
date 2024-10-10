@@ -4,6 +4,8 @@ export const animatePageIn = () => {
   const bgTransition = document.getElementById("bg-transition");
 
   if (bgTransition) {
+    gsap.set(bgTransition, { y: "100%", borderRadius: "0" });
+
     gsap.fromTo(
       bgTransition,
       {
@@ -26,6 +28,9 @@ export const animatePageOut = (href: string) => {
   const bgTransition = document.getElementById("bg-transition");
 
   if (bgTransition) {
+
+    gsap.set(bgTransition, { y: "100%", borderRadius: "0" });
+    
     gsap.fromTo(
       bgTransition,
       {
