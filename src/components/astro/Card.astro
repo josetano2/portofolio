@@ -56,15 +56,15 @@ const { key, name, description, stacks, thumbnail } = Astro.props;
     bgTransition.style.height = "auto";
     bgTransition.style.y = "0%";
   }
-
   function resetDiv() {
     bgTransition.style.width = "auto";
     bgTransition.style.height = "auto";
-    bgTransition.style.y = "100%";
+    bgTransition.style.y = "-100%";
   }
 
-  window.addEventListener("pageshow", resetDiv, false);
+  window.addEventListener("pagehide", resetDiv, false);
   window.addEventListener("pagehide", reset, false);
+
   document.addEventListener("DOMContentLoaded", () => {
     const cards = document.querySelectorAll(
       ".card-parent"
