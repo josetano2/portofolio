@@ -52,7 +52,7 @@ const { key, name, description, stacks, thumbnail } = Astro.props;
 
   const bgTransition = document.getElementById("bg-transition") as HTMLElement;
 
-  window.addEventListener("astro:page-load", () => {
+  window.addEventListener("pageshow", () => {
     if (bgTransition) {
       console.log("tes");
       gsap.set(bgTransition, { y: "100%", borderRadius: "0" });
