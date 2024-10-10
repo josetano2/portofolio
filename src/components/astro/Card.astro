@@ -54,8 +54,8 @@ const { key, name, description, stacks, thumbnail } = Astro.props;
 
   window.addEventListener("pageshow", () => {
     if (bgTransition) {
-      console.log("tes");
       gsap.set(bgTransition, { y: "100%", borderRadius: "0" });
+      animatePageIn();
     }
   });
 
