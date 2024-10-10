@@ -1,4 +1,9 @@
-import type { IExperience, IProject, IStack } from "@/lib/models/model";
+import type {
+  IAchievement,
+  IExperience,
+  IProject,
+  IStack,
+} from "@/lib/models/model";
 import { DiPostgresql, DiRedis } from "react-icons/di";
 import { FaUnity, FaCss3 } from "react-icons/fa6";
 import { FaReact } from "react-icons/fa";
@@ -22,6 +27,7 @@ import theAdventureOfTPAThumbnail from "@/lib/images/The Adventure of TPA/main.p
 import tarzanThumbnail from "@/lib/images/TarZaN/main.png";
 import sunshineFiThumbnail from "@/lib/images/SunshineFi/main.png";
 import aniMobThumbnail from "@/lib/images/AniMob/main.jpg";
+import codefestCertif from "@/lib/images/Certificates/Codefest.png";
 
 export const stackContents: IStack[] = [
   // 0
@@ -304,10 +310,11 @@ export const myself = `Hello, my name is Jose Jonathan Tano, an undergratuate
     My focus right now to master my skills in web development, aiming
     to create user-friendly, efficient, and elegant softwares.`;
 
-export const achievements: IExperience[] = [
+export const achievements: IAchievement[] = [
   {
     name: "2nd Winner of CodeFest Hackathon 3.0",
     year: "2024",
+    certifImage: codefestCertif,
   },
   {
     name: "2nd Winner of CodeFest Chain Fusion Hackathon",
