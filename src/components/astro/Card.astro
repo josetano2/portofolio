@@ -48,11 +48,13 @@ const { key, name, description, stacks, thumbnail } = Astro.props;
 
 <script>
   import { animatePageIn, animatePageOut } from "@/lib/animation/animation";
+  import gsap from "gsap";
 
   const bgTransition = document.getElementById("bg-transition") as HTMLElement;
 
   window.addEventListener("pageshow", () => {
     if (bgTransition) {
+      console.log("tes");
       gsap.set(bgTransition, { y: "100%", borderRadius: "0" });
     }
   });
