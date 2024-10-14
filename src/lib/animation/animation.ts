@@ -4,7 +4,6 @@ export const animatePageIn = () => {
   const bgTransition = document.getElementById("bg-transition");
 
   if (bgTransition) {
-
     gsap.fromTo(
       bgTransition,
       {
@@ -18,7 +17,7 @@ export const animatePageIn = () => {
         ease: "power1.in",
         scale: 1,
         borderRadius: "0% 0% 100% 100%",
-      }
+      },
     );
   }
 };
@@ -27,7 +26,6 @@ export const animatePageOut = (href: string) => {
   const bgTransition = document.getElementById("bg-transition");
 
   if (bgTransition) {
-
     gsap.fromTo(
       bgTransition,
       {
@@ -43,12 +41,10 @@ export const animatePageOut = (href: string) => {
         onComplete: () => {
           window.location.href = href;
         },
-      }
+      },
     );
   }
 };
-
-
 
 export const hoverEffect = (topChar: string, bottomChar: string) => {
   gsap.to(topChar, {
@@ -94,8 +90,7 @@ export const buttonHoverEffect = (id: string) => {
       backgroundColor: "#b2e7f9",
       ease: "power1.out",
       color: "white",
-      // borderRight: 2,
-      borderBottom: 5,
+      boxShadow: "0px 6px 0px 0px black",
     });
   }
 };
@@ -110,8 +105,7 @@ export const buttonExitHoverEffect = (id: string) => {
       backgroundColor: "transparent",
       ease: "power1.out",
       color: "black",
-      borderRight: 1,
-      borderBottom: 1,
+      boxShadow: "0px 0px 0px 0px black",
     });
   }
 };

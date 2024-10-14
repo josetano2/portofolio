@@ -1,7 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import type { IProject, IStack } from "../../lib/models/model";
-import { animatePageOut } from "@/lib/animation/animation";
+import type { IStack } from "../../lib/models/model";
 
 interface Props {
   key: string;
@@ -15,11 +14,11 @@ const { key, name, description, stacks, thumbnail } = Astro.props;
 ---
 
 <div
-  class="w-full h-fit gap-2 font-mono cursor-pointer border-2 border-black p-3 bg-white group card-parent"
+  class="w-full h-fit gap-2 font-mono cursor-pointer border-2 border-black p-3 bg-white group card-parent box-border"
   data-cursor-text={name}
   data-key={key}
 >
-  <div class="w-full h-72 overflow-hidden relative" data-cursor-stick>
+  <div class="w-full h-72 overflow-hidden relative">
     <div
       class="w-screen h-full bg-black absolute z-20 opacity-0 xl:opacity-10 2xl:opacity-10 group-hover:opacity-0 transition-opacity ease-in"
     >
@@ -47,7 +46,8 @@ const { key, name, description, stacks, thumbnail } = Astro.props;
 </div>
 
 <script>
-  import { animatePageIn, animatePageOut } from "@/lib/animation/animation";
+  import { animatePageOut } from "@/lib/animation/animation";
+  import gsap from "gsap";
 
   document.addEventListener("DOMContentLoaded", () => {
     const cards = document.querySelectorAll(
@@ -56,6 +56,24 @@ const { key, name, description, stacks, thumbnail } = Astro.props;
     cards.forEach((card) => {
       const key = card.dataset.key;
       card.addEventListener("click", () => animatePageOut("/projects/" + key));
-    });
+
+      card.addEventListener("mouseenter", () => {
+        gsap.to(card, {
+          duration: 0.5,
+          scale: 1,
+          ease: "power1.out",
+          boxShadow: "2px 6px 0px 0px black"
+        })
+      });
+      card.addEventListener("mouseleave", () => {
+        gsap.to(card, {
+          duration: 0.5,
+          scale: 1,
+          ease: "power1.out",
+          boxShadow: "0px 0px 0px 0px black"
+        })
+      });
+    });  
   });
+  
 </script>
