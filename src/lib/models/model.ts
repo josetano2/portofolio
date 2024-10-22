@@ -7,7 +7,7 @@ export interface IProject {
   explanation: string;
   stacks: IStack[];
   thumbnail: ImageMetadata;
-  imageDetails: ImageMetadata[];
+  imageDetails?: ImageMetadata[];
   githubRepo: string;
   demo?: string;
 }
@@ -21,6 +21,6 @@ export interface IExperience {
   name: string;
   year: string;
 }
-export interface IAchievement extends IExperience{
+export interface IAchievement extends IExperience {
   certifImage?: ImageMetadata;
 }

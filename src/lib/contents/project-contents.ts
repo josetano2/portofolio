@@ -29,6 +29,8 @@ import sunshineFiThumbnail from "@/lib/images/SunshineFi/main.png";
 import aniMobThumbnail from "@/lib/images/AniMob/main.jpg";
 import codefestCertif from "@/lib/images/Certificates/Codefest.png";
 
+import { importImageDetails } from "../utils/import";
+
 export const stackContents: IStack[] = [
   // 0
   {
@@ -134,13 +136,11 @@ export const projectContents: { [key: string]: IProject } = {
     `,
     thumbnail: traveloHIThumbnail,
     githubRepo: "https://github.com/josetano2/TraveloHI",
-    imageDetails: [
-      traveloHIThumbnail,
-      traveloHIThumbnail,
-      traveloHIThumbnail,
-      traveloHIThumbnail,
-      traveloHIThumbnail,
-    ],
+    imageDetails: importImageDetails(
+      import.meta.glob("/src/lib/images/TraveloHI/Details/*.png", {
+        eager: true,
+      }),
+    ),
   },
   easywork: {
     name: "EasyWork",
@@ -159,7 +159,6 @@ export const projectContents: { [key: string]: IProject } = {
     stacks: [stackContents[3], stackContents[4]],
     thumbnail: easyWorkThumbnail,
     githubRepo: "https://github.com/josetano2/easy-work",
-    imageDetails: [easyWorkThumbnail, easyWorkThumbnail, easyWorkThumbnail],
     demo: "https://devpost.com/software/easywork?ref_content=my-projects-tab&ref_feature=my_projects",
   },
   sunshine: {
@@ -194,7 +193,6 @@ export const projectContents: { [key: string]: IProject } = {
     stacks: [stackContents[6], stackContents[7]],
     thumbnail: recallThumbnail,
     githubRepo: "https://github.com/josetano2/recall",
-    imageDetails: [easyWorkThumbnail],
   },
   "the-adventure-of-tpa": {
     name: "The Adventure of TPA",
@@ -212,7 +210,6 @@ export const projectContents: { [key: string]: IProject } = {
     stacks: [stackContents[8], stackContents[9]],
     thumbnail: theAdventureOfTPAThumbnail,
     githubRepo: "https://github.com/josetano2/The-Adventure-of-TPA",
-    imageDetails: [easyWorkThumbnail],
   },
   linkasa: {
     name: "LinKasa",
@@ -230,7 +227,6 @@ export const projectContents: { [key: string]: IProject } = {
     stacks: [stackContents[0], stackContents[7], stackContents[14]],
     thumbnail: linkasaThumbnail,
     githubRepo: "https://github.com/josetano2/LinKasa",
-    imageDetails: [easyWorkThumbnail],
   },
   tarzan: {
     name: "TarZaN",
@@ -249,7 +245,6 @@ export const projectContents: { [key: string]: IProject } = {
     stacks: [stackContents[8], stackContents[9]],
     thumbnail: tarzanThumbnail,
     githubRepo: "https://github.com/josetano2/tarzan",
-    imageDetails: [easyWorkThumbnail],
   },
   sunshinefi: {
     name: "SunshineFi",
@@ -269,7 +264,6 @@ export const projectContents: { [key: string]: IProject } = {
     stacks: [stackContents[0], stackContents[4], stackContents[5]],
     thumbnail: sunshineFiThumbnail,
     githubRepo: "https://github.com/josetano2/sunshine-socialfi",
-    imageDetails: [easyWorkThumbnail],
   },
   janidb: {
     name: "JAniDB",
@@ -284,7 +278,6 @@ export const projectContents: { [key: string]: IProject } = {
     stacks: [stackContents[0], stackContents[10], stackContents[11]],
     thumbnail: janiDBThumbnail,
     githubRepo: "https://github.com/josetano2/JAniDB",
-    imageDetails: [easyWorkThumbnail],
     demo: "https://janidb.vercel.app/",
   },
   animob: {
@@ -301,7 +294,6 @@ export const projectContents: { [key: string]: IProject } = {
     stacks: [stackContents[15]],
     thumbnail: aniMobThumbnail,
     githubRepo: "https://github.com/josetano2/AniMob",
-    imageDetails: [easyWorkThumbnail],
   },
 };
 
