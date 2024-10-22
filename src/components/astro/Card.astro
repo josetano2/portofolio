@@ -24,7 +24,7 @@ const { key, name, description, stacks, thumbnail } = Astro.props;
     >
     </div>
     <Image
-      class="object-cover object-top w-full h-full transition-transform ease-in duration-[0.15s] scale-[1] group-hover:scale-[1.05]"
+      class="object-cover object-top w-full h-full transition-transform ease-in duration-[0.15s] scale-[1]"
       src={thumbnail}
       alt="tes"
       densities={[1.5, 2]}
@@ -60,9 +60,9 @@ const { key, name, description, stacks, thumbnail } = Astro.props;
       card.addEventListener("mouseenter", () => {
         gsap.to(card, {
           duration: 0.5,
-          scale: 1,
+          scale: 1.05,
           ease: "power1.out",
-          boxShadow: "2px 6px 0px 0px black"
+          boxShadow: "2px 3px 0px 0px black"
         })
       });
       card.addEventListener("mouseleave", () => {
