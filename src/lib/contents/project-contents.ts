@@ -140,7 +140,7 @@ export const projectContents: { [key: string]: IProject } = {
     `,
     thumbnail: traveloHIThumbnail,
     githubRepo: "https://github.com/josetano2/TraveloHI",
-    imageDetails: traveloHIDetails,
+    imageDetails: "/src/lib/images/TraveloHI",
   },
   easywork: {
     name: "EasyWork",

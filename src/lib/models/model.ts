@@ -7,7 +7,7 @@ export interface IProject {
   explanation: string;
   stacks: IStack[];
   thumbnail: ImageMetadata;
-  imageDetails?: ImageMetadata[];
+  imageDetails?: string;
   githubRepo: string;
   demo?: string;
 }
