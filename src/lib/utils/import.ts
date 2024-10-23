@@ -1,7 +1,7 @@
 import type { ImageMetadata } from "astro";
 
 export function importImageDetails(
-  imageFile: Record<string, unknown>,
+  imageFile: Record<string, { default: string }>,
 ): ImageMetadata[] {
   let arr: ImageMetadata[] = [];
 

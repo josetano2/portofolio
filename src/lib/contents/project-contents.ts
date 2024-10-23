@@ -31,6 +31,10 @@ import codefestCertif from "@/lib/images/Certificates/Codefest.png";
 
 import { importImageDetails } from "../utils/import";
 
+const traveloHIDetails = importImageDetails(
+  import.meta.glob("@/lib/images/TraveloHI/Details/*.png", { eager: true }),
+);
+
 export const stackContents: IStack[] = [
   // 0
   {
@@ -136,11 +140,7 @@ export const projectContents: { [key: string]: IProject } = {
     `,
     thumbnail: traveloHIThumbnail,
     githubRepo: "https://github.com/josetano2/TraveloHI",
-    imageDetails: importImageDetails(
-      import.meta.glob("/src/lib/images/TraveloHI/Details/*.png", {
-        eager: true,
-      }),
-    ),
+    imageDetails: traveloHIDetails,
   },
   easywork: {
     name: "EasyWork",
