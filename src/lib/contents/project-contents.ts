@@ -137,7 +137,7 @@ export const projectContents: { [key: string]: IProject } = {
     thumbnail: traveloHIThumbnail,
     githubRepo: "https://github.com/josetano2/TraveloHI",
     imageDetails: importImageDetails(
-      import.meta.glob("@/lib/images/TraveloHI/Details/*.png", {
+      import.meta.glob("./src/lib/images/TraveloHI/Details/*.png", {
         eager: true,
       }),
     ),

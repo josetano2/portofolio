@@ -15,11 +15,5 @@ export function importImageDetails(
     arr.push(imageMetadata);
   }
 
-  arr.sort((a, b) => {
-    const nameA = a.src.split("/").pop() || "";
-    const nameB = b.src.split("/").pop() || "";
-    return nameA.localeCompare(nameB);
-  });
-
   return arr;
 }
