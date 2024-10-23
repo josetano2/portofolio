@@ -140,7 +140,6 @@ export const projectContents: { [key: string]: IProject } = {
     `,
     thumbnail: traveloHIThumbnail,
     githubRepo: "https://github.com/josetano2/TraveloHI",
-    imageDetails: "/src/lib/images/TraveloHI",
   },
   easywork: {
     name: "EasyWork",
@@ -175,7 +174,6 @@ export const projectContents: { [key: string]: IProject } = {
     stacks: [stackContents[0], stackContents[4]],
     thumbnail: sunshineThumbnail,
     githubRepo: "https://github.com/josetano2/sunshine",
-    imageDetails: [easyWorkThumbnail],
     demo: "https://youtu.be/5CAqpu-hQPc",
   },
   recall: {
