@@ -35,6 +35,20 @@ const traveloHIDetails = importImageDetails(
   import.meta.glob("@/lib/images/TraveloHI/Details/*.png", { eager: true }),
 );
 
+import travelohi1 from "@/lib/images/TraveloHI/Details/1.png";
+import travelohi2 from "@/lib/images/TraveloHI/Details/2.png";
+import travelohi3 from "@/lib/images/TraveloHI/Details/3.png";
+import travelohi4 from "@/lib/images/TraveloHI/Details/4.png";
+import travelohi5 from "@/lib/images/TraveloHI/Details/5.png";
+import travelohi6 from "@/lib/images/TraveloHI/Details/6.png";
+import travelohi7 from "@/lib/images/TraveloHI/Details/7.png";
+import travelohi8 from "@/lib/images/TraveloHI/Details/8.png";
+import travelohi9 from "@/lib/images/TraveloHI/Details/9.png";
+import travelohi10 from "@/lib/images/TraveloHI/Details/10.png";
+import travelohi11 from "@/lib/images/TraveloHI/Details/11.png";
+import travelohi12 from "@/lib/images/TraveloHI/Details/12.png";
+import travelohi13 from "@/lib/images/TraveloHI/Details/13.png";
+
 export const stackContents: IStack[] = [
   // 0
   {
@@ -140,6 +154,21 @@ export const projectContents: { [key: string]: IProject } = {
     `,
     thumbnail: traveloHIThumbnail,
     githubRepo: "https://github.com/josetano2/TraveloHI",
+    imageDetails: [
+      travelohi1,
+      travelohi2,
+      travelohi3,
+      travelohi4,
+      travelohi5,
+      travelohi6,
+      travelohi7,
+      travelohi8,
+      travelohi9,
+      travelohi10,
+      travelohi11,
+      travelohi12,
+      travelohi13,
+    ],
   },
   easywork: {
     name: "EasyWork",

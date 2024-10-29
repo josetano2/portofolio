@@ -72,15 +72,15 @@ const projectDetails = projectContents[project];
           }
         </div>
       </div>
-      <!-- <div class="grid grid-cols-1 sm:grid-cols-2 gap-3"> -->
-      <!--   { -->
-      <!--     projectDetails && projectDetails.imageDetails && projectDetails.imageDetails.map((i) => ( -->
-      <!--       <Image -->
-      <!--         class="border-2 border-black" -->
-      <!--         src={i} -->
-      <!--         alt={projectDetails.name} -->
-      <!--       /> -->
-      <!--     )) -->
-      <!--   } -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        {
+          projectDetails && projectDetails.imageDetails && projectDetails.imageDetails.map((i) => (
+            <Image
+              class="border-2 border-black"
+              src={i}
+              alt={projectDetails.name}
+            />
+          ))
+        }
   </div>
 </Layout>
