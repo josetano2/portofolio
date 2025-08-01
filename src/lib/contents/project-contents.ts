@@ -357,4 +357,8 @@ export const experiences: IExperience[] = [
     name: "Full-Time Laboratory Assistant@Binus",
     year: "2023 - 2025",
   },
+  {
+    name: "IT Developer Intern@Blibli",
+    year: "2025 - Present",
+  },
 ];

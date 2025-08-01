@@ -87,7 +87,7 @@ export const buttonHoverEffect = (id: string) => {
     gsap.to(buttonRef, {
       duration: 0.3,
       scale: 1.1,
-      backgroundColor: "#b2e7f9",
+      backgroundColor: "#475569",
       ease: "power1.out",
       color: "white",
       boxShadow: "0px 6px 0px 0px black",
