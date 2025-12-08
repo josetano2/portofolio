@@ -10,7 +10,7 @@ export default function TypewriterText({ className }: ITypewriterText) {
     <div className={className}>
       <Typewriter
         options={{
-          strings: ["Hello", "你好", "おはよう"],
+          strings: ["Hello", "你好", "おはよう", "Halo"],
           autoStart: true,
           loop: true,
         }}

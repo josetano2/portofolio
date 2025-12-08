@@ -9,7 +9,20 @@ const { title = "Jose Jonathan Tano" } = Astro.params;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="/public/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/favicon.ico" />
+    <meta
+      name="description"
+      content="Jose Jonathan Tano - Computer Science Student & Developer."
+    />
+    <meta property="og:title" content={title} />
+    <meta
+      property="og:description"
+      content="Jose Jonathan Tano - Computer Science Student & Developer"
+    />
+    <meta property="og:type" content="website" />
     <title>{title}</title>
   </head>
   <body
