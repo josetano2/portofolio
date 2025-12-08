@@ -48,35 +48,39 @@ export const animatePageOut = (href: string) => {
 
 export const hoverEffect = (topChar: string, bottomChar: string) => {
   gsap.to(topChar, {
-    y: -30,
-    duration: 0.3,
-    stagger: 0.02,
+    y: -35,
+    duration: 0.5,
+    stagger: 0.025,
     opacity: 0,
-    ease: "power1.out",
+    ease: "power2.out",
+    rotation: -5,
   });
   gsap.to(bottomChar, {
-    y: -30,
-    duration: 0.3,
-    stagger: 0.02,
+    y: -35,
+    duration: 0.5,
+    stagger: 0.025,
     opacity: 1,
-    ease: "power1.out",
+    ease: "power2.out",
+    rotation: 0,
   });
 };
 
 export const exitHoverEffect = (topChar: string, bottomChar: string) => {
   gsap.to(topChar, {
     y: 0,
-    duration: 0.3,
+    duration: 0.4,
     stagger: 0.02,
     opacity: 1,
-    ease: "power1.out",
+    ease: "power2.inOut",
+    rotation: 0,
   });
   gsap.to(bottomChar, {
     y: 0,
-    duration: 0.3,
+    duration: 0.4,
     stagger: 0.02,
     opacity: 0,
-    ease: "power1.out",
+    ease: "power2.inOut",
+    rotation: 5,
   });
 };
 
