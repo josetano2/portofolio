@@ -10,7 +10,7 @@ import { cursor } from "@/lib/utils/cursor";
 
 export default function Navbar() {
   return (
-    <div className="flex items-center justify-between w-full sm:gap-24 sm:justify-center text-lg sm:text-lg xl:text-xl mt-4 z-30 font-semibold font-mono bg-transparent">
+    <div className="flex items-center justify-between w-full sm:gap-24 sm:justify-center text-lg sm:text-lg xl:text-xl mt-4 z-30 font-semibold bg-transparent">
       {Routes.map((r, idx) => {
         const charClass = `char-navbar-${idx}`,
           charClassBottom = `char-navbar-${idx + 4}`,
