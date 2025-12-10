@@ -3,28 +3,49 @@ import Layout from "@/layouts/Layout.astro";
 import Button from "../components/react/Button";
 import TypewriterText from "@/components/react/TypewriterText";
 import GetInTouch from "@/components/astro/GetInTouch.astro";
-import cv from "@/lib/contents/cv/cv.pdf"
-import '@/styles/index.scss'
+import cv from "@/lib/contents/cv/cv.pdf";
+import "@/styles/index.scss";
 ---
 
 <Layout>
   <div
-    class="flex flex-col justify-center w-full h-full sm:p-6 lg:p-12 overflow-hidden mt-auto"
+    class="flex flex-col justify-center w-full h-full sm:p-6 lg:p-12 overflow-hidden mt-auto relative"
   >
-    <div class="flex flex-col h-full justify-center items-center gap-8 split">
-      <div class="flex">
-        <p class="text-2xl lg:text-3xl 2xl:text-4xl">{`>\xa0`}</p>
-        <TypewriterText
-          className="text-2xl lg:text-3xl 2xl:text-4xl"
-          client:load
-        />
-        <p class="text-2xl lg:text-3xl 2xl:text-4xl">
-          {`, I'm Jose`}
-        </p>
+    <div
+      class="flex flex-col h-full justify-center items-center gap-10 split relative z-10"
+    >
+      <div class="flex flex-col items-center gap-4">
+        <div
+          class="flex flex-wrap justify-center items-center text-slate-900 dark:text-white"
+        >
+          <p class="text-3xl lg:text-5xl 2xl:text-6xl font-semibold">
+            {`>\xa0`}
+          </p>
+          <TypewriterText
+            className="text-3xl lg:text-5xl 2xl:text-6xl font-semibold"
+            client:load
+          />
+          <p class="text-3xl lg:text-5xl 2xl:text-6xl font-semibold">
+            {`, I'm`}
+          </p>
+        </div>
+        <h1
+          class="text-5xl lg:text-7xl 2xl:text-8xl font-bold bg-gradient-to-br from-slate-900 via-slate-700 to-slate-600 dark:from-slate-100 dark:via-slate-300 dark:to-slate-400 bg-clip-text text-transparent"
+        >
+          Jose
+        </h1>
       </div>
+      <!-- <p
+        class="text-lg lg:text-xl text-slate-600 dark:text-slate-400 max-w-md text-center leading-relaxed"
+      >
+        Computer Science Student & Developer passionate about creating elegant
+        solutions
+      </p> -->
+
       <GetInTouch />
-      <div class="flex justify-center items-center gap-12 text-lg">
-        <Button client:idle href={cv}  text="View CV" id="button-cv" />
+
+      <div class="flex flex-wrap justify-center items-center gap-6 text-lg">
+        <Button client:idle href={cv} text="View CV" id="button-cv" />
         <Button
           client:idle
           href="/projects"
@@ -35,26 +56,23 @@ import '@/styles/index.scss'
     </div>
   </div>
 
-  <style is:global>
-    .text {
-      transform: translateY(20px);
-    }
-
-    .split {
-      transform: translateY(60px);
-      opacity: 0;
-    }
-
-  </style>
-
   <script>
     import gsap from "gsap";
-    
+
     gsap.to(".split", {
       y: 0,
-      duration: 1,
+      duration: 1.2,
       opacity: 1,
-      ease: "expo.inOut",
+      ease: "expo.out",
+    });
+
+    gsap.from(".split > *", {
+      y: 30,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.15,
+      ease: "power2.out",
+      delay: 0.3,
     });
   </script>
 </Layout>

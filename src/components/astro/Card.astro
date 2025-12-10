@@ -14,13 +14,13 @@ const { key, name, description, stacks, thumbnail } = Astro.props;
 ---
 
 <div
-  class="w-full h-fit gap-2 cursor-pointer border-2 border-black p-3 bg-white group card-parent box-border"
+  class="w-full h-fit gap-2 cursor-pointer border-2 border-slate-800 dark:border-slate-600 p-3 bg-white dark:bg-slate-800/30 backdrop-blur-sm group card-parent box-border transition-colors duration-300"
   data-cursor-text={name}
   data-key={key}
 >
   <div class="w-full h-72 overflow-hidden relative">
     <div
-      class="w-screen h-full bg-black absolute z-20 opacity-0 xl:opacity-10 2xl:opacity-10 group-hover:opacity-0 transition-opacity ease-in"
+      class="w-screen h-full bg-black dark:bg-slate-900 absolute z-20 opacity-0 xl:opacity-10 2xl:opacity-10 group-hover:opacity-0 transition-opacity ease-in"
     >
     </div>
     <Image
@@ -32,8 +32,10 @@ const { key, name, description, stacks, thumbnail } = Astro.props;
   </div>
   <div class="pt-6">
     <div class="flex items-center justify-between w-full">
-      <p class="text-xl 2xl:text-2xl font-bold">{name}</p>
-      <div class="flex gap-3">
+      <p class="text-xl 2xl:text-2xl font-bold text-slate-900 dark:text-white">
+        {name}
+      </p>
+      <div class="flex gap-3 text-slate-700 dark:text-slate-300">
         {
           stacks.map((s) => {
             return <s.icon size={21} />;
@@ -41,7 +43,9 @@ const { key, name, description, stacks, thumbnail } = Astro.props;
         }
       </div>
     </div>
-    <p class="text-base 2xl:text-lg">{description}</p>
+    <p class="text-base 2xl:text-lg text-slate-700 dark:text-slate-300">
+      {description}
+    </p>
   </div>
 </div>
 
@@ -58,22 +62,24 @@ const { key, name, description, stacks, thumbnail } = Astro.props;
       card.addEventListener("click", () => animatePageOut("/projects/" + key));
 
       card.addEventListener("mouseenter", () => {
+        const isDark = document.documentElement.classList.contains("dark");
         gsap.to(card, {
           duration: 0.5,
           scale: 1.05,
           ease: "power1.out",
-          boxShadow: "2px 3px 0px 0px black"
-        })
+          boxShadow: isDark
+            ? "2px 3px 0px 0px #475569"
+            : "2px 3px 0px 0px black",
+        });
       });
       card.addEventListener("mouseleave", () => {
         gsap.to(card, {
           duration: 0.5,
           scale: 1,
           ease: "power1.out",
-          boxShadow: "0px 0px 0px 0px black"
-        })
+          boxShadow: "0px 0px 0px 0px transparent",
+        });
       });
-    });  
+    });
   });
-  
 </script>

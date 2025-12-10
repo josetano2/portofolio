@@ -84,32 +84,40 @@ export const exitHoverEffect = (topChar: string, bottomChar: string) => {
   });
 };
 
+const getCurrentTheme = (): "light" | "dark" => {
+  return document.documentElement.classList.contains("dark") ? "dark" : "light";
+};
+
 export const buttonHoverEffect = (id: string) => {
   const buttonRef = document.getElementById(id);
+  const currentTheme = getCurrentTheme();
 
   if (buttonRef) {
+    buttonRef.classList.add("button-hover-active");
+    
     gsap.to(buttonRef, {
       duration: 0.3,
       scale: 1.1,
       backgroundColor: "#475569",
       ease: "power1.out",
-      color: "white",
-      boxShadow: "0px 6px 0px 0px black",
+      boxShadow: currentTheme === "dark" ? "0px 6px 0px 0px #1e293b" : "0px 6px 0px 0px black",
     });
   }
 };
 
 export const buttonExitHoverEffect = (id: string) => {
   const buttonRef = document.getElementById(id);
+  const currentTheme = getCurrentTheme();
 
   if (buttonRef) {
+    buttonRef.classList.remove("button-hover-active");
+    
     gsap.to(buttonRef, {
       duration: 0.3,
       scale: 1,
       backgroundColor: "transparent",
       ease: "power1.out",
-      color: "black",
-      boxShadow: "0px 0px 0px 0px black",
+      boxShadow: currentTheme === "dark" ? "0px 0px 0px 0px #1e293b" : "0px 0px 0px 0px black",
     });
   }
 };

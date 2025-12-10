@@ -31,20 +31,25 @@ const projectDetails = projectContents[project];
     >
       <div class="flex gap-6 justify-center">
         <Image
-          class="border-2 border-black object-cover"
+          class="border-2 border-slate-800 dark:border-slate-300 object-cover"
           src={projectDetails.thumbnail}
           alt={projectDetails.name}
         />
       </div>
       <div class="flex flex-col justify-center gap-3">
         <div class="flex items-center justify-between gap-6">
-          <p class="text-2xl lg:text-3xl 2xl:text-4xl font-bold">
+          <p
+            class="text-2xl lg:text-3xl 2xl:text-4xl font-bold text-slate-900 dark:text-white"
+          >
             {`> ${projectDetails.name}`}
           </p>
-          <div class="flex gap-6">
+          <div class="flex gap-6 text-slate-700 dark:text-slate-300">
             {
               projectDetails.demo && (
-                <a href={projectDetails.demo}>
+                <a
+                  href={projectDetails.demo}
+                  class="hover:text-slate-900 dark:hover:text-white transition-colors"
+                >
                   <FaGlobe
                     className="cursor-pointer"
                     size={25}
@@ -53,7 +58,10 @@ const projectDetails = projectContents[project];
                 </a>
               )
             }
-            <a href={projectDetails.githubRepo}>
+            <a
+              href={projectDetails.githubRepo}
+              class="hover:text-slate-900 dark:hover:text-white transition-colors"
+            >
               <FaGithub
                 className="cursor-pointer"
                 size={25}
@@ -67,20 +75,26 @@ const projectDetails = projectContents[project];
             projectDetails.explanation
               .split("~")
               .map((paragraph) => (
-                <p class="text-justify text-lg mb-4">{paragraph}</p>
+                <p class="text-justify text-lg mb-4 text-slate-700 dark:text-slate-300">
+                  {paragraph}
+                </p>
               ))
           }
         </div>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {
-          projectDetails && projectDetails.imageDetails && projectDetails.imageDetails.map((i) => (
-            <Image
-              class="border-2 border-black"
-              src={i}
-              alt={projectDetails.name}
-            />
-          ))
+          projectDetails &&
+            projectDetails.imageDetails &&
+            projectDetails.imageDetails.map((i) => (
+              <Image
+                class="border-2 border-slate-800 dark:border-slate-300"
+                src={i}
+                alt={projectDetails.name}
+              />
+            ))
         }
-  </div>
-</Layout>
+      </div>
+    </div>
+  </div></Layout
+>
