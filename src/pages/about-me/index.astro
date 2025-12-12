@@ -6,8 +6,11 @@ import {
   experiences,
   achievements,
 } from "@/lib/contents/project-contents";
+import { techStacks } from "@/lib/contents/tech-stacks";
+import StackCard from "@/components/astro/StackCard.astro";
 import { Image } from "astro:assets";
 import Footer from "@/components/astro/Footer.astro";
+import type { IStack } from "@/lib/models/model";
 ---
 
 <Layout>
@@ -58,6 +61,29 @@ import Footer from "@/components/astro/Footer.astro";
         </div>
       </div>
 
+      <div class="space-y-8">
+        <h2
+          class="text-3xl md:text-4xl font-semibold text-black dark:text-white text-center"
+        >
+          Tech Stacks
+        </h2>
+
+        {
+          techStacks.map((category) => (
+            <div class="space-y-4">
+              <h3 class="text-xl md:text-2xl font-semibold text-slate-800 dark:text-slate-200">
+                {category.title}
+              </h3>
+              <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
+                {category.stacks.map((stack: IStack) => (
+                  <StackCard stack={stack} />
+                ))}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+
       <div class="grid md:grid-cols-2 gap-6 md:gap-10">
         <div class="space-y-4">
           <h2
@@ -81,7 +107,6 @@ import Footer from "@/components/astro/Footer.astro";
           </div>
         </div>
 
-        <!-- Experience -->
         <div class="space-y-4">
           <h2
             class="text-3xl md:text-4xl font-semibold text-black dark:text-white"

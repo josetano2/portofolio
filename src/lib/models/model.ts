@@ -15,6 +15,7 @@ export interface IProject {
 export interface IStack {
   name: string;
   icon: IconType;
+  color?: string;
 }
 
 export interface IExperience {
@@ -23,4 +24,9 @@ export interface IExperience {
 }
 export interface IAchievement extends IExperience {
   certifImage?: ImageMetadata;
+}
+
+export interface ITechStacks {
+  title: string;
+  stacks: IStack[];
 }
