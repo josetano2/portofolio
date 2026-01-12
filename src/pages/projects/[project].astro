@@ -88,7 +88,7 @@ const projectDetails = projectContents[project];
             projectDetails.imageDetails &&
             projectDetails.imageDetails.map((i) => (
               <Image
-                class="border-2 border-slate-800 dark:border-slate-300"
+                class="border-2 border-slate-800 dark:border-slate-300 max-h-[40rem] w-auto object-contain"
                 src={i}
                 alt={projectDetails.name}
               />
