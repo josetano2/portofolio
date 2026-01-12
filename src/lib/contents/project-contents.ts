@@ -35,6 +35,10 @@ const traveloHIDetails = importImageDetails(
   import.meta.glob("@/lib/images/TraveloHI/Details/*.png", { eager: true }),
 );
 
+const easyWorkDetails = importImageDetails(
+  import.meta.glob("@/lib/images/EasyWork/Details/*.png", { eager: true }),
+)
+
 const recallDetails = importImageDetails(
   import.meta.glob("@/lib/images/Recall/Details/*.png", { eager: true }),
 );
@@ -164,6 +168,7 @@ export const projectContents: { [key: string]: IProject } = {
     thumbnail: easyWorkThumbnail,
     githubRepo: "https://github.com/josetano2/easy-work",
     demo: "https://devpost.com/software/easywork?ref_content=my-projects-tab&ref_feature=my_projects",
+    imageDetails: easyWorkDetails,
   },
   sunshine: {
     name: "Sunshine 🌞",
