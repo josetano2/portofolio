@@ -29,7 +29,12 @@ const darkModeColor = isBlack
     ? "#000000"
     : stack.color || "#000000";
 
-const rgb = hexToRgb(stack.color || "#000000");
+const glowColorSource = isBlack
+  ? "#ffffff"
+  : isWhite
+    ? "#000000"
+    : stack.color || "#000000";
+const rgb = hexToRgb(glowColorSource);
 const glowColor = `${rgb.r}, ${rgb.g}, ${rgb.b}`;
 ---
 
