@@ -43,6 +43,41 @@ const recallDetails = importImageDetails(
   import.meta.glob("@/lib/images/Recall/Details/*.png", { eager: true }),
 );
 
+import travelohi1 from "@/lib/images/TraveloHI/Details/1.png";
+import travelohi2 from "@/lib/images/TraveloHI/Details/2.png";
+import travelohi3 from "@/lib/images/TraveloHI/Details/3.png";
+import travelohi4 from "@/lib/images/TraveloHI/Details/4.png";
+import travelohi5 from "@/lib/images/TraveloHI/Details/5.png";
+import travelohi6 from "@/lib/images/TraveloHI/Details/6.png";
+import travelohi7 from "@/lib/images/TraveloHI/Details/7.png";
+import travelohi8 from "@/lib/images/TraveloHI/Details/8.png";
+import travelohi9 from "@/lib/images/TraveloHI/Details/9.png";
+import travelohi10 from "@/lib/images/TraveloHI/Details/10.png";
+import travelohi11 from "@/lib/images/TraveloHI/Details/11.png";
+import travelohi12 from "@/lib/images/TraveloHI/Details/12.png";
+import travelohi13 from "@/lib/images/TraveloHI/Details/13.png";
+
+import recall1 from "@/lib/images/Recall/Details/1.png";
+import recall2 from "@/lib/images/Recall/Details/2.png";
+import recall3 from "@/lib/images/Recall/Details/3.png";
+import recall4 from "@/lib/images/Recall/Details/4.png";
+import recall5 from "@/lib/images/Recall/Details/5.png";
+import recall6 from "@/lib/images/Recall/Details/6.png";
+import recall7 from "@/lib/images/Recall/Details/7.png";
+import recall8 from "@/lib/images/Recall/Details/8.png";
+import recall9 from "@/lib/images/Recall/Details/9.png";
+import recall10 from "@/lib/images/Recall/Details/10.png";
+import recall11 from "@/lib/images/Recall/Details/11.png";
+import recall12 from "@/lib/images/Recall/Details/12.png";
+
+import easywork1 from "@/lib/images/EasyWork/Details/1.png";
+import easywork2 from "@/lib/images/EasyWork/Details/2.png";
+import easywork3 from "@/lib/images/EasyWork/Details/3.png";
+import easywork4 from "@/lib/images/EasyWork/Details/4.png";
+import easywork5 from "@/lib/images/EasyWork/Details/5.png";
+import easywork7 from "@/lib/images/EasyWork/Details/7.png";
+import easywork8 from "@/lib/images/EasyWork/Details/8.png";
+
 export const stackContents: IStack[] = [
   // 0
   {
@@ -148,7 +183,21 @@ export const projectContents: { [key: string]: IProject } = {
     `,
     thumbnail: traveloHIThumbnail,
     githubRepo: "https://github.com/josetano2/TraveloHI",
-    imageDetails: traveloHIDetails,
+    imageDetails: [
+      travelohi1,
+      travelohi2,
+      travelohi3,
+      travelohi4,
+      travelohi5,
+      travelohi6,
+      travelohi7,
+      travelohi8,
+      travelohi9,
+      travelohi10,
+      travelohi11,
+      travelohi12,
+      travelohi13,
+    ],
   },
   easywork: {
     name: "EasyWork",
@@ -168,7 +217,15 @@ export const projectContents: { [key: string]: IProject } = {
     thumbnail: easyWorkThumbnail,
     githubRepo: "https://github.com/josetano2/easy-work",
     demo: "https://devpost.com/software/easywork?ref_content=my-projects-tab&ref_feature=my_projects",
-    imageDetails: easyWorkDetails,
+    imageDetails: [
+      easywork1,
+      easywork2,
+      easywork3,
+      easywork4,
+      easywork5,
+      easywork7,
+      easywork8,
+    ],
   },
   sunshine: {
     name: "Sunshine 🌞",
@@ -201,7 +258,20 @@ export const projectContents: { [key: string]: IProject } = {
     stacks: [stackContents[6], stackContents[7]],
     thumbnail: recallThumbnail,
     githubRepo: "https://github.com/josetano2/recall",
-    imageDetails: recallDetails,
+    imageDetails: [
+      recall1,
+      recall2,
+      recall3,
+      recall4,
+      recall5,
+      recall6,
+      recall7,
+      recall8,
+      recall9,
+      recall10,
+      recall11,
+      recall12,
+    ],
   },
   "the-adventure-of-tpa": {
     name: "The Adventure of TPA",
