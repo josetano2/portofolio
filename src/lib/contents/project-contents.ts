@@ -167,12 +167,12 @@ export const projectContents: { [key: string]: IProject } = {
       stackContents[5],
     ],
     explanation: `
-      TraveloHI is a fullstack web application that offer users to book flights and reserve hotel rooms online, similar to many other e-commerce platforms. 
-      TraveloHI is a project to replicate the famous Traveloka.com. User could use promo, view their transaction history, view their current active ticket, 
-      view bookings, search & filter multiple hotels and flights, and much more! A cool feature on this web is user could upload a specific scenery photo,
-      and an AI could predict the image that is given by the user.~
+      TraveloHI is a fullstack web application that offers users to book flights and reserve hotel rooms online, similar to many other e-commerce platforms. 
+      TraveloHI is a project to replicate the famous Traveloka.com. Users can use promo, view their transaction history, view their current active ticket, 
+      view bookings, search & filter multiple hotels and flights, and much more! A cool feature on this web is users can upload a specific scenery photo,
+      and an AI can predict the image that is given by the user.~
 
-      The frontend of this website is created by utilizing React and SCSS. Meanwhile the backend part it created by using Go and Flask. The web application
+      The frontend of this website is created by utilizing React and SCSS. Meanwhile the backend part is created by using Go and Flask. The web application
       utilizes REST API powered by PostgreSQL for database management. For the model itself, it utilizes the AlexNet Model. Lastly, it utilizes JWT authentication 
       for user access and storing cookies.
     `,
@@ -242,12 +242,12 @@ export const projectContents: { [key: string]: IProject } = {
     name: "Recall",
     description: "Mobile Application",
     explanation: `
-      Recall is a mobile app for sharing and optimizing flashcards online, utilizing the Supermemo2 Algorithm to boost learning efficiency. Recall is created
-      to enables people who wanted to learn new things quickly and efficiently. Recall is efficient since it utilizes Spaced Repetition System (SRS) algorithm 
-      to determine what the user should review now. User could create a deck for their studying purposes, or they could view all of the available decks online
-      created by other users. Users could review their card and see the summary of their review, which utilizes SM2 algorithm at the backend.~
+      Recall is a mobile app for sharing and optimizing flashcards online, utilizing the Supermemo2 Algorithm to boost learning efficiency. Recall was created
+      to enable people who want to learn new things quickly and efficiently. Recall is efficient since it utilizes Spaced Repetition System (SRS) algorithm 
+      to determine what the user should review now. Users can create a deck for their studying purposes, or they can view all of the available decks online
+      created by other users. Users can review their cards and see the summary of their review, which utilizes SM2 algorithm at the backend.~
 
-      Recall created in Android and uses Kotlin, we also utilize the Jetpack Compose Framework on creating the layout of the application. Meanwhile the backend
+      Recall was created in Android and uses Kotlin, we also utilize the Jetpack Compose Framework on creating the layout of the application. Meanwhile the backend
       is created by using Firebase and Java Spring. Recall is created by a group of 2 people, myself and Darren Maverick.
     `,
     stacks: [stackContents[6], stackContents[7]],
@@ -273,12 +273,12 @@ export const projectContents: { [key: string]: IProject } = {
     description: "Game",
     explanation: `
       The Adventure of Tim, Patrick, and Araszkiewicz (TPA) is a quest based RPG developed in Unity, featuring a dynamic battle system and immersive environment.
-      The game follows the journey of three charactes: Tim, a brave knight; Patrick, a dog knight; and Araszkiewicz, a wizard. Player can explore the town to accept
-      quest, or to buy potions to enhance their character. One of the available quest is to defend crystals from the upcoming enemies. The goal is to kill the enemy
-      as many as possible to earn points. The game will end when either the crystal is destroyed, or all three character dies. After a game ends, the player could earn
-      in-game money based on their perfomance.~
+      The game follows the journey of three characters: Tim, a brave knight; Patrick, a dog knight; and Araszkiewicz, a wizard. Players can explore the town to accept
+      quests, or to buy potions to enhance their character. One of the available quests is to defend crystals from the upcoming enemies. The goal is to kill the enemy
+      as many as possible to earn points. The game will end when either the crystal is destroyed, or all three characters die. After a game ends, the player can earn
+      in-game money based on their performance.~
 
-      The Adventure of TPA is created by using Unity and C#. The uses multiple algorithms for world design and pathfindings. The game uses Binary Space Partitioning (BSP),
+      The Adventure of TPA is created by using Unity and C#. It uses multiple algorithms for world design and pathfinding. The game uses Binary Space Partitioning (BSP),
       and Prim to generate random obstacles on the map, and A* algorithm for the enemies' pathfinding.
     `,
     stacks: [stackContents[8], stackContents[9]],
@@ -306,14 +306,14 @@ export const projectContents: { [key: string]: IProject } = {
     name: "TarZaN",
     description: "Game",
     explanation: `
-     TarZan is an RPG and tower defense game developed in Unity. Player can explore diverse biomes, tame wild animals,
-     and mainly, engage in tower defense scenarios where waves of enemies challenge their defenses. Overtime, player would
-     get XP from the tower defense game mode. The player's objective is to defend the treehouse from these enemis.
-     Once they are ready, tehy can challenge the final boss to conclude the game. Aside from the tower defense mode, player 
-     could explore the biomes by walking, running, climbing, and even grappling. Player could tame pets to help them throught the gameplay.~
+     TarZan is an RPG and tower defense game developed in Unity. Players can explore diverse biomes, tame wild animals,
+     and mainly, engage in tower defense scenarios where waves of enemies challenge their defenses. Over time, players would
+     get XP from the tower defense game mode. The player's objective is to defend the treehouse from these enemies.
+     Once they are ready, they can challenge the final boss to conclude the game. Aside from the tower defense mode, players 
+     can explore the biomes by walking, running, climbing, and even grappling. Players can tame pets to help them throughout the gameplay.~
 
      TarZan is created by using Unity and C#. It also utilizes various algorithms throughout the game, which are Wave Function Collapse
-     (WFC) to generate the obstacles, and A* for the optimizing the enemies' pathfinding towards the treehouse. Lastly, the game uses NavMesh
+     (WFC) to generate the obstacles, and A* for optimizing the enemies' pathfinding towards the treehouse. Lastly, the game uses NavMesh
      for the wild animal's movement and pathfinding.
     `,
     stacks: [stackContents[8], stackContents[9]],
@@ -343,8 +343,8 @@ export const projectContents: { [key: string]: IProject } = {
       and growth in the Web3 space.~
 
       The frontend of the application is built using React and Tailwind, while the backend, which handles all the posts available, is powered by Motoko, a language 
-      specifically designed for the Internet Computer. Just like Sunshine, SunshineFi also utilizes Internet Identity to identify and authenticate users that uses
-      our web. SunshineFi is created over the course of 36 hours for the Chain Fusion HackerHouse Hackatahon at Bali, build by a group of 3 people, Theo Justin and
+      specifically designed for the Internet Computer. Just like Sunshine, SunshineFi also utilizes Internet Identity to identify and authenticate users who use
+      our web. SunshineFi is created over the course of 36 hours for the Chain Fusion HackerHouse Hackathon at Bali, built by a group of 3 people, Theo Justin and
       Ryan Wantouw.
     `,
     description: "Web3 Application",
@@ -384,10 +384,10 @@ export const projectContents: { [key: string]: IProject } = {
   // },
 };
 
-export const myself = `Hello, my name is Jose Jonathan Tano, an undergratuate 
+export const myself = `Hello, my name is Jose Jonathan Tano, an undergraduate 
     computer science student with a passion for technologies and learning. 
-    My focus right now to master my skills in web development, aiming
-    to create user-friendly, efficient, and elegant softwares.`;
+    My focus right now is to master my skills in web development, aiming
+    to create user-friendly, efficient, and elegant software.`;
 
 export const achievements: IAchievement[] = [
   {
