@@ -78,6 +78,17 @@ import easywork5 from "@/lib/images/EasyWork/Details/5.png";
 import easywork7 from "@/lib/images/EasyWork/Details/7.png";
 import easywork8 from "@/lib/images/EasyWork/Details/8.png";
 
+import tarzan1 from "@/lib/images/TarZaN/Details/1.png";
+import tarzan2 from "@/lib/images/TarZaN/Details/2.png";
+import tarzan3 from "@/lib/images/TarZaN/Details/3.png";
+import tarzan4 from "@/lib/images/TarZaN/Details/4.png";
+import tarzan5 from "@/lib/images/TarZaN/Details/5.png";
+import tarzan6 from "@/lib/images/TarZaN/Details/6.png";
+import tarzan7 from "@/lib/images/TarZaN/Details/7.png";
+import tarzan8 from "@/lib/images/TarZaN/Details/8.png";
+import tarzan9 from "@/lib/images/TarZaN/Details/9.png";
+import tarzan10 from "@/lib/images/TarZaN/Details/10.png";
+
 export const stackContents: IStack[] = [
   {
     name: "React",
@@ -308,6 +319,19 @@ export const projectContents: { [key: string]: IProject } = {
     stacks: [stackContents[8], stackContents[9]],
     thumbnail: tarzanThumbnail,
     githubRepo: "https://github.com/josetano2/tarzan",
+    demo: "https://youtu.be/xlYHl76CTT4",
+    imageDetails: [
+      tarzan1,
+      tarzan2,
+      tarzan3,
+      tarzan4,
+      tarzan5,
+      tarzan6,
+      tarzan7,
+      tarzan8,
+      tarzan9,
+      tarzan10,
+    ],
   },
   sunshinefi: {
     name: "SunshineFi",
