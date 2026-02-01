@@ -15,7 +15,7 @@ export default function Button({ href, text, id }: IButton) {
   return (
     <button
       data-cursor-icon=" "
-      className="border-black dark:border-white border-[1px] rounded-full px-4 py-1 text-black dark:text-white"
+      className="border-black dark:border-white border-[1px] rounded-full px-4 py-1 text-black hover:text-white dark:text-white"
       id={id}
       onClick={() => animatePageOut(href)}
       onMouseEnter={() => buttonHoverEffect(id)}
