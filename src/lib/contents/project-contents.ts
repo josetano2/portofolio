@@ -79,82 +79,66 @@ import easywork7 from "@/lib/images/EasyWork/Details/7.png";
 import easywork8 from "@/lib/images/EasyWork/Details/8.png";
 
 export const stackContents: IStack[] = [
-  // 0
   {
     name: "React",
     icon: FaReact,
   },
-  // 1
   {
     name: "Go",
     icon: TbBrandGolang,
   },
-  // 2
   {
     name: "Postgresql",
     icon: DiPostgresql,
   },
-  // 3
   {
     name: "Next",
     icon: RiNextjsFill,
   },
-  // 4
   {
     name: "Tailwind",
     icon: RiTailwindCssFill,
   },
-  // 5
   {
     name: "Flask",
     icon: SiFlask,
   },
-  // 6
   {
     name: "Kotlin",
     icon: TbBrandKotlin,
   },
-  // 7
   {
     name: "Firebase",
     icon: RiFirebaseFill,
   },
-  // 8
   {
     name: "Unity",
     icon: FaUnity,
   },
-  // 9
   {
     name: "C#",
     icon: TbBrandCSharp,
   },
-  // 10
   {
     name: "CSS",
     icon: FaCss3,
   },
-  // 11
   {
     name: "GraphQL",
     icon: GrGraphQl,
   },
-  // 12
   {
     name: "GraphQL",
     icon: GrGraphQl,
   },
-  // 13
   {
     name: "Redis",
     icon: DiRedis,
   },
-  // 14
   {
     name: "Electron",
     icon: IoLogoElectron,
   },
-  // 15
   {
     name: "Flutter",
     icon: RiFlutterFill,
@@ -290,23 +274,23 @@ export const projectContents: { [key: string]: IProject } = {
     thumbnail: theAdventureOfTPAThumbnail,
     githubRepo: "https://github.com/josetano2/The-Adventure-of-TPA",
   },
-  linkasa: {
-    name: "LinKasa",
-    description: "Desktop Application",
-    explanation: `
-      LinKasa is a desktop application designed to manage and optimize airport management operations. LinKasa aims to facilitate complex task associated with
-      managing flight operations, ground support, and other logistical challenges. This application integrates real-time monitoring, task management, and communication 
-      features between departments, allowing airport staff to efficiently handle everything from baggage tracking to security operations.  LinKasa is designed to be 
-      user-friendly and customizable, providing the tools that airport operators need to ensure safety and efficiency.~
+  // linkasa: {
+  //   name: "LinKasa",
+  //   description: "Desktop Application",
+  //   explanation: `
+  //     LinKasa is a desktop application designed to manage and optimize airport management operations. LinKasa aims to facilitate complex task associated with
+  //     managing flight operations, ground support, and other logistical challenges. This application integrates real-time monitoring, task management, and communication 
+  //     features between departments, allowing airport staff to efficiently handle everything from baggage tracking to security operations.  LinKasa is designed to be 
+  //     user-friendly and customizable, providing the tools that airport operators need to ensure safety and efficiency.~
 
-      Given Linkasa's extensive range of roles and functionalities, the first step is to thoroughly analyze the business requirements for this application, by mapping them
-      into an UML Model. For this project, I have made the use case diagram, use case description, and the other diagrams needed. For the application itself, it is created
-      by using Next.js and electron, and Firebase to store all of the data.
-    `,
-    stacks: [stackContents[0], stackContents[7], stackContents[14]],
-    thumbnail: linkasaThumbnail,
-    githubRepo: "https://github.com/josetano2/LinKasa",
-  },
+  //     Given Linkasa's extensive range of roles and functionalities, the first step is to thoroughly analyze the business requirements for this application, by mapping them
+  //     into an UML Model. For this project, I have made the use case diagram, use case description, and the other diagrams needed. For the application itself, it is created
+  //     by using Next.js and electron, and Firebase to store all of the data.
+  //   `,
+  //   stacks: [stackContents[0], stackContents[7], stackContents[14]],
+  //   thumbnail: linkasaThumbnail,
+  //   githubRepo: "https://github.com/josetano2/LinKasa",
+  // },
   tarzan: {
     name: "TarZaN",
     description: "Game",
@@ -344,36 +328,36 @@ export const projectContents: { [key: string]: IProject } = {
     thumbnail: sunshineFiThumbnail,
     githubRepo: "https://github.com/josetano2/sunshine-socialfi",
   },
-  janidb: {
-    name: "JAniDB",
-    explanation: `
-      JaniDB is a web application that showcases a vast collection of information from the world of anime. The site features top-rated shows across various genres like 
-      RomCom, Drama, Action, and Music. When a user clicks on an anime card, they are directed to a detailed page containing comprehensive information, including total episodes, 
-      characters, genres, synopsis, and more. Users can also search for specific anime titles and save their favorites for easy access.~
+  // janidb: {
+  //   name: "JAniDB",
+  //   explanation: `
+  //     JaniDB is a web application that showcases a vast collection of information from the world of anime. The site features top-rated shows across various genres like 
+  //     RomCom, Drama, Action, and Music. When a user clicks on an anime card, they are directed to a detailed page containing comprehensive information, including total episodes, 
+  //     characters, genres, synopsis, and more. Users can also search for specific anime titles and save their favorites for easy access.~
 
-      JaniDB is created with React, and it utlizies GraphQL from the AniList API. JaniDB is my first project that uses React and utilizes API to display real-time dynamic information on the website.
-    `,
-    description: "Web Application",
-    stacks: [stackContents[0], stackContents[10], stackContents[11]],
-    thumbnail: janiDBThumbnail,
-    githubRepo: "https://github.com/josetano2/JAniDB",
-    demo: "https://janidb.vercel.app/",
-  },
-  animob: {
-    name: "AniMob",
-    explanation: `
-      AniMob is a mobile application that showcases a vast collection of information from the world of anime. Similar to JaniDB, it recommends multiple animes from various of genres.
-      User could comment their opinion on each of the anime, and they could mark their favorites for easy access. The app also features a search function, allowing users to 
-      browse various anime, view brief synopses, and explore genres.~
+  //     JaniDB is created with React, and it utlizies GraphQL from the AniList API. JaniDB is my first project that uses React and utilizes API to display real-time dynamic information on the website.
+  //   `,
+  //   description: "Web Application",
+  //   stacks: [stackContents[0], stackContents[10], stackContents[11]],
+  //   thumbnail: janiDBThumbnail,
+  //   githubRepo: "https://github.com/josetano2/JAniDB",
+  //   demo: "https://janidb.vercel.app/",
+  // },
+  // animob: {
+  //   name: "AniMob",
+  //   explanation: `
+  //     AniMob is a mobile application that showcases a vast collection of information from the world of anime. Similar to JaniDB, it recommends multiple animes from various of genres.
+  //     User could comment their opinion on each of the anime, and they could mark their favorites for easy access. The app also features a search function, allowing users to 
+  //     browse various anime, view brief synopses, and explore genres.~
 
-      AniMob is created with Flutter, and it does not have a backend. So everything within the application is hard coded information. Although the application is not dynamic, it gave
-      me a new approach on building application on Flutter, since this is my first project by using Flutter.
-    `,
-    description: "Mobile Application",
-    stacks: [stackContents[15]],
-    thumbnail: aniMobThumbnail,
-    githubRepo: "https://github.com/josetano2/AniMob",
-  },
+  //     AniMob is created with Flutter, and it does not have a backend. So everything within the application is hard coded information. Although the application is not dynamic, it gave
+  //     me a new approach on building application on Flutter, since this is my first project by using Flutter.
+  //   `,
+  //   description: "Mobile Application",
+  //   stacks: [stackContents[15]],
+  //   thumbnail: aniMobThumbnail,
+  //   githubRepo: "https://github.com/josetano2/AniMob",
+  // },
 };
 
 export const myself = `Hello, my name is Jose Jonathan Tano, an undergratuate 
