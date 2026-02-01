@@ -411,7 +411,7 @@ export const achievements: IAchievement[] = [
 export const experiences: IExperience[] = [
   {
     name: "IT Developer Intern@Blibli",
-    year: "2025 - Present",
+    year: "2025 - 2026",
   },
   {
     name: "Full-Time Laboratory Assistant@Binus",
