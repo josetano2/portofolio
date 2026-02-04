@@ -3,6 +3,7 @@ import { projectContents } from "@/lib/contents/project-contents";
 import Layout from "../../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import { FaGithub, FaGlobe } from "react-icons/fa6";
+import { FaFileAlt } from "react-icons/fa";
 
 export function getStaticPaths() {
   return [
@@ -44,6 +45,20 @@ const projectDetails = projectContents[project];
             {`> ${projectDetails.name}`}
           </p>
           <div class="flex gap-6 text-slate-700 dark:text-slate-300">
+            {
+              projectDetails.docs && (
+                <a
+                  href={projectDetails.docs}
+                  class="hover:text-slate-900 dark:hover:text-white transition-colors"
+                >
+                  <FaFileAlt
+                    className="cursor-pointer"
+                    size={25}
+                    data-cursor-text="Docs"
+                  />
+                </a>
+              )
+            }
             {
               projectDetails.demo && (
                 <a

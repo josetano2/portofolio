@@ -28,6 +28,7 @@ import tarzanThumbnail from "@/lib/images/TarZaN/main.png";
 import sunshineFiThumbnail from "@/lib/images/SunshineFi/main.png";
 import aniMobThumbnail from "@/lib/images/AniMob/main.jpg";
 import codefestCertif from "@/lib/images/Certificates/Codefest.png";
+import sunshineDocs from "@/lib/contents/docs/sunshine.pdf";
 
 import { importImageDetails } from "../utils/import";
 
@@ -88,6 +89,12 @@ import theAdventureOfTPA8 from "@/lib/images/The Adventure of TPA/Details/8.png"
 import theAdventureOfTPA9 from "@/lib/images/The Adventure of TPA/Details/9.png";
 import theAdventureOfTPA10 from "@/lib/images/The Adventure of TPA/Details/10.png";
 import theAdventureOfTPA11 from "@/lib/images/The Adventure of TPA/Details/11.png";
+
+import sunshineFi1 from "@/lib/images/SunshineFi/Details/1.png";
+import sunshineFi2 from "@/lib/images/SunshineFi/Details/2.png";
+import sunshineFi3 from "@/lib/images/SunshineFi/Details/3.png";
+import sunshineFi4 from "@/lib/images/SunshineFi/Details/4.png";
+import sunshineFi5 from "@/lib/images/SunshineFi/Details/5.png";
 
 export const stackContents: IStack[] = [
   {
@@ -237,6 +244,7 @@ export const projectContents: { [key: string]: IProject } = {
     thumbnail: sunshineThumbnail,
     githubRepo: "https://github.com/josetano2/sunshine",
     demo: "https://youtu.be/5CAqpu-hQPc",
+    docs: sunshineDocs,
   },
   recall: {
     name: "Recall",
@@ -364,6 +372,13 @@ export const projectContents: { [key: string]: IProject } = {
     stacks: [stackContents[0], stackContents[4], stackContents[5]],
     thumbnail: sunshineFiThumbnail,
     githubRepo: "https://github.com/josetano2/sunshine-socialfi",
+    imageDetails: [
+      sunshineFi1,
+      sunshineFi2,
+      sunshineFi3,
+      sunshineFi4,
+      sunshineFi5,
+    ],
   },
   // janidb: {
   //   name: "JAniDB",
