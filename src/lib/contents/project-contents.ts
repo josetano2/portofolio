@@ -31,18 +31,6 @@ import codefestCertif from "@/lib/images/Certificates/Codefest.png";
 
 import { importImageDetails } from "../utils/import";
 
-const traveloHIDetails = importImageDetails(
-  import.meta.glob("@/lib/images/TraveloHI/Details/*.png", { eager: true }),
-);
-
-const easyWorkDetails = importImageDetails(
-  import.meta.glob("@/lib/images/EasyWork/Details/*.png", { eager: true }),
-)
-
-const recallDetails = importImageDetails(
-  import.meta.glob("@/lib/images/Recall/Details/*.png", { eager: true }),
-);
-
 import travelohi1 from "@/lib/images/TraveloHI/Details/1.png";
 import travelohi2 from "@/lib/images/TraveloHI/Details/2.png";
 import travelohi3 from "@/lib/images/TraveloHI/Details/3.png";
@@ -88,6 +76,18 @@ import tarzan7 from "@/lib/images/TarZaN/Details/7.png";
 import tarzan8 from "@/lib/images/TarZaN/Details/8.png";
 import tarzan9 from "@/lib/images/TarZaN/Details/9.png";
 import tarzan10 from "@/lib/images/TarZaN/Details/10.png";
+
+import theAdventureOfTPA1 from "@/lib/images/The Adventure of TPA/Details/1.png";
+import theAdventureOfTPA2 from "@/lib/images/The Adventure of TPA/Details/2.png";
+import theAdventureOfTPA3 from "@/lib/images/The Adventure of TPA/Details/3.png";
+import theAdventureOfTPA4 from "@/lib/images/The Adventure of TPA/Details/4.png";
+import theAdventureOfTPA5 from "@/lib/images/The Adventure of TPA/Details/5.png";
+import theAdventureOfTPA6 from "@/lib/images/The Adventure of TPA/Details/6.png";
+import theAdventureOfTPA7 from "@/lib/images/The Adventure of TPA/Details/7.png";
+import theAdventureOfTPA8 from "@/lib/images/The Adventure of TPA/Details/8.png";
+import theAdventureOfTPA9 from "@/lib/images/The Adventure of TPA/Details/9.png";
+import theAdventureOfTPA10 from "@/lib/images/The Adventure of TPA/Details/10.png";
+import theAdventureOfTPA11 from "@/lib/images/The Adventure of TPA/Details/11.png";
 
 export const stackContents: IStack[] = [
   {
@@ -284,6 +284,19 @@ export const projectContents: { [key: string]: IProject } = {
     stacks: [stackContents[8], stackContents[9]],
     thumbnail: theAdventureOfTPAThumbnail,
     githubRepo: "https://github.com/josetano2/The-Adventure-of-TPA",
+    imageDetails: [
+      theAdventureOfTPA1,
+      theAdventureOfTPA2,
+      theAdventureOfTPA3,
+      theAdventureOfTPA4,
+      theAdventureOfTPA5,
+      theAdventureOfTPA6,
+      theAdventureOfTPA7,
+      theAdventureOfTPA8,
+      theAdventureOfTPA9,
+      theAdventureOfTPA10,
+      theAdventureOfTPA11,
+    ],
   },
   // linkasa: {
   //   name: "LinKasa",
