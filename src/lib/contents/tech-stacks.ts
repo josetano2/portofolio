@@ -1,7 +1,7 @@
 import {
   SiC,
   SiCplusplus,
-  SiCsharp,
+  SiSharp,
   SiJavascript,
   SiOpenjdk,
   SiTypescript,
@@ -10,7 +10,6 @@ import {
   SiPython,
   SiMysql,
   SiPostgresql,
-  SiMicrosoftsqlserver,
   SiFirebase,
   SiElasticsearch,
   SiReact,
@@ -39,7 +38,7 @@ export const techStacks: ITechStacks[] = [
       },
       {
         name: "C#",
-        icon: SiCsharp,
+        icon: SiSharp,
         color: "#239120",
       },
       {

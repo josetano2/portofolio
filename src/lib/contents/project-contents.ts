@@ -11,8 +11,9 @@ import {
   RiTailwindCssFill,
   RiNextjsFill,
   RiFirebaseFill,
+  RiQwenAiFill
 } from "react-icons/ri";
-import { SiFlask } from "react-icons/si";
+import { SiFlask, SiPython } from "react-icons/si";
 import { TbBrandKotlin, TbBrandGolang, TbBrandCSharp } from "react-icons/tb";
 import { GrGraphQl } from "react-icons/gr";
 import { IoLogoDocker, IoLogoElectron } from "react-icons/io5";
@@ -28,8 +29,10 @@ import tarzanThumbnail from "@/lib/images/TarZaN/main.png";
 import sunshineFiThumbnail from "@/lib/images/SunshineFi/main.png";
 import aniMobThumbnail from "@/lib/images/AniMob/main.jpg";
 import notekiThumbnail from "@/lib/images/Noteki/main.png";
+import cropWhisperThumbnail from "@/lib/images/CropWhisper/main.png";
 import codefestCertif from "@/lib/images/Certificates/Codefest.png";
 import sunshineDocs from "@/lib/contents/docs/sunshine.pdf";
+
 
 import { importImageDetails } from "../utils/import";
 
@@ -168,7 +171,15 @@ export const stackContents: IStack[] = [
   {
     name: "Docker",
     icon: IoLogoDocker
-  }
+  },
+  {
+    name: "Qwen",
+    icon: RiQwenAiFill
+  },
+  {
+    name: "Python",
+    icon: SiPython,
+  },
 ];
 
 export const projectContents: { [key: string]: IProject } = {
@@ -267,6 +278,23 @@ export const projectContents: { [key: string]: IProject } = {
     githubRepo: "https://github.com/josetano2/sunshine",
     demo: "https://youtu.be/5CAqpu-hQPc",
     docs: sunshineDocs,
+  },
+  cropwhisper: {
+    name: "CropWhisper",
+    description: "Web Application",
+    explanation: `
+     CropWhisper is an end-to-end multimodal agentic AI system that helps smallholder farmers identify and treat crop diseases without needing an agronomist, a soil lab, or any agricultural training. 
+     The farmer provides photos of their affected crop, a short description of the problem, and their location. CropWhisper handles the rest. An 8-agent pipeline powered by Qwen3-VL and Qwen3 Reasoning — served via vLLM on AMD Instinct MI300X GPUs — 
+     works through the problem in stages. A Vision-Language agent produces a forensic, bias-free visual description of the crop. A Diagnosis agent cross-references that against the farmer's statement, real soil data from the ISRIC SoilGrids global database, 
+     and a RAG database of 190 confirmed disease cases. A Verification agent stress-tests the diagnosis. Finally, an Action Plan agent produces a prioritized report with immediate steps, cost estimates, a 7-day monitoring checklist, and escalation criteria. 
+     When confidence is low, the system asks for more evidence. A second 4-agent follow-up pipeline accepts new photos, re-analyzes the case, and returns a diff-style update explicitly tagging each change as CONTRADICT, MODIFY, or KEEP. This cascades until 
+     the diagnosis is confident. The production vision is a mobile app with real-time camera, voice I/O in the farmer's local language, GPS auto-detection, and offline-first triage — designed for 2G/3G and zero literacy requirements. Built on AMD Instinct 
+     MI300X, ROCm, vLLM, Qwen3-VL, Qwen3 Reasoning, LangGraph, and Supabase.
+     `,
+    stacks: [stackContents[17], stackContents[18]],
+    thumbnail: cropWhisperThumbnail,
+    githubRepo: "https://github.com/nenlitiochristian/cropwhisper",
+    demo: "https://lablab.ai/ai-hackathons/amd-developer/ikan-solo/cropwhisper",
   },
   recall: {
     name: "Recall",
@@ -434,8 +462,8 @@ export const projectContents: { [key: string]: IProject } = {
   // },
 };
 
-export const myself = `Hello, my name is Jose Jonathan Tano, an undergraduate 
-    computer science student with a passion for technologies and learning. 
+export const myself = `Hello, my name is Jose Jonathan Tano, a computer science
+    graduate with a passion for technologies and learning.
     My focus right now is to master my skills in web development, aiming
     to create user-friendly, efficient, and elegant software.`;
 
