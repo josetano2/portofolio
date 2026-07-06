@@ -27,11 +27,11 @@ export const techStacks: ITechStacks[] = [
   {
     title: "Programming Languages",
     stacks: [
-      {
-        name: "C",
-        icon: SiC,
-        color: "#A8B9CC",
-      },
+      // {
+      //   name: "C",
+      //   icon: SiC,
+      //   color: "#A8B9CC",
+      // },
       {
         name: "C++",
         icon: SiCplusplus,
@@ -87,21 +87,21 @@ export const techStacks: ITechStacks[] = [
         icon: SiPostgresql,
         color: "#4169E1",
       },
-      {
-        name: "T-SQL",
-        icon: SiMicrosoftsqlserver,
-        color: "#CC2927",
-      },
+      // {
+      //   name: "T-SQL",
+      //   icon: SiMicrosoftsqlserver,
+      //   color: "#CC2927",
+      // },
       {
         name: "Firebase",
         icon: SiFirebase,
         color: "#FFCA28",
       },
-      {
-        name: "Elasticsearch",
-        icon: SiElasticsearch,
-        color: "#005571",
-      },
+      // {
+      //   name: "Elasticsearch",
+      //   icon: SiElasticsearch,
+      //   color: "#005571",
+      // },
     ],
   },
   {
@@ -112,11 +112,11 @@ export const techStacks: ITechStacks[] = [
         icon: SiReact,
         color: "#61DAFB",
       },
-      {
-        name: "Next",
-        icon: SiNextdotjs,
-        color: "#000000",
-      },
+      // {
+      //   name: "Next",
+      //   icon: SiNextdotjs,
+      //   color: "#000000",
+      // },
       {
         name: "Spring Boot",
         icon: SiSpringboot,
@@ -127,11 +127,11 @@ export const techStacks: ITechStacks[] = [
         icon: SiVuedotjs,
         color: "#4FC08D",
       },
-      {
-        name: "Flask",
-        icon: SiFlask,
-        color: "#000000",
-      },
+      // {
+      //   name: "Flask",
+      //   icon: SiFlask,
+      //   color: "#000000",
+      // },
       {
         name: "GoFiber",
         icon: SiGo,

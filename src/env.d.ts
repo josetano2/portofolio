@@ -1,3 +1,4 @@
+/// <reference path="../.astro/types.d.ts" />
 declare module '*.png' {
   const value: ImageMetadata;
   export default value;

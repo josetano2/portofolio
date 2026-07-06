@@ -103,13 +103,89 @@ const projectDetails = projectContents[project];
             projectDetails.imageDetails &&
             projectDetails.imageDetails.map((i) => (
               <Image
-                class="border-2 border-slate-800 dark:border-slate-300 max-h-[40rem] w-auto object-contain"
+                class="lightbox-trigger border-2 border-slate-800 dark:border-slate-300 aspect-video w-full object-cover cursor-pointer"
                 src={i}
                 alt={projectDetails.name}
+                data-cursor-text="View"
               />
             ))
         }
       </div>
+
+      <div
+        id="lightbox-overlay"
+        class="fixed inset-0 z-50 flex items-center justify-center opacity-0 pointer-events-none bg-black/0"
+      >
+        <img
+          id="lightbox-image"
+          class="max-h-[85vh] max-w-[90vw] object-contain border-2 border-slate-300 scale-90"
+          src=""
+          alt=""
+        />
+      </div>
     </div>
   </div></Layout
 >
+
+<script>
+  import gsap from "gsap";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const overlay = document.getElementById("lightbox-overlay");
+    const lightboxImage = document.getElementById(
+      "lightbox-image",
+    ) as HTMLImageElement | null;
+    const triggers = document.querySelectorAll(
+      ".lightbox-trigger",
+    ) as NodeListOf<HTMLImageElement>;
+
+    if (!overlay || !lightboxImage) return;
+
+    const openLightbox = (src: string, alt: string) => {
+      lightboxImage.src = src;
+      lightboxImage.alt = alt;
+      overlay.classList.remove("pointer-events-none");
+
+      gsap.to(overlay, {
+        duration: 0.35,
+        opacity: 1,
+        backgroundColor: "rgba(0,0,0,0.85)",
+        ease: "power2.out",
+      });
+      gsap.fromTo(
+        lightboxImage,
+        { scale: 0.9, opacity: 0 },
+        { duration: 0.35, scale: 1, opacity: 1, ease: "power2.out" },
+      );
+    };
+
+    const closeLightbox = () => {
+      gsap.to(overlay, {
+        duration: 0.3,
+        opacity: 0,
+        backgroundColor: "rgba(0,0,0,0)",
+        ease: "power1.in",
+        onComplete: () => {
+          overlay.classList.add("pointer-events-none");
+        },
+      });
+      gsap.to(lightboxImage, {
+        duration: 0.3,
+        scale: 0.9,
+        opacity: 0,
+        ease: "power1.in",
+      });
+    };
+
+    triggers.forEach((trigger) => {
+      trigger.addEventListener("click", () =>
+        openLightbox(trigger.src, trigger.alt),
+      );
+    });
+
+    overlay.addEventListener("click", closeLightbox);
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeLightbox();
+    });
+  });
+</script>

@@ -15,7 +15,7 @@ import {
 import { SiFlask } from "react-icons/si";
 import { TbBrandKotlin, TbBrandGolang, TbBrandCSharp } from "react-icons/tb";
 import { GrGraphQl } from "react-icons/gr";
-import { IoLogoElectron } from "react-icons/io5";
+import { IoLogoDocker, IoLogoElectron } from "react-icons/io5";
 import { RiFlutterFill } from "react-icons/ri";
 import traveloHIThumbnail from "@/lib/images/TraveloHI/main.png";
 import sunshineThumbnail from "@/lib/images/Sunshine/main.jpg";
@@ -27,6 +27,7 @@ import theAdventureOfTPAThumbnail from "@/lib/images/The Adventure of TPA/main.p
 import tarzanThumbnail from "@/lib/images/TarZaN/main.png";
 import sunshineFiThumbnail from "@/lib/images/SunshineFi/main.png";
 import aniMobThumbnail from "@/lib/images/AniMob/main.jpg";
+import notekiThumbnail from "@/lib/images/Noteki/main.png";
 import codefestCertif from "@/lib/images/Certificates/Codefest.png";
 import sunshineDocs from "@/lib/contents/docs/sunshine.pdf";
 
@@ -96,6 +97,9 @@ import sunshineFi3 from "@/lib/images/SunshineFi/Details/3.png";
 import sunshineFi4 from "@/lib/images/SunshineFi/Details/4.png";
 import sunshineFi5 from "@/lib/images/SunshineFi/Details/5.png";
 
+import noteki1 from "@/lib/images/Noteki/Details/1.png";
+import noteki2 from "@/lib/images/Noteki/Details/2.png";
+
 export const stackContents: IStack[] = [
   {
     name: "React",
@@ -161,6 +165,10 @@ export const stackContents: IStack[] = [
     name: "Flutter",
     icon: RiFlutterFill,
   },
+  {
+    name: "Docker",
+    icon: IoLogoDocker
+  }
 ];
 
 export const projectContents: { [key: string]: IProject } = {
@@ -200,6 +208,20 @@ export const projectContents: { [key: string]: IProject } = {
       travelohi12,
       travelohi13,
     ],
+  },
+  noteki: {
+    name: "Noteki",
+    description: "Web Application",
+    explanation: `
+      Noteki is an AI-powered web application that transforms study notes into high-quality Anki flashcards. It leverages AI to refine and correct notes, generate clear explanations, 
+      and create contextual examples that may be missing from the original material. By automating the flashcard creation process, Noteki helps learners study more efficiently and retain 
+      information more effectively. I primarily use it to generate Japanese grammar flashcards while preparing for the JLPT.
+    `,
+    stacks: [stackContents[0], stackContents[4], stackContents[16]],
+    thumbnail: notekiThumbnail,
+    githubRepo: "https://github.com/josetano2/noteki",
+    imageDetails: [noteki1, noteki2],
+    demo: "https://noteki.josetano.dev/",
   },
   easywork: {
     name: "EasyWork",
