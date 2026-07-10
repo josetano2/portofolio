@@ -38,42 +38,50 @@ const { title = "Jose Jonathan Tano" } = Astro.params;
     </script>
   </head>
   <body
-    class="w-screen min-h-screen flex bg-custom-grid bg-custom-size bg-white dark:bg-slate-900 overflow-x-hidden transition-colors duration-300"
+    class="w-screen min-h-screen flex flex-col bg-[color:var(--paper)] text-[color:var(--ink)] overflow-x-hidden transition-colors duration-300"
   >
-    <!-- Decorative Blurry Glows -->
     <div
-      class="fixed top-0 left-0 w-96 h-96 bg-pink-300 dark:bg-pink-600 dark:opacity-20 rounded-full opacity-30 blur-3xl -translate-x-1/4 -translate-y-1/4 pointer-events-none"
-    >
-    </div>
-    <div
-      class="fixed bottom-0 right-0 w-96 h-96 bg-blue-300 dark:bg-blue-600 dark:opacity-20 rounded-full opacity-30 blur-3xl translate-x-1/4 translate-y-1/4 pointer-events-none"
-    >
-    </div>
-
-    <div
-      class="fixed w-[200vw] h-[140vh] bg-slate-600 dark:bg-slate-800 -left-[50vw] top-0 z-[999]"
+      class="fixed w-[200vw] h-[140vh] bg-[#ff3d1a] -left-[50vw] top-0 z-[999]"
       id="bg-transition"
     >
     </div>
+
     <ThemeToggle client:load />
-    <div class="w-full min-h-screen flex flex-col p-8">
-      <div class="w-full h-fit flex justify-center">
-        <Navbar client:only />
-      </div>
-      <article class="h-full">
-        <slot />
-      </article>
-    </div>
+
+    <header
+      class="w-full flex items-center justify-between px-6 lg:px-12 py-6 lg:py-8 z-30 relative"
+    >
+      <a
+        href="/"
+        id="logo-home-link"
+        data-cursor-icon=" "
+        class="font-display text-xl lg:text-2xl tracking-tight"
+      >
+        JJT&#8202;/&#8202;01
+      </a>
+      <Navbar client:only />
+    </header>
+
+    <article class="flex-1 flex flex-col relative z-10">
+      <slot />
+    </article>
+
+    <footer
+      class="w-full px-6 lg:px-12 py-8 flex items-center justify-between font-mono text-xs uppercase tracking-widest opacity-60"
+    >
+      <span>&copy; {new Date().getFullYear()} Jose Jonathan Tano</span>
+      <span class="hidden sm:inline">Scroll to explore</span>
+      <span>Jakarta, ID</span>
+    </footer>
   </body>
 </html>
 
 <style is:global>
   html {
-    font-family: "Lexend", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
+    font-family: "Archivo", sans-serif;
+    font-weight: 400;
     font-style: normal;
-    /* cursor: none; */
+    scroll-behavior: smooth;
   }
 
   ::-webkit-scrollbar-track {
@@ -81,33 +89,12 @@ const { title = "Jose Jonathan Tano" } = Astro.params;
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: #475569;
-    border-radius: 10px;
-  }
-
-  .dark ::-webkit-scrollbar-thumb {
-    background-color: #64748b;
+    background-color: var(--ink);
+    border-radius: 0;
   }
 
   ::-webkit-scrollbar {
-    width: 3px;
-  }
-
-  body {
-    background-size: 70px 70px;
-    background-image: radial-gradient(
-      circle,
-      #0000003b 1px,
-      rgba(0, 0, 0, 0) 1px
-    );
-  }
-
-  .dark body {
-    background-image: radial-gradient(
-      circle,
-      rgba(255, 255, 255, 0.1) 1px,
-      rgba(0, 0, 0, 0) 1px
-    );
+    width: 6px;
   }
 
   ::view-transition-old(root),
@@ -131,9 +118,9 @@ const { title = "Jose Jonathan Tano" } = Astro.params;
 
 <script>
   import LocomotiveScroll from "locomotive-scroll";
-  import { animatePageIn } from "@/lib/animation/animation";
+  import { animatePageIn, animatePageOut } from "@/lib/animation/animation";
 
-  const locomotiveScroll = new LocomotiveScroll({
+  new LocomotiveScroll({
     lenisOptions: {
       wrapper: window,
       content: document.documentElement,
@@ -148,9 +135,11 @@ const { title = "Jose Jonathan Tano" } = Astro.params;
     },
   });
 
-  // window.addEventListener("DOMContentLoaded", () => {
-  //   animatePageIn();
-  // });
+  const logoLink = document.getElementById("logo-home-link");
+  logoLink?.addEventListener("click", (e) => {
+    e.preventDefault();
+    animatePageOut("/");
+  });
 
   const bgTransition = document.getElementById("bg-transition") as HTMLElement;
 

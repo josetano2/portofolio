@@ -1,6 +1,7 @@
 ---
 import { projectContents } from "@/lib/contents/project-contents";
 import Layout from "../../layouts/Layout.astro";
+import Footer from "@/components/astro/Footer.astro";
 import { Image } from "astro:assets";
 import { FaGithub, FaGlobe } from "react-icons/fa6";
 import { FaFileAlt } from "react-icons/fa";
@@ -8,15 +9,14 @@ import { FaFileAlt } from "react-icons/fa";
 export function getStaticPaths() {
   return [
     { params: { project: "travelohi" } },
+    { params: { project: "noteki" } },
     { params: { project: "easywork" } },
     { params: { project: "sunshine" } },
+    { params: { project: "cropwhisper" } },
     { params: { project: "recall" } },
-    { params: { project: "linkasa" } },
     { params: { project: "sunshinefi" } },
     { params: { project: "tarzan" } },
     { params: { project: "the-adventure-of-tpa" } },
-    { params: { project: "janidb" } },
-    { params: { project: "animob" } },
   ];
 }
 
@@ -26,109 +26,123 @@ const projectDetails = projectContents[project];
 ---
 
 <Layout title={projectDetails.name}>
-  <div class="flex flex-col pt-4 lg:pt-0 justify-center items-center">
-    <div
-      class="flex flex-col h-full sm:p-4 lg:p-8 gap-6 w-full lg:w-3/4 justify-center items-center"
+  <div class="flex flex-col px-6 lg:px-12 pt-4 pb-8">
+    <a
+      href="/projects"
+      id="back-link"
+      data-cursor-icon=" "
+      class="reveal font-mono text-xs uppercase tracking-widest opacity-60 hover:opacity-100 mb-8 inline-flex items-center gap-2 w-fit opacity-0"
     >
-      <div class="flex gap-6 justify-center">
-        <Image
-          class="border-2 border-slate-800 dark:border-slate-300 object-cover"
-          src={projectDetails.thumbnail}
-          alt={projectDetails.name}
-        />
-      </div>
-      <div class="flex flex-col justify-center gap-3">
-        <div class="flex items-center justify-between gap-6">
-          <p
-            class="text-2xl lg:text-3xl 2xl:text-4xl font-bold text-slate-900 dark:text-white"
-          >
-            {`> ${projectDetails.name}`}
-          </p>
-          <div class="flex gap-6 text-slate-700 dark:text-slate-300">
-            {
-              projectDetails.docs && (
-                <a
-                  href={projectDetails.docs}
-                  class="hover:text-slate-900 dark:hover:text-white transition-colors"
-                >
-                  <FaFileAlt
-                    className="cursor-pointer"
-                    size={25}
-                    data-cursor-text="Docs"
-                  />
-                </a>
-              )
-            }
-            {
-              projectDetails.demo && (
-                <a
-                  href={projectDetails.demo}
-                  class="hover:text-slate-900 dark:hover:text-white transition-colors"
-                >
-                  <FaGlobe
-                    className="cursor-pointer"
-                    size={25}
-                    data-cursor-text="Demo"
-                  />
-                </a>
-              )
-            }
-            <a
-              href={projectDetails.githubRepo}
-              class="hover:text-slate-900 dark:hover:text-white transition-colors"
-            >
-              <FaGithub
-                className="cursor-pointer"
-                size={25}
-                data-cursor-text="Repository"
-              />
-            </a>
-          </div>
-        </div>
-        <div>
-          {
-            projectDetails.explanation
-              .split("~")
-              .map((paragraph) => (
-                <p class="text-justify text-lg mb-4 text-slate-700 dark:text-slate-300">
-                  {paragraph}
-                </p>
-              ))
-          }
-        </div>
-      </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      &larr; All projects
+    </a>
+
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
+      <h1 class="reveal font-display text-5xl lg:text-8xl leading-[0.85] opacity-0">
+        {projectDetails.name}
+      </h1>
+      <div class="reveal flex gap-6 font-mono text-xs uppercase tracking-widest">
         {
-          projectDetails &&
-            projectDetails.imageDetails &&
-            projectDetails.imageDetails.map((i) => (
-              <Image
-                class="lightbox-trigger border-2 border-slate-800 dark:border-slate-300 aspect-video w-full object-cover cursor-pointer"
-                src={i}
-                alt={projectDetails.name}
-                data-cursor-text="View"
-              />
+          projectDetails.docs && (
+            <a
+              href={projectDetails.docs}
+              class="flex items-center gap-2 hover:text-[#ff3d1a] transition-colors"
+            >
+              <FaFileAlt data-cursor-text="Docs" size={16} /> Docs
+            </a>
+          )
+        }
+        {
+          projectDetails.demo && (
+            <a
+              href={projectDetails.demo}
+              class="flex items-center gap-2 hover:text-[#ff3d1a] transition-colors"
+            >
+              <FaGlobe data-cursor-text="Demo" size={16} /> Demo
+            </a>
+          )
+        }
+        <a
+          href={projectDetails.githubRepo}
+          class="flex items-center gap-2 hover:text-[#ff3d1a] transition-colors"
+        >
+          <FaGithub data-cursor-text="Repository" size={16} /> Code
+        </a>
+      </div>
+    </div>
+
+    <div class="reveal border-y-2 border-[color:var(--ink)] py-2 mb-10 opacity-0">
+      <Image
+        class="w-full aspect-video object-cover object-top"
+        src={projectDetails.thumbnail}
+        alt={projectDetails.name}
+      />
+    </div>
+
+    <div class="reveal grid lg:grid-cols-[auto_1fr] gap-6 lg:gap-16 mb-16 opacity-0">
+      <p class="font-mono text-xs uppercase tracking-widest opacity-60 shrink-0">
+        {projectDetails.description ?? "Project"}
+      </p>
+      <div class="max-w-3xl">
+        {
+          projectDetails.explanation
+            .split("~")
+            .map((paragraph) => (
+              <p class="text-base lg:text-lg leading-relaxed mb-5">
+                {paragraph}
+              </p>
             ))
         }
       </div>
-
-      <div
-        id="lightbox-overlay"
-        class="fixed inset-0 z-50 flex items-center justify-center opacity-0 pointer-events-none bg-black/0"
-      >
-        <img
-          id="lightbox-image"
-          class="max-h-[85vh] max-w-[90vw] object-contain border-2 border-slate-300 scale-90"
-          src=""
-          alt=""
-        />
-      </div>
     </div>
-  </div></Layout
->
+
+    {
+      projectDetails.imageDetails && (
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+          {projectDetails.imageDetails.map((i) => (
+            <Image
+              class="lightbox-trigger border-2 border-[color:var(--ink)] aspect-video w-full object-cover cursor-pointer"
+              src={i}
+              alt={projectDetails.name}
+              data-cursor-text="View"
+            />
+          ))}
+        </div>
+      )
+    }
+
+    <div
+      id="lightbox-overlay"
+      class="fixed inset-0 z-50 flex items-center justify-center opacity-0 pointer-events-none bg-black/0"
+    >
+      <img
+        id="lightbox-image"
+        class="max-h-[85vh] max-w-[90vw] object-contain border-2 border-[color:var(--paper)] scale-90"
+        src=""
+        alt=""
+      />
+    </div>
+
+    <Footer />
+  </div>
+</Layout>
 
 <script>
   import gsap from "gsap";
+  import { animatePageOut } from "@/lib/animation/animation";
+
+  gsap.set(".reveal", { y: 30 });
+  gsap.to(".reveal", {
+    y: 0,
+    opacity: 1,
+    duration: 0.7,
+    stagger: 0.08,
+    ease: "power3.out",
+  });
+
+  document.getElementById("back-link")?.addEventListener("click", (e) => {
+    e.preventDefault();
+    animatePageOut("/projects");
+  });
 
   document.addEventListener("DOMContentLoaded", () => {
     const overlay = document.getElementById("lightbox-overlay");

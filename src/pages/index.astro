@@ -4,74 +4,95 @@ import Button from "../components/react/Button";
 import TypewriterText from "@/components/react/TypewriterText";
 import GetInTouch from "@/components/astro/GetInTouch.astro";
 import cv from "@/lib/contents/cv/cv.pdf";
+import { stackContents } from "@/lib/contents/project-contents";
 import "@/styles/index.scss";
+
+const tickerStacks = [...stackContents, ...stackContents];
 ---
 
 <Layout>
-  <div
-    class="flex flex-col justify-center w-full h-full sm:p-6 lg:p-12 overflow-hidden mt-auto relative"
+  <section
+    class="relative flex flex-col justify-center min-h-[80vh] px-6 lg:px-12 gap-8"
   >
-    <div
-      class="flex flex-col h-full justify-center items-center gap-10 split relative z-10"
+    <div class="hero-line flex items-center gap-3 font-mono text-xs lg:text-sm uppercase tracking-widest opacity-0">
+      <span class="w-2 h-2 bg-[#ff3d1a]"></span>
+      <TypewriterText className="" client:load />
+      <span>— Computer Science Graduate</span>
+    </div>
+
+    <h1
+      class="hero-title font-display text-[15vw] leading-[0.85] lg:text-[11rem] lg:leading-[0.82] opacity-0"
     >
-      <div class="flex flex-col items-center gap-4">
-        <div
-          class="flex flex-wrap justify-center items-center text-slate-900 dark:text-white"
-        >
-          <p class="text-3xl lg:text-5xl 2xl:text-6xl font-semibold">
-            {`>\xa0`}
-          </p>
-          <TypewriterText
-            className="text-3xl lg:text-5xl 2xl:text-6xl font-semibold"
-            client:load
-          />
-          <p class="text-3xl lg:text-5xl 2xl:text-6xl font-semibold">
-            {`, I'm`}
-          </p>
-        </div>
-        <!-- <h1
-          class="text-5xl lg:text-7xl 2xl:text-8xl font-bold bg-gradient-to-br from-slate-900 via-slate-700 to-slate-600 dark:from-slate-100 dark:via-slate-300 dark:to-slate-400 bg-clip-text text-transparent"
-        >
-          Jose
-        </h1> -->
-        <h1
-          class="text-5xl lg:text-7xl 2xl:text-8xl font-bold bg-gradient-to-br text-slate-900 dark:text-white"
-        >
-          Jose
-        </h1>
-      </div>
+      <span class="block">JOSE</span>
+      <span class="block stroke-text">JONATHAN</span>
+      <span class="block">TANO<span class="text-[#ff3d1a]">.</span></span>
+    </h1>
 
-      <GetInTouch />
-
-      <div class="flex flex-wrap justify-center items-center gap-6 text-lg">
-        <Button client:idle href={cv} text="CV" id="button-cv" />
+    <div
+      class="hero-sub flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mt-4 opacity-0"
+    >
+      <p class="max-w-md text-base lg:text-lg leading-relaxed">
+        I build <span class="font-semibold">user-friendly</span>, efficient, and
+        elegant software — from full-stack web apps to AI-driven pipelines and
+        the occasional Unity game.
+      </p>
+      <div class="flex flex-wrap items-center gap-6">
+        <Button client:idle href={cv} text="Download CV" id="button-cv" />
         <Button
           client:idle
           href="/projects"
-          text="Projects"
+          text="View Projects"
           id="button-projects"
         />
       </div>
     </div>
-  </div>
+  </section>
+
+  <section class="ticker-wrap relative border-y-2 border-[color:var(--ink)] py-4 overflow-hidden opacity-0">
+    <div class="ticker flex w-max gap-12 font-mono text-sm uppercase tracking-widest whitespace-nowrap">
+      {
+        tickerStacks.map((s) => (
+          <span class="flex items-center gap-3 opacity-70">
+            <s.icon size={18} />
+            {s.name}
+            <span class="text-[#ff3d1a]">/</span>
+          </span>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="px-6 lg:px-12 py-16 lg:py-24 flex justify-center">
+    <GetInTouch />
+  </section>
 
   <script>
     import gsap from "gsap";
 
-    gsap.to(".split", {
-      y: 0,
-      duration: 1.2,
-      opacity: 1,
-      ease: "expo.out",
-    });
+    const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
-    gsap.from(".split > *", {
-      y: 30,
-      opacity: 0,
-      duration: 0.8,
-      stagger: 0.15,
-      ease: "power2.out",
-      delay: 0.3,
-    });
+    tl.to(".hero-line", { opacity: 1, y: 0, duration: 0.6 })
+      .set(".hero-title", { opacity: 1 })
+      .fromTo(
+        ".hero-title span",
+        { yPercent: 110 },
+        { yPercent: 0, opacity: 1, duration: 0.9, stagger: 0.08 },
+        "-=0.3"
+      )
+      .to(".hero-sub", { opacity: 1, y: 0, duration: 0.6 }, "-=0.4")
+      .to(".ticker-wrap", { opacity: 1, duration: 0.6 }, "-=0.3");
+
+    gsap.set(".hero-line", { y: 20 });
+    gsap.set(".hero-sub", { y: 20 });
+
+    const tickerEl = document.querySelector(".ticker");
+    if (tickerEl) {
+      gsap.to(tickerEl, {
+        xPercent: -50,
+        duration: 20,
+        ease: "none",
+        repeat: -1,
+      });
+    }
   </script>
 </Layout>

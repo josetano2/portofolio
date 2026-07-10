@@ -62,14 +62,14 @@ export default function ThemeToggle() {
     <button
       ref={buttonRef}
       onClick={toggleTheme}
-      className="fixed bottom-8 right-8 md:bottom-auto md:top-8 z-50 p-3 rounded-full bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm  border-slate-200 dark:border-borderslate-700 shadow-lg hover:scale-110 transition-all duration-300"
+      className="fixed bottom-8 right-8 z-50 w-11 h-11 flex items-center justify-center border-2 border-[color:var(--ink)] bg-[color:var(--paper)] hover:bg-[#ff3d1a] hover:border-[#ff3d1a] hover:text-[color:var(--paper)] transition-all duration-300"
       aria-label="Toggle theme"
       data-cursor-icon=" "
     >
       {theme === "light" ? (
-        <FiMoon className="w-5 h-5 text-blue-700" />
+        <FiMoon className="w-4 h-4" />
       ) : (
-        <FiSun className="w-5 h-5 text-yellow-400" />
+        <FiSun className="w-4 h-4" />
       )}
     </button>
   );

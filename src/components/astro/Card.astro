@@ -4,54 +4,60 @@ import type { IStack } from "../../lib/models/model";
 
 interface Props {
   key: string;
+  index: number;
   name: string;
   description: string;
   stacks: IStack[];
   thumbnail: ImageMetadata;
 }
 
-const { key, name, description, stacks, thumbnail } = Astro.props;
+const { key, index, name, description, stacks, thumbnail } = Astro.props;
 ---
 
 <div
-  class="w-full h-fit gap-2 cursor-pointer border-2 border-slate-800 dark:border-slate-600 p-3 bg-white dark:bg-slate-800/30 backdrop-blur-sm group card-parent box-border transition-colors duration-300"
+  class="card-parent group relative border-t-2 border-[color:var(--ink)] py-8 lg:py-10 cursor-pointer overflow-hidden"
   data-cursor-text={name}
   data-key={key}
 >
-  <div class="w-full h-72 overflow-hidden relative">
-    <div
-      class="w-screen h-full bg-black dark:bg-slate-900 absolute z-20 opacity-0 xl:opacity-10 2xl:opacity-10 group-hover:opacity-0 transition-opacity ease-in"
+  <div class="flex items-center gap-6 lg:gap-10">
+    <span class="font-mono text-sm opacity-40 shrink-0"
+      >{String(index).padStart(2, "0")}</span
     >
-    </div>
-    <Image
-      class="object-cover object-top w-full h-full transition-transform ease-in duration-[0.15s] scale-[1]"
-      src={thumbnail}
-      alt="tes"
-      densities={[1.5, 2]}
-    />
-  </div>
-  <div class="pt-6">
-    <div class="flex items-center justify-between w-full">
-      <p class="text-xl 2xl:text-2xl font-bold text-slate-900 dark:text-white">
+
+    <div class="flex-1 flex flex-col gap-2 relative z-10">
+      <p
+        class="card-name font-display text-3xl sm:text-4xl lg:text-6xl transition-transform duration-500 group-hover:translate-x-4"
+      >
         {name}
       </p>
-      <div class="flex gap-3 text-slate-700 dark:text-slate-300">
-        {
-          stacks.map((s) => {
-            return <s.icon size={21} />;
-          })
-        }
+      <div class="flex items-center gap-4 font-mono text-xs uppercase tracking-widest opacity-60">
+        <span>{description}</span>
+        <span class="flex gap-2">
+          {stacks.map((s) => <s.icon size={14} />)}
+        </span>
       </div>
     </div>
-    <p class="text-base 2xl:text-lg text-slate-700 dark:text-slate-300">
-      {description}
-    </p>
+
+    <div
+      class="thumb-wrap hidden lg:block w-40 h-28 overflow-hidden border-2 border-[color:var(--ink)] opacity-0 -rotate-3 scale-95 transition-all duration-500 group-hover:opacity-100 group-hover:rotate-0 group-hover:scale-100"
+    >
+      <Image
+        class="object-cover w-full h-full"
+        src={thumbnail}
+        alt={name}
+        densities={[1.5, 2]}
+      />
+    </div>
+
+    <span
+      class="arrow font-display text-2xl lg:text-4xl transition-transform duration-500 group-hover:translate-x-2 group-hover:-translate-y-2"
+      >&#8599;</span
+    >
   </div>
 </div>
 
 <script>
   import { animatePageOut } from "@/lib/animation/animation";
-  import gsap from "gsap";
 
   document.addEventListener("DOMContentLoaded", () => {
     const cards = document.querySelectorAll(
@@ -60,26 +66,6 @@ const { key, name, description, stacks, thumbnail } = Astro.props;
     cards.forEach((card) => {
       const key = card.dataset.key;
       card.addEventListener("click", () => animatePageOut("/projects/" + key));
-
-      card.addEventListener("mouseenter", () => {
-        const isDark = document.documentElement.classList.contains("dark");
-        gsap.to(card, {
-          duration: 0.5,
-          scale: 1.05,
-          ease: "power1.out",
-          boxShadow: isDark
-            ? "2px 3px 0px 0px #475569"
-            : "2px 3px 0px 0px black",
-        });
-      });
-      card.addEventListener("mouseleave", () => {
-        gsap.to(card, {
-          duration: 0.5,
-          scale: 1,
-          ease: "power1.out",
-          boxShadow: "0px 0px 0px 0px transparent",
-        });
-      });
     });
   });
 </script>

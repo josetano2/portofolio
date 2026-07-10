@@ -1,13 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@100..900&family=Archivo+Black&family=JetBrains+Mono:wght@400;500;700&display=swap");
 
-
-::selection {
-  color: #ffffff;
-  background: #475569;
+:root {
+  --ink: #0a0a0a;
+  --paper: #f4f2ed;
+  --accent: #ff3d1a;
 }
 
-$mf-color-base: #000 !default;
-$mf-color-text: #fff !default;
+::selection {
+  color: #f4f2ed;
+  background: #ff3d1a;
+}
+
+html.dark {
+  --ink: #f4f2ed;
+  --paper: #0a0a0a;
+}
 
 .mf-cursor {
   $root: &;
@@ -16,7 +23,6 @@ $mf-color-text: #fff !default;
   top: 0;
   left: 0;
   z-index: 250;
-    
 
   direction: ltr;
   contain: layout style size;
@@ -36,7 +42,7 @@ $mf-color-text: #fff !default;
     height: 48px;
     transform: scale(0.2);
 
-    background: #475569;
+    background: #ff3d1a;
     border-radius: 50%;
 
     transition:
@@ -45,7 +51,7 @@ $mf-color-text: #fff !default;
   }
 
   &.-inverse {
-    color: invert($mf-color-base);
+    color: invert(#000);
   }
 
   &.-exclusion {
@@ -53,7 +59,7 @@ $mf-color-text: #fff !default;
       mix-blend-mode: exclusion;
 
       &:before {
-        background: invert($mf-color-base);
+        background: invert(#000);
       }
     }
   }
@@ -66,16 +72,12 @@ $mf-color-text: #fff !default;
 
   &.-text {
     &:before {
-      // opacity: 0.75;
       transform: scale(1.7);
-      
     }
 
     &.-active:before {
       transform: scale(1.6);
       transition-duration: 0.2s;
-      
-      
     }
   }
 
@@ -108,11 +110,14 @@ $mf-color-text: #fff !default;
     transform: scale(0) rotate(10deg);
 
     opacity: 0;
-    color: $mf-color-text;
+    color: #f4f2ed;
 
-    font-size: 16px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
     line-height: 20px;
     text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 
     transition:
       opacity 0.4s,
@@ -173,3 +178,22 @@ $mf-color-text: #fff !default;
   }
 }
 
+.font-display {
+  font-family: "Archivo Black", "Archivo", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.font-mono {
+  font-family: "JetBrains Mono", monospace;
+}
+
+.stroke-text {
+  -webkit-text-stroke: 1.5px var(--ink);
+  color: transparent;
+}
+
+@media (min-width: 1024px) {
+  .stroke-text {
+    -webkit-text-stroke: 2.5px var(--ink);
+  }
+}

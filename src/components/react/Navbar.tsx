@@ -1,62 +1,34 @@
 import React from "react";
 import { Routes } from "@/lib/routes/routes";
-import {
-  animatePageOut,
-  exitHoverEffect,
-  hoverEffect,
-} from "@/lib/animation/animation";
-import { renderSplittedSentence, splitText } from "@/lib/utils/split";
-import { cursor } from "@/lib/utils/cursor";
+import { animatePageOut } from "@/lib/animation/animation";
 
 export default function Navbar() {
   return (
-    <div className="flex items-center justify-between w-full sm:gap-24 sm:justify-center text-lg sm:text-lg xl:text-xl mt-4 z-30 font-semibold bg-transparent text-slate-900 dark:text-white">
+    <nav className="flex items-center gap-6 lg:gap-10 font-mono text-xs lg:text-sm uppercase tracking-widest z-30">
       {Routes.map((r, idx) => {
-        const charClass = `char-navbar-${idx}`,
-          charClassBottom = `char-navbar-${idx + 4}`,
-          parentClass = `parent-${idx}`,
-          invisClass = `invis-${idx}`;
-
         return (
-          <div
-            className={`cursor-pointer flex flex-col relative h-8 ${parentClass}`}
-            style={{ clipPath: "inset(0% 0 20% 0)" }}
+          <a
+            href={r.path}
+            key={idx}
             data-cursor-icon=" "
+            className="group relative flex items-center gap-2 cursor-pointer"
             onClick={(e) => {
               e.preventDefault();
               animatePageOut(r.path);
             }}
-            onMouseEnter={() => {
-              hoverEffect("." + charClass, "." + charClassBottom);
-            }}
-            onMouseLeave={() => {
-              exitHoverEffect("." + charClass, "." + charClassBottom);
-            }}
-            key={idx}
-          
           >
-            <div className="flex">
-              {splitText(r.name).map((char, i) => {
-                return (
-                  <p className={charClass} key={i}>
-                    {renderSplittedSentence(char)}
-                  </p>
-                );
-              })}
-            </div>
-
-            <div className="flex">
-              {splitText(r.name).map((char, i) => {
-                return (
-                  <p className={charClassBottom} key={i}>
-                    {renderSplittedSentence(char)}
-                  </p>
-                );
-              })}
-            </div>
-          </div>
+            <span className="opacity-40">{String(idx + 1).padStart(2, "0")}</span>
+            <span className="relative overflow-hidden inline-block">
+              <span className="block transition-transform duration-300 ease-out group-hover:-translate-y-full">
+                {r.name}
+              </span>
+              <span className="absolute left-0 top-0 block translate-y-full transition-transform duration-300 ease-out group-hover:translate-y-0 text-[#ff3d1a]">
+                {r.name}
+              </span>
+            </span>
+          </a>
         );
       })}
-    </div>
+    </nav>
   );
 }

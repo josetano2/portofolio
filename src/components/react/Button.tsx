@@ -1,8 +1,4 @@
-import {
-  animatePageOut,
-  buttonExitHoverEffect,
-  buttonHoverEffect,
-} from "@/lib/animation/animation";
+import { animatePageOut } from "@/lib/animation/animation";
 import React from "react";
 
 interface IButton {
@@ -15,13 +11,14 @@ export default function Button({ href, text, id }: IButton) {
   return (
     <button
       data-cursor-icon=" "
-      className="border-black dark:border-white border-[1px] rounded-full px-4 py-1 text-black hover:text-white dark:text-white"
+      className="group relative overflow-hidden border-2 border-[color:var(--ink)] px-8 py-3 font-mono text-xs uppercase tracking-widest"
       id={id}
       onClick={() => animatePageOut(href)}
-      onMouseEnter={() => buttonHoverEffect(id)}
-      onMouseLeave={() => buttonExitHoverEffect(id)}
     >
-      {text}
+      <span className="absolute inset-0 bg-[color:var(--ink)] -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out" />
+      <span className="relative group-hover:text-[color:var(--paper)] transition-colors duration-300">
+        {text}
+      </span>
     </button>
   );
 }
